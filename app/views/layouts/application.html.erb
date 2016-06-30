@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MyStore">
 <head>
   <title>Myapp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<%= yield %>
+<div ui-view></div>
 
 </body>
 </html>

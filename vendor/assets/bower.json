@@ -1,0 +1,22 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "angular": "latest",
+    "angular-animate": "latest",
+    "angular-aria": "latest",
+    "angular-material": "latest",
+    "angular-ui-router": "latest",
+    "angular-resource": "latest",
+    "bootstrap-sass-official": "latest",
+    "ngGallery": "latest",
+    "angular-devise": "latest",
+    "ng-token-auth": "latest",
+    "angular-xeditable": "latest",
+    "angular-timeago": "latest",
+    "sweetalert": "latest",
+    "bootstrap": "latest",
+    "angular-file-upload": "latest",
+    "angular-swiper": "latest",
+    "ngstorage": "latest"
+  }
+}
