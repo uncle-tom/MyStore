@@ -5,6 +5,7 @@ angular
     'ngMaterial', 
     'ksSwiper', 
     'ngStorage', 
+    'templates',
     'ngResource', 
     'angularFileUpload', 
     'jkuri.gallery',
@@ -21,7 +22,7 @@ angular
       .state('home', {
         url: '/', 
         controller: 'mainCtrl',
-        templateUrl: 'test.html'
+        templateUrl: 'test/test.html'
       });
       $urlRouterProvider.otherwise('/');
     }

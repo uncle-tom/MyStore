@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require angular/angular
+//= require angular
 //= require angular-animate
 //= require angular-ui-router
+//= require angular-rails-templates
 //= require angular-resource
 //= require angular-xeditable
 //= require ngGallery
@@ -26,6 +26,7 @@
 //= require angular-swiper
 //= require ngstorage
 //= require router
+//#= require bootstrap
 //= require_tree ./models
 //= require_tree ./services
 //= require_tree ./directives
@@ -36,4 +37,4 @@
 //= require angular-material
 //= require angular-timeago
 //= require sweetalert/dist/sweetalert.min.js
-//= require turbolinks
+//#= require turbolinks
