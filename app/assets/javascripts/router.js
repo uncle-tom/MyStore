@@ -20,8 +20,8 @@ angular
       $stateProvider
       .state('home', {
         url: '/', 
-        templateUrl: 'test.html',
-        controller: 'mainCtrl'
+        controller: 'mainCtrl',
+        templateUrl: 'test.html'
       });
       $urlRouterProvider.otherwise('/');
     }
