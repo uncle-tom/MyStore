@@ -22,7 +22,17 @@ angular
       .state('home', {
         url: '/', 
         controller: 'mainCtrl',
-        templateUrl: 'test/test.html'
+        templateUrl: 'index.html'
+      })
+      .state('product', {
+        url: '/product/{id}', 
+        controller: 'productCtrl',
+        templateUrl: 'product/show.html'
+      })
+      .state('admin', {
+        url: '/admin',
+        controller: 'adminCtrl',
+        templateUrl: 'admin/index.html'
       });
       $urlRouterProvider.otherwise('/');
     }
