@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require angular
 //= require angular-animate
 //= require angular-ui-router
@@ -26,7 +27,7 @@
 //= require angular-swiper
 //= require ngstorage
 //= require router
-//#= require bootstrap
+
 //= require_tree ./models
 //= require_tree ./services
 //= require_tree ./directives

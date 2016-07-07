@@ -33,6 +33,21 @@ angular
         url: '/admin',
         controller: 'adminCtrl',
         templateUrl: 'admin/index.html'
+      })
+      .state('adminmain', {
+        url: '/admin/main',
+        controller: 'adminCtrl',
+        templateUrl: 'admin/main.html'
+      })
+      .state('adminproduct', {
+        url: '/admin/product',
+        controller: 'adminCtrl',
+        templateUrl: 'admin/product.html'
+      })
+      .state('admincategory', {
+        url: '/admin/category',
+        controller: 'adminCtrl',
+        templateUrl: 'admin/category.html'
       });
       $urlRouterProvider.otherwise('/');
     }
