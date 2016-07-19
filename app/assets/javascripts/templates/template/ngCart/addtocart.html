@@ -1,0 +1,27 @@
+<div ng-hide="attrs.id">
+  <a class="btn btn-lg btn-primary" ng-disabled="true" ng-transclude></a>
+</div>
+<div ng-show="attrs.id">
+  <div>
+      <md-button class="catalog_buybutton buy-button_mobile" ng-hide="inCart()" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);"
+      ng-click="ngCart.addItem(id, name, price, q, data)"
+      ng-transclude
+      >Купить</md-button>
+      <md-button class="catalog_buybutton buy-button_pc" ng-hide="inCart()" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);"
+      ng-click="ngCart.addItem(id, name, price, q, data)"
+      ng-transclude
+      >Купить</md-button>
+      <md-button ng-hide="inCart()" class="md-fab md-mini" aria-label="Favorite">
+          <img src="assets/icon/favorite2.png" alt="">
+      </md-button>
+
+      <!-- <a class="btn btn-sm btn-primary"
+         ng-click="ngCart.addItem(id, name, price, q, data)"
+         ng-transclude></a> -->
+  </div>
+  <div style="    line-height: 52px">
+      <mark  ng-show="inCart()">
+          В <a href="/#cart">корзине</a> | <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">&times; </a>
+      </mark>
+  </div>
+</div>

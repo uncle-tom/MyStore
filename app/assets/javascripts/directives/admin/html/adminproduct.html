@@ -1,12 +1,27 @@
-<h2>Добавить товар</h2>
-<div>
-	<input type="text" placeholder="Название товара">
-</div>
-
-<div>
-	<input type="text" placeholder="Цена">
-</div>
-
-<div>
-	<textarea name="" id="" cols="30" rows="10" placeholder="Описание товара"></textarea>
+<div class="adminproductlist">
+	<div class="page-header">
+		  <div class="row">
+		  	<div class="col-md-6">
+		  		<h2>Список товаров</h2>		
+		  	</div>
+		  	<div class="col-md-6">
+		  		<input type="text" placeholder="Поиск" ng-model="query">
+		  	</div>
+		  </div>
+		</div>
+	<div ng-repeat="product in products | filter:query">
+		<div class="adminproductlist_one">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="http://candyladyshop.ru/assets/img/portfolio/16.jpg" alt="">
+				</div>
+				<div class="col-md-8">
+					<h4><a href="#/product/{{product.id}}">{{product.name}}</a></h4>
+					<h5>{{product.price_min}} &#8381;</h5>
+					<md-button class="md-raised">Редактировать</md-button>
+					<md-button class="md-raised">Удалить</md-button>
+				</div>
+			</div>
+		</div>	
+	</div>
 </div>

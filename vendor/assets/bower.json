@@ -17,6 +17,7 @@
     "bootstrap": "latest",
     "angular-file-upload": "latest",
     "angular-swiper": "latest",
-    "ngstorage": "latest"
+    "ngstorage": "latest",
+    "ngcart": "latest"
   }
 }

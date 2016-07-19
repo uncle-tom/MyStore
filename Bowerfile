@@ -15,4 +15,5 @@ asset 'bootstrap'
 asset 'angular-file-upload'
 asset 'angular-swiper'
 asset 'ngstorage'
+asset 'ngcart'
 

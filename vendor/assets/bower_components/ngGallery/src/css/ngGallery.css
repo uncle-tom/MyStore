@@ -6,6 +6,7 @@
 
 img.ng-thumb {
   height: 50px;
+  width: 150px;
   float: left;
   display: block;
   cursor: pointer;

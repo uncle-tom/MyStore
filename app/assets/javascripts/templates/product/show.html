@@ -1,1 +1,174 @@
-<p>Show product</p>
+<div ng-include="'shared/header.html'"></div>
+<!-- Хлебные крошки -->
+<div class="container-fluid breadcrumb">
+	<div class="row">
+		<div class="col-md-12">
+			<div xmlns:v="http://rdf.data-vocabulary.org/#">
+				<span typeof="v:Breadcrumb">
+				<a href="/" rel="v:url" property="v:title"> CandyLadyShop</a> › </span>
+				<span typeof="v:Breadcrumb"> <a href="http://candyladyshop.ru/{{product.id}}" rel="v:url" property="v:title">{{product.name}}</a> </span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Хлебные крошки -->
+
+<div class="container-fluid">
+	<div class="row product-page">
+		<!-- Информация о продукте -->
+		<div class="col-md-5 product-page_info">
+			<h2>{{product.name}}</h2>
+			<pre>{{product.description}}</pre>
+			<h3>Стоимость: {{product.price}} &#8381;</h3>
+			<md-input-container>
+        <label>Размер</label>
+        <md-select ng-model="product_size">
+          <md-option ng-repeat="size in product.size" value="{{size}}">
+            {{size}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+      <md-input-container>
+        <label>Цвет</label>
+        <md-select ng-model="product_color">
+          <md-option ng-repeat="color in product.color" value="{{color}}">
+            {{color}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+      <br>
+      <div class="pc-show">
+				<ngcart-addtocart id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
+			</div>
+		</div>
+		<!-- Информация о продукте -->
+
+		<!-- Фотки для компа -->
+		<div class="col-md-7 pc-show">
+			<ul class="product-thumbs">
+			  <li ng-repeat="img in product.images">
+			    <img ng-src="{{img}}" ng-click="setImage(img)" />
+			  </li>
+			</ul>
+			<div class="product-images">
+			  <img ng-src="{{img}}" class="product-images_main"
+			      ng-class="{selected: img === mainImageUrl}"
+			      ng-repeat="img in product.images" />
+			</div>
+		</div>
+		<!-- Фотки для компа -->
+
+		<!-- Для мобилки -->
+		<div class="col-md-7 mobile-show">
+			<ks-swiper-container swiper="swiper" initial-slide="0" loop="true"  pagination-is-active="true" slides-per-view="1" space-between="5" pagination-clickable="false" autoplay="42500"> 
+			  <ks-swiper-slide class="swiper-slide" ng-repeat="img in product.images">
+			    <img src="{{img}}" alt="">
+			  </ks-swiper-slide>
+			</ks-swiper-container>
+			<br><md-input-container>
+        <label>Размер</label>
+        <md-select ng-model="product_size">
+          <md-option ng-repeat="size in product.size" value="{{size}}">
+            {{size}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+      <md-input-container>
+        <label>Цвет</label>
+        <md-select ng-model="product_color">
+          <md-option ng-repeat="color in product.color" value="{{color}}">
+            {{color}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+      <br><ngcart-addtocart class="buy-button_mobile" id="{{product.name}}" name="{{product.name}}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
+		</div>
+		<!-- Для мобилки -->
+	</div>
+</div>
+
+<div class="container-fluid">
+	<md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Новинки">
+        <md-content class="md-padding">
+          <div class="row">
+						<div ng-repeat="product in products | limitTo:4">
+							<div class="col-md-3">
+								<div class="product">
+									<a href="#/product/{{product.id}}">
+									<div class="product-photo">
+										<img src="http://candyladyshop.ru/assets/img/portfolio/1.jpg" alt="">
+										<h5>Больше информации
+										<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
+										</h5>
+									</div>
+									<h4>{{product.name}}</h4>
+									<p>{{product.description | limitTo:50}}..</p></a>
+									<h4>{{product.price_min}} рублей</h4>
+									<md-button  style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Купить</md-button>
+									<md-button class="md-fab md-mini" aria-label="Favorite">
+				          	<img src="assets/icon/favorite2.png" alt="">
+				        	</md-button>
+								</div>
+							</div>
+						</div>
+					</div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Популярное">
+        <md-content class="md-padding">
+          <div class="row">
+						<div ng-repeat="product in products | limitTo:4">
+							<div class="col-md-3">
+								<div class="product">
+									<a href="#/product/{{product.id}}">
+									<div class="product-photo">
+										<img src="http://candyladyshop.ru/assets/img/portfolio/10.jpg" alt="">
+										<h5>Больше информации
+										<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
+										</h5>
+									</div>
+									<h4>{{product.name}}</h4>
+									<p>{{product.description | limitTo:50}}..</p></a>
+									<h4>{{product.price_min}} рублей</h4>
+									<md-button  style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Купить</md-button>
+									<md-button class="md-fab md-mini" aria-label="Favorite">
+				          	<img src="assets/icon/favorite2.png" alt="">
+				        	</md-button>
+								</div>
+							</div>
+						</div>
+					</div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Скидки">
+        <md-content class="md-padding">
+          <div class="row">
+						<div ng-repeat="product in products | limitTo:4">
+							<div class="col-md-3">
+								<div class="product">
+									<a href="#/product/{{product.id}}">
+									<div class="product-photo">
+										<img src="http://candyladyshop.ru/assets/img/portfolio/11.jpg" alt="">
+										<h5>Больше информации
+										<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
+										</h5>
+									</div>
+									<h4>{{product.name}}</h4>
+									<p>{{product.description | limitTo:50}}..</p></a>
+									<h4>{{product.price_min}} рублей</h4>
+									<md-button  style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Купить</md-button>
+									<md-button class="md-fab md-mini" aria-label="Favorite">
+				          	<img src="assets/icon/favorite2.png" alt="">
+				        	</md-button>
+								</div>
+							</div>
+						</div>
+					</div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+<div ng-include="'shared/footer.html'"></div>

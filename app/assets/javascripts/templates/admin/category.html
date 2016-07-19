@@ -2,11 +2,19 @@
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-3">
+		<!-- Основной сайбар -->
+		<div class="col-md-2">
 			<adminsidebar></adminsidebar>			
 		</div>
-		<div class="col-md-9">
-			<h2>This is category admin panel</h2>			
+		<!-- Список категорий -->
+		<div class="col-md-7">
+			<admincategory></admincategory>
+		</div>
+		<!-- Правый сайдбар -->
+		<div class="col-md-3">
+			<div class="addproduct">
+				<a href="#/admin/addnewcategory"><md-button class="md-raised md-primary" >Добавить категорию</md-button></a>
+			</div>
 		</div>
 	</div>
 </div>

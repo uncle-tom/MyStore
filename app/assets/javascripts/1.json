@@ -1,0 +1,18 @@
+{
+    "description": "The T-Mobile G1 was the world's first Android-powered phone. Launched nearly two years ago, it created an entirely new class of mobile phones and apps. Its successor, the T-Mobile G2 with Google, will continue the revolution.\n\nThe T-Mobile G2 will deliver tight integration with Google services and break new ground as the first smartphone designed to run at 4G speeds on our new HSPA+ network.", 
+    "id": "t-mobile-g2",
+    "price":200,
+    "size": [
+    	"75B", "80B", "85B", "75C"
+    ],
+    "images": [
+        "http://candyladyshop.ru/assets/img/portfolio/16.jpg", 
+        "http://candyladyshop.ru/assets/img/portfolio/23.jpg", 
+        "http://candyladyshop.ru/assets/img/portfolio/21.jpg"
+    ], 
+    "name": "T-Mobile G2", 
+    "color": ["Черный"],
+    "sale_price":180,
+    "has_popular": true,
+    "has_sale": true
+}

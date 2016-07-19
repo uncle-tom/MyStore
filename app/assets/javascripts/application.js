@@ -19,6 +19,7 @@
 //= require angular-rails-templates
 //= require angular-resource
 //= require angular-xeditable
+//= require ngcart
 //= require ngGallery
 //= require angular-devise
 //= require angular-file-upload
@@ -27,13 +28,14 @@
 //= require angular-swiper
 //= require ngstorage
 //= require router
-
+//= require Swiper
 //= require_tree ./models
 //= require_tree ./services
 //= require_tree ./directives
 //= require_tree ./controllers
 //= require_tree ./models
 //= require_tree ./templates
+//= require_tree ./animations
 //= require angular-aria
 //= require angular-material
 //= require angular-timeago
