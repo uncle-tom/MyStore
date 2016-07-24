@@ -1,76 +1,91 @@
 <div class="row addproduct" ng-controller="adminCtrl">
-  <h2>Добавление нового товара</h2></br>
-  <form name="newproduct" class="simple_form form-horizontal" novalidate="novalidate" id="new-product" accept-charset="UTF-8">
-    <md-input-container class="md-icon-float md-block">
-      <label>URL товара | Например: redskip</label>
-      <input ng-model="newProduct.id" type="text">
-    </md-input-container>
-    <md-input-container class="md-icon-float md-block">
-      <label>Название товара</label>
-      <input ng-model="newProduct.name" type="text">
-    </md-input-container>
+  <div class="row">
+    <form name="newproduct" class="simple_form form-horizontal" novalidate="novalidate" id="new-product" accept-charset="UTF-8">
+      
+      <div class="col-md-4 col-xs-12 admin-sidebar_right_position">
+        <div class="admin-sidebar_right">
+          <div class="addproduct">
+            <md-checkbox ng-model="has_popular">
+              Популярный товар?
+            </md-checkbox>
 
-    <md-input-container class="md-block">
-      <label>Цена</label>
-      <input type="number" step="any" ng-model="newProduct.price"/>
-    </md-input-container>
-    <md-checkbox ng-model="has_sale">
-     Есть скидка?
-    </md-checkbox>
-    <div class="sale_price" ng-if="has_sale">
-    <md-input-container class="md-block">
-      <label>Цена со скидкой</label>
-      <input type="number" step="any" ng-model="newProduct.sale_price"/>
-    </md-input-container>
-    </div>
-    <div>
-    <md-input-container>
-      <label>Размер</label>
-      <md-select ng-model="product_size" multiple>
-        <md-optgroup label="Размеры">
-           <md-option ng-repeat="size in sizes" value="{{size.size}}">
-            {{size.size}}
-          </md-option>
-        </md-optgroup>
-      </md-select>
-    </md-input-container>
-    <br>
-    <md-input-container>
-      <label>Цвет</label>
-      <md-select ng-model="product_color" multiple>
-        <md-optgroup label="Цвета">
-           <md-option ng-repeat="color in colors" value="{{color.color}}">
-            {{color.color}}
-          </md-option>
-        </md-optgroup>
-      </md-select>
-    </md-input-container>
-    </div>
-
-    <md-input-container class="md-block">
-      <label>Описание товара</label>
-      <textarea ng-model="newProduct.description" rows="5" cols="5" md-select-on-focus></textarea>
-    </md-input-container>
-    
-    <md-checkbox ng-model="has_popular">
-      Популярный товар?
-    </md-checkbox>
-
-    <div ng-controller="categoryCtrl">
-    <fieldset class="demo-fieldset" >
-      <legend class="demo-legend">Выберите подходящие категории</legend>
-      <div layout="row" layout-wrap flex>
-        <div style="column-count: 3;">
-          <div ng-repeat="item in items">
-            <md-checkbox >
-             {{ item }}
+            <md-checkbox ng-model="in_stock">
+              Есть в наличии?
             </md-checkbox>
           </div>
         </div>
       </div>
-    </fieldset>
-    </div>
 
-    <md-button class="md-raised md-primary">Загрузить товар</md-button>
-  </form>
+      <div class="col-md-8">
+        <h2>Добавление нового товара</h2></br>
+        <md-input-container class="md-icon-float md-block">
+          <label>URL товара | Например: redskip</label>
+          <input ng-model="newProduct.id" type="text">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Название товара</label>
+          <input ng-model="newProduct.name" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Цена</label>
+          <input type="number" step="any" ng-model="newProduct.price"/>
+        </md-input-container>
+        <md-checkbox ng-model="has_sale">
+         Есть скидка?
+        </md-checkbox>
+        <div class="sale_price" ng-if="has_sale">
+        <md-input-container class="md-block">
+          <label>Цена со скидкой</label>
+          <input type="number" step="any" ng-model="newProduct.sale_price"/>
+        </md-input-container>
+        </div>
+        <div>
+        <md-input-container>
+          <label>Размер</label>
+          <md-select ng-model="product_size" multiple>
+            <md-optgroup label="Размеры">
+               <md-option ng-repeat="size in sizes" value="{{size.size}}">
+                {{size.size}}
+              </md-option>
+            </md-optgroup>
+          </md-select>
+        </md-input-container>
+        <br>
+        <md-input-container>
+          <label>Цвет</label>
+          <md-select ng-model="product_color" multiple>
+            <md-optgroup label="Цвета">
+               <md-option ng-repeat="color in colors" value="{{color.color}}">
+                {{color.color}}
+              </md-option>
+            </md-optgroup>
+          </md-select>
+        </md-input-container>
+        </div>
+
+        <md-input-container class="md-block">
+          <label>Описание товара</label>
+          <textarea ng-model="newProduct.description" rows="5" cols="5" md-select-on-focus></textarea>
+        </md-input-container>
+        
+        <div ng-controller="categoryCtrl">
+        <fieldset class="demo-fieldset" >
+          <legend class="demo-legend">Выберите подходящие категории</legend>
+          <div layout="row" layout-wrap flex>
+            <div style="column-count: 3;">
+              <div ng-repeat="item in items">
+                <md-checkbox >
+                 {{ item }}
+                </md-checkbox>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        </div>
+
+        <md-button class="md-raised md-primary">Загрузить товар</md-button>
+      </div>
+    </form>
+  </div>
 </div>

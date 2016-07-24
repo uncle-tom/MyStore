@@ -14,5 +14,6 @@
     "color": ["Черный"],
     "sale_price":180,
     "has_popular": true,
-    "has_sale": true
+    "has_sale": true,
+    "in_stock": true
 }
