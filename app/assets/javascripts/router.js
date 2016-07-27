@@ -70,6 +70,11 @@ angular
         controller: 'productCtrl',
         templateUrl: 'admin/product.html'
       })
+      .state('editproduct', {
+        url: '/admin/edit/{id}',
+        controller: 'productCtrl',
+        templateUrl: 'admin/productedit.html'
+      })
       .state('admincategory', {
         url: '/admin/category',
         controller: 'adminCtrl',

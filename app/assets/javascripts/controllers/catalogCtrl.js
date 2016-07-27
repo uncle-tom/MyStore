@@ -1,7 +1,7 @@
 angular.module('MyStore').controller('catalogCtrl', 
-  ['$scope', '$http', '$localStorage', '$sessionStorage', 'Auth', '$stateParams', catalogCtrl]);
+  ['$scope', '$http', '$localStorage', '$sessionStorage', 'Auth', '$stateParams', 'Product', catalogCtrl]);
 
-function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $stateParams) {
+function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product) {
 	console.log('catalogCtrl');
 	
 	// $http.get('assets/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
@@ -9,13 +9,13 @@ function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $state
  //  });
   
 
-  $http.get('assets/hotels.json').success(function(data, status, headers, config){
+  Product.query({},function(data){
     $scope.products = data;
   });
 
   $scope.qty = 2500;
   //filter price_min
-  $scope.minpriceFilter = function(products, qty, price_min) {
-    return products.price_min <= $scope.qty
+  $scope.minpriceFilter = function(products, qty, price) {
+    return products.price <= $scope.qty
   }
 }

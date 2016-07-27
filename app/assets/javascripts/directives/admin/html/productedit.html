@@ -1,6 +1,6 @@
 <div class="row addproduct" ng-controller="adminCtrl">
   <div class="row">
-    <form name="newproduct" class="simple_form form-horizontal" novalidate="novalidate" id="new-product" accept-charset="UTF-8">
+    <form name="editproduct" class="simple_form form-horizontal" novalidate="novalidate" id="edit-product" accept-charset="UTF-8">
       
       <div class="col-md-4 col-xs-12 admin-sidebar_right_position">
         <div class="admin-sidebar_right">
@@ -17,7 +17,7 @@
       </div>
 
       <div class="col-md-8">
-        <h2>Добавление нового товара</h2></br>
+        <h2>Редактирование товара</h2></br>
         <md-input-container class="md-icon-float md-block">
           <label>URL товара | Например: redskip</label>
           <input ng-model="product.permalink" type="text">
@@ -29,7 +29,7 @@
 
         <md-input-container class="md-block">
           <label>Цена</label>
-          <input type="number" step="any" ng-model="product.price"/>
+          <input step="any" ng-model="product.price"/>
         </md-input-container>
         <md-checkbox ng-model="has_sale">
          Есть скидка?
@@ -66,7 +66,7 @@
 
         <md-input-container class="md-block">
           <label>Описание товара</label>
-          <textarea ng-model="product.description" rows="5" cols="5" md-select-on-focus></textarea>
+          <textarea ng-model="product.description" rows="5" cols="5" ></textarea>
         </md-input-container>
         
         <div ng-controller="categoryCtrl">
@@ -84,7 +84,7 @@
         </fieldset>
         </div>
 
-        <md-button ng-click="addProduct()" class="md-raised md-primary">Загрузить товар</md-button>
+        <md-button ng-click="productEdit()" class="md-raised md-primary">Обновить товар</md-button>
       </div>
     </form>
   </div>
