@@ -2,7 +2,7 @@
 <form action="">
 	<md-input-container class="md-icon-float md-block">
     <label>Название категории</label>
-    <input ng-model="newProduct.name" type="text">
+    <input ng-model="category.name" type="text">
   </md-input-container>
 	
 	<md-checkbox ng-click="includesCity_name('Стрелковое')">
@@ -19,4 +19,5 @@
 	    </select>
 	  </div>
   </div>
+  <md-button ng-click="addCategory()" class="md-raised md-primary">Добавить категорию</md-button>
 </form>

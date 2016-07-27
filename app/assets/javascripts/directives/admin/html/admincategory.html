@@ -11,21 +11,10 @@
 		</div>
 	<div>
 		<div class="adminpcategorylist_one">
-			<div class="row">
+			<div class="row" ng-repeat="cat in category">
 				<div class="col-md-12">
 					<div class="col-md-7">
-						<p><a href="">Женские платья</a></p>
-					</div>
-					<div class="col-md-3">
-						<p>Редактировать</p>
-					</div>
-					<div class="col-md-2">
-						<p>Удалить</p>
-					</div>	
-				</div>
-				<div class="col-md-12">
-					<div class="col-md-7">
-						<p><a href="">Теплая одежда</a></p>
+						<p><a href="">{{cat.name}}</a></p>
 					</div>
 					<div class="col-md-3">
 						<p>Редактировать</p>
