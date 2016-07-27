@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
 
 protected
 
-	def product_params
+	def category_params
 		params.require(:category).permit(:id, :name, :parent_id)
 	end
 end
