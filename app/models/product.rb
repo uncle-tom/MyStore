@@ -3,6 +3,6 @@ class Product < ActiveRecord::Base
   serialize :colors, Array
 
   has_many :photos
-  has_many :categories
+  has_and_belongs_to_many :categories
   
 end

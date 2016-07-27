@@ -30,10 +30,8 @@
 //= require router
 //= require Swiper
 //= require_tree ./models
-//= require_tree ./services
 //= require_tree ./directives
 //= require_tree ./controllers
-//= require_tree ./models
 //= require_tree ./templates
 //= require_tree ./animations
 //= require angular-aria
