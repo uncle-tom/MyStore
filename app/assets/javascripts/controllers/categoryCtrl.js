@@ -1,10 +1,12 @@
 angular.module('MyStore').controller('categoryCtrl', 
-  ['$scope', '$http', '$localStorage', '$sessionStorage', 'Auth', 'ngCart', categoryCtrl]);
+  ['$scope', '$http', '$localStorage', '$sessionStorage', 
+  'Auth', 'ngCart', 'Category', categoryCtrl]);
 
-function categoryCtrl($scope, $http, $localStorage, $sessionStorage, Auth, ngCart) {
+function categoryCtrl($scope, $http, $localStorage, $sessionStorage, Auth, ngCart, Category) {
 	console.log('category');
 	
 	// тест
-	$scope.items = ["Одежда","Обувь","Штаны","Куртка", "Не куртка", "Что-то еще", "И еще", "Хватит создавать категории"];
-
+	Category.query({}, function(data){
+    $scope.categories = data;
+  });
 }
