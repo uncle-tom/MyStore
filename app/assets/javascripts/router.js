@@ -71,13 +71,18 @@ angular
         templateUrl: 'admin/product.html'
       })
       .state('editproduct', {
-        url: '/admin/edit/{id}',
+        url: '/admin/product/edit/{id}',
         controller: 'productCtrl',
         templateUrl: 'admin/productedit.html'
       })
+      .state('editcategory', {
+        url: '/admin/category/edit/{id}',
+        controller: 'categoryCtrl',
+        templateUrl: 'admin/categoryedit.html'
+      })
       .state('admincategory', {
         url: '/admin/category',
-        controller: 'adminCtrl',
+        controller: 'categoryCtrl',
         templateUrl: 'admin/category.html'
       })
       .state('addnewproduct', {

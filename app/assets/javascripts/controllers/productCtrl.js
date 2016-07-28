@@ -4,10 +4,10 @@ angular.module('MyStore').controller('productCtrl',
   productCtrl]);
 
 function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product) {	
-	/*$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
+	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
     $scope.product = data;
     console.log(data)
-  });*/
+  });
 
   Product.query({}, function(data){
     $scope.products = data;
