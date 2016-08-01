@@ -75,6 +75,11 @@ angular
         controller: 'productCtrl',
         templateUrl: 'admin/productedit.html'
       })
+      .state('photos', {
+        url: '/admin/product/photos/{id}',
+        controller: 'productPhotosCtrl',
+        templateUrl: 'admin/product_photos.html'
+      })
       .state('editcategory', {
         url: '/admin/category/edit/{id}',
         controller: 'categoryCtrl',

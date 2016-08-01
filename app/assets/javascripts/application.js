@@ -29,6 +29,7 @@
 //= require ngstorage
 //= require router
 //= require Swiper
+//= require angular-file-upload
 //= require_tree ./models
 //= require_tree ./directives
 //= require_tree ./controllers

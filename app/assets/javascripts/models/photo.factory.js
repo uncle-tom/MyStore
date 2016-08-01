@@ -1,8 +1,8 @@
 // Product Resource
 angular
   .module('MyStore')
-  .factory("Product", function ($resource) {
-    return $resource('/products/:id', 
+  .factory("Photo", function ($resource) {
+    return $resource('/products/:product_id/photos/:id', 
       { 
         id: '@id'
       },

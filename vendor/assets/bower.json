@@ -11,6 +11,7 @@
     "ngGallery": "latest",
     "angular-devise": "latest",
     "ng-token-auth": "latest",
+    "ng-file-upload": "latest",
     "angular-xeditable": "latest",
     "angular-timeago": "latest",
     "sweetalert": "latest",
