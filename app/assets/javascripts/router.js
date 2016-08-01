@@ -13,7 +13,8 @@ angular
     'Devise',
     'xeditable',
     'yaru22.angular-timeago',
-    'ngCart'
+    'ngCart',
+    'md-steppers'
   ])
   .config([
     '$stateProvider',

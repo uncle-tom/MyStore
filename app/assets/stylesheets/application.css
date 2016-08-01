@@ -16,6 +16,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "angular-material/angular-material.css";
 @import "swiper/dist/css/swiper.min.css";
+@import "md-steppers/dist/md-steppers.min.css";
 @import url(https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic);
 
@@ -76,6 +77,10 @@
 
 .margin50 {
 	margin: 50px;
+}
+
+.fullwidth {
+	width: 100%;
 }
 
 .mobile-show {
@@ -255,6 +260,27 @@ md-content.md-default-theme, md-content {
 	width: 50%;
 }
 
+#vk {
+	text-align: center;
+	padding: 100px;
+	background-color: #507299;
+	color: #fff;
+	font-size: 40px;
+	font-weight: 900;
+}
+
+#vk h1 {
+	font-size: 80px !important;
+}
+
+#vk a {
+  color: #fff;
+	border-bottom: 5px solid #fff;
+}
+
+#vk a:hover {
+	text-decoration: none;
+}
 footer {
 	background-color: #2b2b2b;
 	padding: 20px 0px;

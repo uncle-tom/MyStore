@@ -1,11 +1,19 @@
 angular.module('MyStore').controller('mainCtrl', 
-  ['$scope', '$http', '$localStorage', '$sessionStorage', 'Auth', mainCtrl]);
+  ['$scope', '$http', '$stateParams', '$localStorage', '$sessionStorage', 'Auth', 'Product', mainCtrl]);
 
-function mainCtrl($scope, $http, $localStorage, $sessionStorage, Auth) {
+function mainCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, Product, Auth) {
 	console.log('yes');
-	$http.get('assets/hotels.json').success(function(data, status, headers, config){
+
+	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
+    $scope.product = data;
+    console.log(data)
+  });
+	$http.get('products.json').success(function(data, status, headers, config){
     $scope.products = data;
   });
+	// Product.query({}, function(data){
+ //    $scope.products = data;
+ //  });
 
   $scope.reviews = [
 	  {
@@ -59,4 +67,9 @@ function mainCtrl($scope, $http, $localStorage, $sessionStorage, Auth) {
     $scope.swiper.slidePrev();
   };
   
+  //filter premium
+  $scope.haspopularFilter = function(products, has_popular) {
+    return products.has_popular === true;
+  }
+
 }

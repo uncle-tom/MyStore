@@ -29,6 +29,7 @@
 //= require ngstorage
 //= require router
 //= require Swiper
+//= require md-steppers
 //= require_tree ./models
 //= require_tree ./directives
 //= require_tree ./controllers

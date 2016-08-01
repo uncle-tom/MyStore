@@ -1,6 +1,6 @@
 angular.module('MyStore').controller('invoicesCtrl', 
-  ['$scope', '$http', '$localStorage', '$sessionStorage', 'Auth', invoicesCtrl]);
+  ['$scope', '$rootScope', '$http', '$localStorage', '$sessionStorage', 'Auth', '$q', invoicesCtrl]);
 
-function invoicesCtrl($scope, $http, $localStorage, $sessionStorage, Auth) {
+function invoicesCtrl($scope, $rootScope, $http, $localStorage, $sessionStorage,  $q, Auth) {
 	console.log('invoicesCtrl');
 }
