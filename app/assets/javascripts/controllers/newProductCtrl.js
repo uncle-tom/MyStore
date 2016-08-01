@@ -13,6 +13,7 @@ function addNewProduct($scope, $http, $localStorage, $sessionStorage, Auth, Prod
 	console.log('newProductCtrl');
 
 	$scope.product = new Product;
+
   $scope.addProduct = function(){
     $scope.product.$save(function(){
       console.log($scope.product);

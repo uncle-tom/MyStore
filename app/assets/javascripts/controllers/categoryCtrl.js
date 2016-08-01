@@ -4,10 +4,6 @@ angular.module('MyStore').controller('categoryCtrl',
 
 function categoryCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, Auth, ngCart, Category) {
 	console.log('category');
-  $http.get('/categories/'+$stateParams.id+'.json').success(function(data, status, headers, config){
-    $scope.category = data;
-    console.log(data)
-  });
 	
 	Category.query({}, function(data){
     $scope.categories = data;

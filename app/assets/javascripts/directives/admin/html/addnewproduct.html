@@ -22,6 +22,7 @@
           <label>URL товара | Например: redskip</label>
           <input ng-model="product.permalink" type="text">
         </md-input-container>
+
         <md-input-container class="md-icon-float md-block">
           <label>Название товара</label>
           <input ng-model="product.name" type="text">
@@ -31,9 +32,11 @@
           <label>Цена</label>
           <input type="number" step="any" ng-model="product.price"/>
         </md-input-container>
+
         <md-checkbox ng-model="has_sale">
          Есть скидка?
         </md-checkbox>
+
         <div class="sale_price" ng-if="has_sale">
         <md-input-container class="md-block">
           <label>Цена со скидкой</label>
@@ -51,7 +54,9 @@
             </md-optgroup>
           </md-select>
         </md-input-container>
+
         <br>
+
         <md-input-container>
           <label>Цвет</label>
           <md-select ng-model="product_color" multiple>
@@ -68,7 +73,7 @@
           <label>Описание товара</label>
           <textarea ng-model="product.description" rows="5" cols="5" md-select-on-focus></textarea>
         </md-input-container>
-        
+
         <div ng-controller="categoryCtrl">
         <fieldset class="demo-fieldset" >
           <legend class="demo-legend">Выберите подходящие категории</legend>
