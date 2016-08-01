@@ -13,9 +13,18 @@
 		<div class="adminpcategorylist_one">
 			<div class="row" >
 				<div class="col-md-12" ng-repeat="cat in categories">
-					<div class="col-md-7">
+				  <div class="col-md-1">
+				    {{cat.id}}
+				  </div>
+
+					<div class="col-md-5">
 						<p>{{cat.name}}</p>
 					</div>
+
+					<div class="col-md-1">
+						<p>{{cat.parent_id}}</p>
+					</div>
+
 					<div class="col-md-3">
 						<p><a href="#/admin/category/edit/{{cat.id}}">Редактировать</a></p>
 					</div>

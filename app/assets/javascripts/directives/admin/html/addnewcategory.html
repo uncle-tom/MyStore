@@ -5,19 +5,16 @@
     <input ng-model="category.name" type="text">
   </md-input-container>
 	
-	<md-checkbox ng-click="includesCity_name('Стрелковое')">
+	<md-checkbox>
   	Родительская категория
   </md-checkbox>
 	
-	<div ng-controller="categoryCtrl">
-		<div class="form-group select hotel_city_name">
-	    <label class="select control-label" for="hotel_city_name">Выберите родительскую категорию</label>
-	    <select class="select form-control" id="hotel_city_name">
-	    	<div ng-repeat="i in items">
-	    		<option value="{{ i }}">{{ i }}</option>
-	    	</div>
-	    </select>
-	  </div>
-  </div>
+	<div class="form-group select category_parent_id">
+	  <label class="select control-label" for="category.parent_id">Выберите родительскую категорию</label>
+	  <select class="select form-control" ng-model="category.parent_id" id="category_parent_id">
+	    <option ng-repeat="category in categories" ng-if="!category.parent_id" value="{{category.id}}">{{ category.name }}</option> 
+	 </select>
+	</div>
+
   <md-button ng-click="addCategory()" class="md-raised md-primary">Добавить категорию</md-button>
 </form>
