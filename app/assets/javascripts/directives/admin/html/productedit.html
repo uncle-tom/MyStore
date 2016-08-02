@@ -76,9 +76,9 @@
           <legend class="demo-legend">Выберите подходящие категории</legend>
           <div layout="row" layout-wrap flex>
             <div style="column-count: 3;">
-              <div ng-repeat="item in items">
-                <md-checkbox >
-                 {{ item }}
+              <div ng-repeat="category in categories">
+                <md-checkbox ng-checked="exists_cat(category.id)" ng-click="toggle_cat(category.id)">
+                 {{ category.name }}
                 </md-checkbox>
               </div>
             </div>

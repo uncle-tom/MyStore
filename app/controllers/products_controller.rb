@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
     index! do |format|
       format.html { render }
       format.json do
-        render json: @products.as_json(methods: :cover_url, include: {photos: {}})
+        render json: @products.as_json(methods: :cover_url, include: {photos: {}, categories: {}})
       end
     end
   end
@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
     show! do |format|
       format.html { render }
       format.json do
-        render json: resource.as_json(methods: :cover_url, include: {photos: {}})
+        render json: resource.as_json(methods: :cover_url, include: {photos: {}, categories: {}})
       end
     end
   end
@@ -38,6 +38,6 @@ protected
 	def product_params
 		params.require(:product).permit(:id, :name, :description,
 			:sale_price, :has_popular, :has_sale, :in_stock, :quantity, 
-			:price, :colors, :sizes, :permalink, :cover_photo_id)
+			:price, :colors, :sizes, :permalink, :cover_photo_id, :category_ids, category_ids:[])
 	end
 end
