@@ -8,7 +8,6 @@
     <div class="col-md-10">
       <div class="container-fluid">
         <h3><a href="#/admin/product/{{product.id}}">Фотографии для {{product.name}}</a></h3>
-        <h3>{{product}}</h3>
         <div class="row">
           <div class="col-md-12">
             <div class="col-md-4 album-photo_thumb" ng-repeat="photo in product.photos">
@@ -20,59 +19,15 @@
             </div>  
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 add-photo">
-            <h3>Добавить фотографии</h3>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th width="50%">Название</th>
-                  <th ng-show="uploader.isHTML5">Размер</th>
-                  <th ng-show="uploader.isHTML5">Прогресс</th>
-                  <th>Статус</th>
-                  <th>&nbsp;</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- ngRepeat: item in uploader.queue -->
-                <tr ng-repeat="item in uploader.queue" class="ng-scope">
-                  <td><strong>{{ item.file.name }}</strong></td>
-                  <td ng-show="uploader.isHTML5" nowrap="">{{ item.file.size/1024/1024|number:2 }} МБ</td>
-                  <td ng-show="uploader.isHTML5">
-                    <div class="progress" style="margin-bottom: 0;">
-                      <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
-                    </div>
-                  </td>
-                  <td class="text-center">
-                    <span ng-show="item.isSuccess" style="display: none;"><i class="glyphicon glyphicon-ok"></i></span>
-                    <span ng-show="item.isCancel" style="display: none;"><i class="glyphicon glyphicon-ban-circle"></i></span>
-                    <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
-                  </td>
-                  <td nowrap="">
-                    <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
-                      <span class="glyphicon glyphicon-upload"></span> Добаваить
-                    </button>
-                    
-                    <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading" disabled="disabled">
-                      <span class="glyphicon glyphicon-ban-circle"></span> Отмена
-                    </button>
-                    <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
-                      <span class="glyphicon glyphicon-trash"></span> Удалить
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="row">
-              <div class="col-md-6">
+              
+
                 <form id="add_photo" uploader="uploader">
                   <input type="file" nv-file-select="" uploader="uploader" multiple/><br/>
+                  <div ng-repeat="item in uploader.queue" class="ng-scope">
+                  <p><strong>{{ item.file.name }}</strong></p>
+                  </div>
                   <button ng-click="uploader.uploadAll()">Загрузить все</button>
                 </form>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

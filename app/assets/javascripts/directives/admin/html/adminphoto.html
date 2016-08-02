@@ -1,0 +1,19 @@
+<div class="productphotolist">
+  <div class="photo" ng-repeat="photo in product.photos">
+    <img ng-src="{{photo.image.thumb.url}}" alt="">
+  </div>
+</div>
+
+<div class="addproductphoto">
+  <div class="addphoto">
+    <div ng-controller="productPhotosCtrl">
+      <form id="add_photo" uploader="uploader">
+        <input type="file" nv-file-select="" uploader="uploader" multiple/><br/>
+        <div ng-repeat="item in uploader.queue" class="ng-scope">
+        <p><strong>{{ item.file.name }}</strong></p>
+        </div>
+        <button ng-click="uploader.uploadAll()">Загрузить все</button>
+      </form>
+    </div>
+  </div>
+</div>
