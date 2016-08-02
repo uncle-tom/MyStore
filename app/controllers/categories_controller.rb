@@ -5,6 +5,12 @@ class CategoriesController < ApplicationController
 
   inherit_resources
 
+  def show
+    @category = Category.find_by name: params[:id]
+    @products = @category.products
+    respond_with(@products)
+  end
+
 protected
 
 	def category_params
