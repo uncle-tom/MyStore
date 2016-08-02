@@ -559,7 +559,7 @@ footer {
 	margin-bottom: -20px;
 }
 
-.adminproductlist, .admincategorylist {
+.adminproductlist, .admincategorylist, .admin-welcome, .admin-main {
 	background: #fff;
 	margin: 20px 0px;
 	padding: 20px;

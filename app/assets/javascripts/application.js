@@ -30,6 +30,8 @@
 //= require router
 //= require angular-swiper
 //= require angular-file-upload
+//= require md-steppers
+//= require Swiper
 //= require_tree ./models
 //= require_tree ./directives
 //= require_tree ./controllers
