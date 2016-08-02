@@ -5,6 +5,15 @@ class ProductsController < ApplicationController
 
   inherit_resources
 
+  def index
+    index! do |format|
+      format.html { render }
+      format.json do
+        render json: @products.as_json(methods: :cover_url, include: {photos: {}})
+      end
+    end
+  end
+
   def show
     show! do |format|
       format.html { render }
