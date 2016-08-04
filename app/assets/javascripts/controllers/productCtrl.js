@@ -13,9 +13,9 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
     });
   });
 
-  /*Product.query({}, function(data){
+  Product.query({}, function(data){
     $scope.products = data;
-  });*/
+  });
 
 	$scope.setImage = function setImage(imageUrl) {
     $scope.mainImageUrl = imageUrl;

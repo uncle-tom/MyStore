@@ -16,11 +16,11 @@
 	<div class="row">
 		<!-- Сайдбар - Категории - Фильтры -->
 		<div class="col-md-3">
-			<div class="sidebar">
+			<div class="sidebar" ng-controller="categoryCtrl">
 				<h4>Категории</h4>
-				<md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
-          Комплекты
-        </md-checkbox>
+				<div ng-repeat="cat in categories">
+					<p><a href="#/categories/{{cat.id}}">{{cat.name}}</a></p>	
+				</div>
 			</div>
 
 			<div class="sidebar" ng-controller="adminCtrl">

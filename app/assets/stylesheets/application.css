@@ -70,7 +70,7 @@
 	.adminproduct_position {
 		float: right !important;
 	}
-	.addproduct {
+	.addproduct, .addcategory {
 		margin: auto !important;
 	}
 }
@@ -546,11 +546,11 @@ footer {
 	padding-top: 10px;
 }
 
-.addproduct {
+.addproduct, .addcategory {
 	margin: 20px;
 }
 
-.admin-sidebar_right .addproduct .md-button {
+.admin-sidebar_right .addproduct .md-button, .admin-sidebar_right .addcategory .md-button {
 	margin: 0px;
 	width: 100%;
 }

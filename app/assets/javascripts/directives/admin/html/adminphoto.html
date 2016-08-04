@@ -1,9 +1,3 @@
-<div class="productphotolist">
-  <div class="photo" ng-repeat="photo in product.photos">
-    <img ng-src="{{photo.image.middle.url}}" alt="">
-  </div>
-</div>
-
 <div class="addproductphoto">
   <div class="addphoto">
     <div ng-controller="productPhotosCtrl">
@@ -15,5 +9,11 @@
         <button ng-click="uploader.uploadAll()">Загрузить все</button>
       </form>
     </div>
+  </div>
+</div>
+
+<div class="productphotolist">
+  <div class="photo" ng-repeat="photo in product.photos">
+    <img ng-src="{{photo.image.middle.url}}" alt="">
   </div>
 </div>
