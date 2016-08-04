@@ -6,9 +6,9 @@ class CategoriesController < ApplicationController
   inherit_resources
 
   def show
-    @category = Category.find_by id: params[:id]
+    @category = Category.find_by name: params[:id]
     @products = @category.products
-    respond_with(@products)
+    respond_with({category: @category, products: @products})
   end
 
 protected
