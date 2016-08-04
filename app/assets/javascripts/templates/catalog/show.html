@@ -6,7 +6,7 @@
 			<div xmlns:v="http://rdf.data-vocabulary.org/#">
 				<span typeof="v:Breadcrumb">
 				<a href="/" rel="v:url" property="v:title"> CandyLadyShop</a> › </span>
-				<span typeof="v:Breadcrumb"> <a href="http://candyladyshop.ru/#catalog" rel="v:url" property="v:title">Каталог</a> </span>
+				<span typeof="v:Breadcrumb"> <a href="/#catalog" rel="v:url" property="v:title">Каталог</a> </span>
 			</div>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 			<div class="sidebar" ng-controller="categoryCtrl">
 				<h4>Категории</h4>
 				<div ng-repeat="cat in categories">
-					<p><a href="#/categories/{{cat.id}}">{{cat.name}}</a></p>	
+					<p><a href="#/categories/{{cat.name}}">{{cat.name}}</a></p>	
 				</div>
 			</div>
 
@@ -62,7 +62,8 @@
 					<div class="product myfade">
 						<a href="#/product/{{product.id}}">
 						<div class="product-photo">
-							<img src="http://candyladyshop.ru/assets/img/portfolio/11.jpg" alt="">
+							<div class="background-photo" style="background: url({{product.photos[0].image.url}}); width: 100%; min-height: 450px;background-size: cover;"></div>
+							<!-- <img src="{{product.photos[0].image.url}}" alt=""> -->
 							<h5>Больше информации
 							<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
 							</h5>

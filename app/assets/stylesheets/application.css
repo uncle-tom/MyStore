@@ -290,6 +290,7 @@ footer {
 .product {
 	text-align: center;
 	margin-top: 10px;
+	min-height: 500px;
 }
 
 .product h5 {
@@ -313,6 +314,10 @@ footer {
 
 .product img {
 	width: 100%;
+}
+
+.background-photo {
+	background: url();
 }
 
 .product .product-photo {
@@ -480,6 +485,8 @@ footer {
 .catalog .sidebar .md-button {
 	margin: auto;
 }
+
+.
 
 /****************
 	About's Page
