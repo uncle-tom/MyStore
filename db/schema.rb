@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160801134111) do
+ActiveRecord::Schema.define(version: 20160806223745) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.integer  "order_id"
+    t.string   "country"
+    t.string   "town"
+    t.string   "zip"
+    t.string   "address"
+    t.string   "address2"
+    t.string   "nova_poshta_id"
+    t.text     "notes"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "addresses", ["order_id"], name: "index_addresses_on_order_id"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +39,33 @@ ActiveRecord::Schema.define(version: 20160801134111) do
     t.integer "category_id", null: false
     t.integer "product_id",  null: false
   end
+
+  create_table "invoice_items", force: :cascade do |t|
+    t.integer  "order_id",               null: false
+    t.integer  "product_id",             null: false
+    t.string   "color"
+    t.string   "size"
+    t.decimal  "price",                  null: false
+    t.integer  "count",      default: 1
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "invoice_items", ["order_id", "product_id"], name: "index_invoice_items_on_order_id_and_product_id"
+  add_index "invoice_items", ["order_id"], name: "index_invoice_items_on_order_id"
+
+  create_table "orders", force: :cascade do |t|
+    t.decimal  "subtotal"
+    t.decimal  "total"
+    t.decimal  "discount"
+    t.integer  "address_id"
+    t.integer  "user_id"
+    t.integer  "shipping_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 
   create_table "photos", force: :cascade do |t|
     t.string   "image"
@@ -47,6 +89,15 @@ ActiveRecord::Schema.define(version: 20160801134111) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.integer  "cover_photo_id"
+  end
+
+  create_table "shippings", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.string   "speed_of_delivery"
+    t.boolean  "is_international"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end
