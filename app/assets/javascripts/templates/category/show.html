@@ -19,7 +19,7 @@
 			<div class="sidebar" ng-controller="categoryCtrl">
 				<h4>Категории</h4>
 				<div ng-repeat="cat in categories">
-					<p><a href="#/categories/{{cat.name}}">{{cat.name}}</a></p>	
+					<p ng-class="{ active: isActive('/categories/{{cat.name}}')}"><a href="#/categories/{{cat.name}}">{{cat.name}}</a></p>	
 				</div>
 			</div>
 
@@ -37,7 +37,7 @@
 			</div>
 			<div class="sidebar">
 				<h4>Выберете стоимость</h4>
-				<input type="range" min="0" max="1000" data-ng-model="qty" />
+				<input type="range" min="0" max="5000" data-ng-model="qty" />
 		    <div class="row">
 		      <div class="col-md-6">
 		        <p class="pull-left">0</p>
@@ -62,10 +62,7 @@
 					<div class="product myfade">
 						<a href="#/product/{{product.id}}">
 						<div class="product-photo">
-							<img src="{{product.img}}" alt="">
-							<h5>Больше информации
-							<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
-							</h5>
+							<mainphotoproduct></mainphotoproduct>
 						</div>
 						<h4>{{product.name}}</h4>
 						<p>{{product.description | limitTo:50}}..</p></a>

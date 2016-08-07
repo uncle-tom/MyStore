@@ -317,7 +317,10 @@ footer {
 }
 
 .background-photo {
-	background: url();
+	width: 100%; 
+	min-height: 450px;
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 .product .product-photo {
@@ -464,6 +467,10 @@ footer {
 	Catalog's Page
 ****************/
 
+.active a {
+	color: red !important;
+}
+
 .catalog {
 	margin: 30px 0px;	
 }
@@ -486,7 +493,11 @@ footer {
 	margin: auto;
 }
 
-.
+/****************
+	Category Page
+****************/
+
+li.active { color:orange;  }
 
 /****************
 	About's Page
@@ -622,6 +633,14 @@ footer {
 	padding-bottom: 10px;
 }
 
+.productphotolist-photo_icon {
+	text-align: center;
+}
+.productphotolist-photo_icon img {
+	width: auto !important;
+	outline: none;
+}
+
 .showfilters.ng-hide {
 	opacity: 0;	
 }
@@ -645,4 +664,18 @@ footer {
 
 .myfade.ng-leave.ng-leave-active {
   opacity: 0;
+}
+
+.animate-show {
+  -webkit-transition: all linear 0.4s;
+  transition: all linear 0.4s;
+  opacity: 1;
+}
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+    display: inline-block !important;
+}
+.animate-show.ng-hide {
+    opacity: 0;
 }

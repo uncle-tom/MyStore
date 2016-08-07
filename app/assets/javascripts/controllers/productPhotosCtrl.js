@@ -34,6 +34,7 @@ function productPhotos($scope, $http, $localStorage, $sessionStorage, Auth, $sta
   }
   
   $scope.delete = function(photo_id) {
+    console.log('yes')
     if(confirm('Вы уверены, что хотите удалить эту фотографию?')){
       Photo.delete({ product_id: $stateParams.id, id: photo_id }, function(response) {
         window.location.reload();

@@ -47,14 +47,14 @@
 		<!-- Фотки для компа -->
 		<div class="col-md-7 pc-show">
 			<ul class="product-thumbs">
-			  <li ng-repeat="img in product.images">
-			    <img ng-src="{{img}}" ng-click="setImage(img)" />
+			  <li ng-repeat="img in product.photos">
+			    <img src="{{img.image.url}}" ng-click="setImage(img.image.url)" />
 			  </li>
 			</ul>
 			<div class="product-images">
-			  <img ng-src="{{img}}" class="product-images_main"
-			      ng-class="{selected: img === mainImageUrl}"
-			      ng-repeat="img in product.images" />
+			  <img ng-src="{{img.image.url}}" class="product-images_main"
+			      ng-class="{selected: img.image.url === mainImageUrl}"
+			      ng-repeat="img in product.photos" />
 			</div>
 		</div>
 		<!-- Фотки для компа -->

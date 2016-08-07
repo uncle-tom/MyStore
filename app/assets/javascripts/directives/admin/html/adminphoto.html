@@ -1,5 +1,5 @@
 <div class="addproductphoto">
-  <div class="addphoto">
+  <div class="addphoto ">
     <div ng-controller="productPhotosCtrl">
       <form id="add_photo" uploader="uploader">
         <input type="file" nv-file-select="" uploader="uploader" multiple/><br/>
@@ -13,7 +13,15 @@
 </div>
 
 <div class="productphotolist">
+  <h4 class="text-center">Фотографии товара</h4>
   <div class="photo" ng-repeat="photo in product.photos">
     <img ng-src="{{photo.image.middle.url}}" alt="">
+    <div class="productphotolist-photo_icon" ng-controller="productPhotosCtrl">
+      <img src="/assets/icon/mainphoto.png" alt="" 
+      ng-if="product.cover_photo_id != photo.id"
+      ng-click="set_main(product.id, photo.id)">
+      <img src="/assets/icon/trash.png" alt=""
+      ng-click="delete(photo.id)">
+    </div>
   </div>
 </div>
