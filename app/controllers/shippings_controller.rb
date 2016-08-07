@@ -1,4 +1,4 @@
-class Admin::ShippingsController < ApplicationController
+class ShippingsController < ApplicationController
   respond_to :json, :html
 
   inherit_resources
