@@ -3,7 +3,11 @@ Rails.application.routes.draw do
     resources :photos
   end
 
-  resources :categories
+  resources :orders do
+    resources :invoice_items
+  end
+
+  resources :categories, :shippings, :addresses
 
   root 'test#index'
 end
