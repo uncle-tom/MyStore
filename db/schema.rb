@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806223745) do
+ActiveRecord::Schema.define(version: 20160809095621) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "order_id"
@@ -22,8 +22,11 @@ ActiveRecord::Schema.define(version: 20160806223745) do
     t.string   "address2"
     t.string   "nova_poshta_id"
     t.text     "notes"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "user_name",      default: "", null: false
+    t.string   "user_phone",     default: "", null: false
+    t.string   "user_email",     default: "", null: false
   end
 
   add_index "addresses", ["order_id"], name: "index_addresses_on_order_id"
@@ -61,8 +64,9 @@ ActiveRecord::Schema.define(version: 20160806223745) do
     t.integer  "address_id"
     t.integer  "user_id"
     t.integer  "shipping_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.string   "payment_type", default: "Оплата при получении", null: false
   end
 
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"

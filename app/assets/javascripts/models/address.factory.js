@@ -1,6 +1,6 @@
 angular.module('MyStore')
-  .factory("Order", function ($resource) {
-    return $resource('/orders/:id', 
+  .factory("Address", function ($resource) {
+    return $resource('/addresses/:id', 
       { 
         id: '@id'
       },
