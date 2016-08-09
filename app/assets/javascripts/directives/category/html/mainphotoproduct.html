@@ -2,7 +2,10 @@
 	ng-init="bg = product.photos[0].image.url" 
 	ng-mouseenter="bg = product.photos[1].image.url"
 	ng-mouseleave="bg = product.photos[0].image.url"
-	ng-style="{ 'background-image': 'url(' + bg + ')' }"> 
+	ng-style="{ 'background-image': 'url(' + bg + ')' }">
+	<div ng-if="product.sale_price != null" class="salephoto">
+		<span class="sale">Скидка 10%</span>
+	</div>
 </div>
 
 <div ng-if="product.photos.length === 0" class="background-photo"
