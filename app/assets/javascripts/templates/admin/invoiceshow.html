@@ -1,0 +1,26 @@
+<div ng-include="'shared/headeradmin.html'"></div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2 col-xs-12">
+			<adminsidebar></adminsidebar>
+		</div>
+		<div class="col-md-3 col-xs-12 admin-sidebar_right_position">
+			<div class="admin-sidebar_right">
+				<div class="adminorderbutton">
+					<md-button class="md-raised" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80); margin-bottom: 20px;">Принять</md-button>
+					<md-button class="md-raised md-accent" >Удалить</md-button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-7 col-xs-12 adminproduct_position admin-invoices">
+			<div class="page-header">
+			  <div class="row">
+			  	<div class="col-md-12">
+			  		<h2>{{order.invoice_items}}</h2>		
+			  	</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>

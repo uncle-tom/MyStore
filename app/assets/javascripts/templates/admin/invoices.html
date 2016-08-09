@@ -5,10 +5,18 @@
 		<div class="col-md-2">
 			<adminsidebar></adminsidebar>			
 		</div>
-		<div class="col-md-10">
-			<h2>Список заказов</h2>
+		<div class="col-md-8 admin-invoices">
+			<div class="page-header">
+			  <div class="row">
+			  	<div class="col-md-12">
+			  		<h2>Список заказов</h2>		
+			  	</div>
+			  </div>
+			</div>
 			<div ng-repeat="order in orders">
-				<p>{{order.id}}</p>
+				<div class="col-md-2">{{order.id}}</div>
+				<div class="col-md-6"><a href="#/admin/invoices/{{order.id}}">{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</a></div>
+				<div class="col-md-4">Товаров: {{order.invoice_items.length}}</div>
 			</div>
 		</div>
 	</div>

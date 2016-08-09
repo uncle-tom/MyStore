@@ -112,6 +112,11 @@ angular
         controller: 'invoicesCtrl',
         templateUrl: 'admin/invoices.html'
       })
+      .state('admininvoiceshow', {
+        url: '/admin/invoices/{id}',
+        controller: 'invoicesCtrl',
+        templateUrl: 'admin/invoiceshow.html'
+      })
       .state('adminpage', {
         url: '/admin/pages',
         controller: 'pageCtrl',
