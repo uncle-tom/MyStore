@@ -6,7 +6,10 @@
 			<adminsidebar></adminsidebar>			
 		</div>
 		<div class="col-md-10">
-			<h2>Many invoices</h2>			
+			<h2>Список заказов</h2>
+			<div ng-repeat="order in orders">
+				<p>{{order.id}}</p>
+			</div>
 		</div>
 	</div>
 </div>

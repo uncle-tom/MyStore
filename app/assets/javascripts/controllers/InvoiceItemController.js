@@ -1,5 +1,5 @@
 angular
-  .module('myApp')
+  .module('MyStore')
   .controller('InvoiceItemController', InvoiceItemController);
 
   function InvoiceItemController($scope, InvoiceItem, $stateParams, $http) {
