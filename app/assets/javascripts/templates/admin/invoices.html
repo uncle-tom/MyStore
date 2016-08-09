@@ -13,11 +13,23 @@
 			  	</div>
 			  </div>
 			</div>
-			<div ng-repeat="order in orders">
-				<div class="col-md-2">{{order.id}}</div>
-				<div class="col-md-6"><a href="#/admin/invoices/{{order.id}}">{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</a></div>
-				<div class="col-md-4">Товаров: {{order.invoice_items.length}}</div>
-			</div>
+			<table class="table table-striped">
+      	<thead>
+      		<tr>
+      			<th>Номер заказа</th>
+      			<th>Кол-во товаров</th>
+      			<th>Время заказа</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr ng-repeat="order in orders | orderBy:order.id:!reverse">
+      			<td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+      			<td>{{order.invoice_items.length}}</td>
+      			<td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+      		</tr>
+      	</tbody>
+      </table>
+			
 		</div>
 	</div>
 </div>
