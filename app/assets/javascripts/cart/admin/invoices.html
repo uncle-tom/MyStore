@@ -1,0 +1,35 @@
+<div ng-include="'header/headeradmin.html'"></div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+			<adminsidebar></adminsidebar>			
+		</div>
+		<div class="col-md-8 admin-invoices">
+			<div class="page-header">
+			  <div class="row">
+			  	<div class="col-md-12">
+			  		<h2>Список заказов</h2>		
+			  	</div>
+			  </div>
+			</div>
+			<table class="table table-striped">
+      	<thead>
+      		<tr>
+      			<th>Номер заказа</th>
+      			<th>Кол-во товаров</th>
+      			<th>Время заказа</th>
+      		</tr>
+      	</thead>
+      	<tbody>
+      		<tr ng-repeat="order in orders | orderBy:order.id:!reverse">
+      			<td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+      			<td>{{order.invoice_items.length}}</td>
+      			<td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+      		</tr>
+      	</tbody>
+      </table>
+			
+		</div>
+	</div>
+</div>

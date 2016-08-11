@@ -1,0 +1,79 @@
+<div ng-include="'header/header.html'"></div>
+<!-- Хлебные крошки -->
+<div class="container-fluid breadcrumb-catalog">
+	<div class="row">
+		<div class="col-md-12">
+			<div xmlns:v="http://rdf.data-vocabulary.org/#">
+				<span typeof="v:Breadcrumb">
+				<a href="/" rel="v:url" property="v:title"> CandyLadyShop</a> › </span>
+				<span typeof="v:Breadcrumb"> <a href="http://candyladyshop.ru/#categories/{{resp.category.name}}" rel="v:url" property="v:title">{{resp.category.name}}</a> </span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Хлебные крошки -->
+<div class="container-fluid catalog">
+	<div class="row">
+		<!-- Сайдбар - Категории - Фильтры -->
+		<div class="col-md-3">
+			<div class="sidebar" ng-controller="categoryCtrl">
+				<h4>Категории</h4>
+				<div ng-repeat="cat in categories">
+					<p ng-class="{ active: isActive('/categories/{{cat.name}}')}"><a href="#/categories/{{cat.name}}">{{cat.name}}</a></p>	
+				</div>
+			</div>
+
+			<div class="sidebar" ng-controller="adminCtrl">
+				<h4>Выберете нужный размер</h4>
+				<span ng-repeat="size in sizes">
+					<md-button>{{size.size}}</md-button>
+				</span>
+			</div>
+			<div class="sidebar" ng-controller="adminCtrl">
+				<h4>Выберете нужный цвет</h4>
+				<span ng-repeat="color in colors">
+					<md-button>{{color.color}}</md-button>
+				</span>
+			</div>
+			<div class="sidebar">
+				<h4>Выберете стоимость</h4>
+				<input type="range" min="0" max="5000" data-ng-model="qty" />
+		    <div class="row">
+		      <div class="col-md-6">
+		        <p class="pull-left">0</p>
+		      </div>
+		      <div class="col-md-6">
+		        <p class="pull-right">{{qty}}</p>
+		      </div>
+		    </div>
+			</div>
+			
+		</div>
+		<!-- Сайдбар - Категории - Фильтры -->
+
+		<!-- Список продуктов -->
+		<div class="col-md-9">
+			<div class="col-md-12">
+				<h1>{{resp.category.name}}</h1>	
+			</div>
+			
+			<div ng-repeat="product in resp.products | filter: minpriceFilter">
+				<div class="col-md-4">
+					<div class="product myfade">
+						<a href="#/product/{{product.id}}">
+						<div class="product-photo">
+							<mainphotoproduct></mainphotoproduct>
+						</div>
+						<h4>{{product.name}}</h4>
+						<p>{{product.description | limitTo:50}}..</p></a>
+						<h4>{{product.price}} &#8381;</h4>
+						<ngcart-addtocart  id="{{product.id}}" name="{{product.name}}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
+						<!-- <md-button  style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Купить</md-button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Список продуктов -->
+	</div>
+</div>
+<div ng-include="'footer/footer.html'"></div>

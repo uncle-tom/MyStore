@@ -30,7 +30,7 @@ angular
       .state('product', {
         url: '/product/{id}', 
         controller: 'productCtrl',
-        templateUrl: 'product/show.html'
+        templateUrl: 'product1/show.html'
       })
       .state('catalog', {
         url: '/catalog', 

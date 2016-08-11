@@ -32,9 +32,6 @@
 //= require angular-file-upload
 //= require md-steppers
 //= require_tree ./models
-//= require_tree ./directives
-//= require_tree ./controllers
-//= require_tree ./templates
 //= require_tree ./animations
 //= require angular-aria
 //= require angular-material
