@@ -15,38 +15,10 @@
 
 <div class="container-fluid">
 	<div class="row product-page">
-		<!-- Информация о продукте -->
-		<div class="col-md-5 product-page_info">
-			<h2>{{product.name}}</h2>
-			<pre>{{product.description}}</pre>
-			<h3>Стоимость: {{product.price}} &#8381;</h3>
-			<h3>Цена со скидкой: {{product.sale_price}} &#8381;</h3>
-			<h4 ng-if="product.has_popular">Это популярный товар!</h4>
-			<md-input-container>
-        <label>Размер</label>
-        <md-select ng-model="product_size">
-          <md-option ng-repeat="size in product.size" value="{{size}}">
-            {{size}}
-          </md-option>
-        </md-select>
-      </md-input-container>
-      <md-input-container>
-        <label>Цвет</label>
-        <md-select ng-model="product_color">
-          <md-option ng-repeat="color in product.color" value="{{color}}">
-            {{color}}
-          </md-option>
-        </md-select>
-      </md-input-container>
-      <br>
-      <div class="pc-show">
-				<ngcart-addtocart id="{{product.id}}" name="{{product.name}}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
-			</div>
-		</div>
-		<!-- Информация о продукте -->
+		
 
 		<!-- Фотки для компа -->
-		<div class="col-md-7 pc-show">
+		<div class="col-md-6 pc-show">
 			<ul class="product-thumbs">
 			  <li ng-repeat="img in product.photos">
 			    <img src="{{img.image.url}}" ng-click="setImage(img.image.url)" />
@@ -59,12 +31,60 @@
 			</div>
 		</div>
 		<!-- Фотки для компа -->
+		<!-- Информация о продукте -->
+		<div class="col-md-4 col-md-offset-1">
+			<div class="product-page_info">
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<h4>{{product.name}}
+							<br><h6>Артикул: </h6>
+						</h4>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<h4 class="pull-right" ng-class="{'active': {{product.in_stock}}, 'yellow': {{!product.in_stock}} }">{{product.in_stock ? 'В наличии' : 'Нет в наличии'}}</h4>
+					</div>
+				</div>
 
+				<p class="product-price text-center">{{product.price}} &#8381;
+					<br><span ng-if="product.sale_price">{{product.sale_price}} &#8381;</span>
+				</p>
+
+				<h4 ng-if="product.has_popular">Это популярный товар!</h4>
+				
+				<div class="text-center">
+					<md-input-container>
+		        <label>Размер</label>
+		        <md-select ng-model="product_size">
+		          <md-option ng-repeat="size in product.size" value="{{size}}">
+		            {{size}}
+		          </md-option>
+		        </md-select>
+		      </md-input-container>
+		      <md-input-container>
+		        <label>Цвет</label>
+		        <md-select ng-model="product_color">
+		          <md-option ng-repeat="color in product.color" value="{{color}}">
+		            {{color}}
+		          </md-option>
+		        </md-select>
+		      </md-input-container>
+				</div>
+				
+	      <br>
+	      <div class="text-center pc-show product-addtocart">
+					<ngcart-addtocart id="{{product.id}}" name="{{product.name}}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
+				</div>
+			</div>
+			<h3>Описание товара:
+			<br><pre>{{product.description}}</pre>
+			</h3>
+		</div>
+		<!-- Информация о продукте -->
 		<!-- Для мобилки -->
 		<div class="col-md-7 mobile-show">
 			<ks-swiper-container swiper="swiper" initial-slide="0" loop="true"  pagination-is-active="true" slides-per-view="1" space-between="5" pagination-clickable="false" autoplay="42500"> 
-			  <ks-swiper-slide class="swiper-slide" ng-repeat="img in product.images">
-			    <img src="{{img}}" alt="">
+			  <ks-swiper-slide class="swiper-slide" ng-repeat="img in product.photos">
+			    <img src="{{img.image.url}}" alt="">
 			  </ks-swiper-slide>
 			</ks-swiper-container>
 			<br><md-input-container>
