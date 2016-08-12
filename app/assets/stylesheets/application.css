@@ -17,6 +17,7 @@
 @import "angular-material/angular-material.css";
 @import "swiper/dist/css/swiper.min.css";
 @import "md-steppers/dist/md-steppers.min.css";
+
 @import url(https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic);
 
@@ -491,8 +492,8 @@ footer {
 
 .product-addtocart .buy-button_pc {
 	width: 100%;
-  font-size: 40px;
-  padding: 12px 0px;
+  font-size: 25px;
+  padding: 5px 0px;
 }
 
 .product-images_main {

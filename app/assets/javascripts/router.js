@@ -25,7 +25,7 @@ angular
       .state('home', {
         url: '/', 
         controller: 'mainCtrl',
-        templateUrl: 'index.html'
+        templateUrl: 'main/index.html'
       })
       .state('product', {
         url: '/product/{id}', 
@@ -45,22 +45,17 @@ angular
       .state('about', {
         url: '/about', 
         controller: 'mainCtrl',
-        templateUrl: 'about.html'
+        templateUrl: 'main/about.html'
       })
       .state('contact', {
         url: '/contact', 
         controller: 'mainCtrl',
-        templateUrl: 'contact.html'
+        templateUrl: 'main/contact.html'
       })
       .state('cart', {
         url: '/cart', 
         controller: 'mainCtrl',
         templateUrl: 'cart/cart.html'
-      })
-      .state('checkout', {
-        url: '/checkout', 
-        controller: 'mainCtrl',
-        templateUrl: 'cart/checkout.html'
       })
       .state('admin', {
         url: '/admin',
@@ -75,57 +70,57 @@ angular
       .state('adminproduct', {
         url: '/admin/product',
         controller: 'productCtrl',
-        templateUrl: 'admin/product.html'
-      })
-      .state('editproduct', {
-        url: '/admin/product/edit/{id}',
-        controller: 'productCtrl',
-        templateUrl: 'admin/productedit.html'
-      })
-      .state('photos', {
-        url: '/admin/product/photos/{id}',
-        controller: 'productPhotosCtrl',
-        templateUrl: 'admin/product_photos.html'
-      })
-      .state('editcategory', {
-        url: '/admin/category/edit/{id}',
-        controller: 'categoryCtrl',
-        templateUrl: 'admin/categoryedit.html'
-      })
-      .state('admincategory', {
-        url: '/admin/category',
-        controller: 'categoryCtrl',
-        templateUrl: 'admin/category.html'
+        templateUrl: 'product/admin/product.html'
       })
       .state('addnewproduct', {
         url: '/admin/addnewproduct',
         controller: 'addNewProduct',
-        templateUrl: 'admin/addnewproduct.html'
+        templateUrl: 'product/admin/addnewproduct.html'
+      })
+      .state('editproduct', {
+        url: '/admin/product/edit/{id}',
+        controller: 'productCtrl',
+        templateUrl: 'product/admin/productedit.html'
+      })
+      .state('photos', {
+        url: '/admin/product/photos/{id}',
+        controller: 'productPhotosCtrl',
+        templateUrl: 'photo/admin/product_photos.html'
+      })
+      .state('editcategory', {
+        url: '/admin/category/edit/{id}',
+        controller: 'categoryCtrl',
+        templateUrl: 'category/admin/categoryedit.html'
+      })
+      .state('admincategory', {
+        url: '/admin/category',
+        controller: 'categoryCtrl',
+        templateUrl: 'category/admin/category.html'
       })
       .state('addnewcategory', {
         url: '/admin/addnewcategory',
         controller: 'addNewCategory', 
-        templateUrl: 'admin/addnewcategory.html'
+        templateUrl: 'category/admin/addnewcategory.html'
       })
       .state('admininvoices', {
         url: '/admin/invoices',
         controller: 'invoicesCtrl',
-        templateUrl: 'admin/invoices.html'
+        templateUrl: 'cart/admin/invoices.html'
       })
       .state('admininvoiceshow', {
         url: '/admin/invoices/{id}',
         controller: 'invoicesCtrl',
-        templateUrl: 'admin/invoiceshow.html'
+        templateUrl: 'cart/admin/invoiceshow.html'
       })
       .state('adminpage', {
         url: '/admin/pages',
         controller: 'pageCtrl',
-        templateUrl: 'admin/pages.html'
+        templateUrl: 'page/admin/pages.html'
       })
       .state('addnewpage', {
         url: '/admin/addnewpage',
         controller: 'addNewPage',
-        templateUrl: 'admin/addnewpage.html'
+        templateUrl: 'page/admin/addnewpage.html'
       });
       $urlRouterProvider.otherwise('/');
     }

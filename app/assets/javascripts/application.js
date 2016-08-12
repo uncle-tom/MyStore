@@ -44,6 +44,7 @@
 //= require_tree ./photo
 //= require_tree ./animations
 //= require_tree ./template
+//= require_tree ./plugins
 //= require angular-aria
 //= require angular-material
 //= require angular-timeago

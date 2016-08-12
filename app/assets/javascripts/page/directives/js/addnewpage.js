@@ -3,6 +3,6 @@ angular
 	.directive('addnewpage', function(){
 		return {
 			restrict: 'E',
-			templateUrl: "directives/admin/html/addnewpage.html"
+			templateUrl: "page/directives/html/addnewpage.html"
 		}
 	})

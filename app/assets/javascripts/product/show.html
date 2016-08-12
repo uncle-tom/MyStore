@@ -25,9 +25,12 @@
 			  </li>
 			</ul>
 			<div class="product-images">
-			  <img ng-src="{{img.image.url}}" class="product-images_main"
-			      ng-class="{selected: img.image.url === mainImageUrl}"
-			      ng-repeat="img in product.photos" />
+			  <img 
+			  ng-src="{{img.image.middle.url}}"  
+			  data-zoom-image="{{img.image.url}}"
+			  class="product-images_main"
+			  ng-class="{selected: img.image.url === mainImageUrl}"
+			  ng-repeat="img in product.photos" />
 			</div>
 		</div>
 		<!-- Фотки для компа -->
@@ -193,4 +196,9 @@
     </md-tabs>
   </md-content>
 </div>
+
+<img class="ppp" src='http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/small/image1.png' data-zoom-image="http://www.elevateweb.co.uk/wp-content/themes/radial/zoom/images/large/image1.jpg"/> 
 <div ng-include="'footer/footer.html'"></div>
+<script>
+	$('img').elevateZoom({zoomType:"inner"});
+</script>

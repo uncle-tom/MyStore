@@ -48,4 +48,10 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
       window.location.reload();
     });
   }
+
+  $scope.images = [
+    {
+      url:"https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/13227725_572348286259991_2582891693683454351_o.jpg"
+    }
+  ]
 }

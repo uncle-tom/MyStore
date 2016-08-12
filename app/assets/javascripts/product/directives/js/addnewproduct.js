@@ -3,6 +3,6 @@ angular
 	.directive('addnewproduct', function(){
 		return {
 			restrict: 'E',
-			templateUrl: "directives/admin/html/addnewproduct.html"
+			templateUrl: "product/directives/html/addnewproduct.html"
 		}
 	})

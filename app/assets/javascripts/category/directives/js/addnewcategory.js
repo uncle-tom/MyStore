@@ -3,6 +3,6 @@ angular
 	.directive('addnewcategory', function(){
 		return {
 			restrict: 'E',
-			templateUrl: "directives/admin/html/addnewcategory.html"
+			templateUrl: "category/directives/html/addnewcategory.html"
 		}
 	})

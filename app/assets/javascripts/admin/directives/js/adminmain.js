@@ -3,6 +3,6 @@ angular
 	.directive('adminmain', function(){
 		return {
 			restrict: 'E',
-			templateUrl: "directives/admin/html/adminmain.html"
+			templateUrl: "admin/directives/html/adminmain.html"
 		}
 	})

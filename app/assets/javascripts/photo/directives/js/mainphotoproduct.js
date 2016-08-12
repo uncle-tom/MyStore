@@ -3,6 +3,6 @@ angular
 	.directive('mainphotoproduct', function(){
 		return {
 			restrict: 'E',
-			templateUrl: "directives/category/html/mainphotoproduct.html"
+			templateUrl: "photo/directives/html/mainphotoproduct.html"
 		}
 	})
