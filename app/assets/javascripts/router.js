@@ -14,13 +14,15 @@ angular
     'xeditable',
     'yaru22.angular-timeago',
     'ngCart',
-    'md-steppers'
+    'md-steppers',
+    'pascalprecht.translate'
   ])
   .config([
     '$stateProvider',
     '$urlRouterProvider',
     '$locationProvider',
-    function($stateProvider, $urlRouterProvider, $locationProvider) {
+    '$translateProvider',
+    function($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider) {
       $stateProvider
       .state('home', {
         url: '/', 
@@ -123,5 +125,43 @@ angular
         templateUrl: 'page/admin/addnewpage.html'
       });
       $urlRouterProvider.otherwise('/');
+
+      $translateProvider.translations('en', {
+        'ADMIN_WELCOME': 'Welcome!',
+        'ADMIN_WELCOME_MESSEGE': 'This admin panel managing your online store. Here you can quickly and easily add items, edit, upload photos, search and perform fine adjustments of the site. All this is very simple and does not require you to special knowledge.',
+        'ADMIN_SIDEBAR_MAIN': 'Main',
+        'ADMIN_SIDEBAR_PRODUCTS': 'Products',
+        'ADMIN_SIDEBAR_CATEGORIES': 'Categories',
+        'ADMIN_SIDEBAR_PAGES': 'Pages',
+        'ADMIN_SIDEBAR_ORDERS': 'Orders',
+        'CHANGE_LANGUAGE_ENGLISH_BUTTON': 'English',
+        'CHANGE_LANGUAGE_RUSSIAN_BUTTON': 'Russian',
+        'CHANGE_LANGUAGE_UKRAINE_BUTTON': 'Ukraine'
+      });
+   
+      $translateProvider.translations('ru', {
+        'ADMIN_WELCOME': 'Добро пожаловать!',
+        'ADMIN_WELCOME_MESSEGE': 'Это админ панель управление вашего интернет-магазина. Здесь вы сможете легко и просто добавлять товар, редактировать его, загружать фотографии, категории и проводить тонкие настройки сайта. Все это очень просто и не потребует от вас специальных знаний.',
+        'ADMIN_SIDEBAR_MAIN': 'Основное',
+        'ADMIN_SIDEBAR_PRODUCTS': 'Товары',
+        'ADMIN_SIDEBAR_CATEGORIES': 'Категории',
+        'ADMIN_SIDEBAR_PAGES': 'Страницы',
+        'ADMIN_SIDEBAR_ORDERS': 'Заказы',
+        'CHANGE_LANGUAGE_ENGLISH_BUTTON': 'Английский',
+        'CHANGE_LANGUAGE_RUSSIAN_BUTTON': 'Русский',
+        'CHANGE_LANGUAGE_UKRAINE_BUTTON': 'Украинский'
+      });
+
+      $translateProvider.translations('ua', {
+        'ADMIN_WELCOME': 'Ласкаво просимо!',
+        'ADMIN_WELCOME_MESSEGE': 'Це адмін панель управління вашого інтернет-магазину. Тут ви зможете легко і просто додавати товар, редагувати його, завантажувати фотографії, категорії і проводити тонкі настройки сайту. Все це дуже просто і не зажадає від вас спеціальних знань.',
+        'ADMIN_SIDEBAR_MAIN': 'Основне',
+        'CHANGE_LANGUAGE_ENGLISH_BUTTON': 'Англійська',
+        'CHANGE_LANGUAGE_RUSSIAN_BUTTON': 'Русский',
+        'CHANGE_LANGUAGE_UKRAINE_BUTTON': 'Український'
+      });
+   
+      $translateProvider.preferredLanguage('en');
     }
+    
   ]);

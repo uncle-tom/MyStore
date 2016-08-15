@@ -95,6 +95,7 @@ body {
 
 li {
 	list-style-type: none;
+	outline: none;
 }
 
 pre {
@@ -530,6 +531,22 @@ footer {
   padding-bottom: 20px;
 }
 
+.sale-true {
+	color: #777777;
+	text-decoration: line-through;
+}
+
+.in_stock-true {
+	background: green;
+  padding: 6px 8px;
+  color: white;
+}
+
+.in_stock-false {
+	background: rgb(255,64,129);
+  padding: 6px 8px;
+  color: white;
+}
 /****************
 	Catalog's Page
 ****************/

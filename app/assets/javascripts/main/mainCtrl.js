@@ -102,6 +102,7 @@ function mainCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, n
           });
 
           address.$save();
+          ngCart.empty()
         });
       })
     }

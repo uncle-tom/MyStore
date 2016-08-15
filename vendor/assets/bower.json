@@ -20,6 +20,7 @@
     "angular-swiper": "latest",
     "ngstorage": "latest",
     "ngcart": "latest",
-    "md-steppers": "latest"
+    "md-steppers": "latest",
+    "angular-translate": "latest"
   }
 }
