@@ -62,13 +62,13 @@
 	.catalog .catalog_buybutton {
 		width: 100%;
 	}
-	.admin-sidebar_right {
+	.admin-sidebar_right, .addproductphoto, .productphotolist {
 		margin: 20px 0px !important;
 	}
 	.admin-sidebar_right_position {
 		float: left !important;
 	}
-	.adminproduct_position {
+	.adminproduct_position, .admincategory_position {
 		float: right !important;
 	}
 	.addproduct, .addcategory, .adminorderbutton {
@@ -677,6 +677,11 @@ li.active { color:orange;  }
   float: right;
   padding: 0px 0px 0px 10px;
   outline: none;
+}
+
+.adminproductlist_sort span {
+	outline: none;
+	color: blue;
 }
     
 .admin-sidebar_right_position {

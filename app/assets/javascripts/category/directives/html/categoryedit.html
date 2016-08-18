@@ -1,23 +1,23 @@
-<h2>Редактирование категории</h2></br>
+<h2>{{'ADMIN_CATEGORY_EDIT_TITLE' | translate }}</h2></br>
 <form>
 	<md-input-container class="md-icon-float md-block">
-    <label>Название категории</label>
+    <label>{{'ADMIN_CATEGORY_ADD_NAME' | translate }}</label>
     <input ng-model="category.name" type="text">
   </md-input-container>
 	
-	<md-checkbox ng-click="includesCity_name('Стрелковое')">
-  	Родительская категория
+	<md-checkbox>
+  	{{'ADMIN_CATEGORY_ADD_PARENT' | translate }}
   </md-checkbox>
 	
 	<div ng-controller="categoryCtrl">
-		<div class="form-group select hotel_city_name">
-	    <label class="select control-label" for="hotel_city_name">Выберите родительскую категорию</label>
-	    <select class="select form-control" id="hotel_city_name">
-	    	<div ng-repeat="i in items">
-	    		<option value="{{ i }}">{{ i }}</option>
-	    	</div>
-	    </select>
-	  </div>
+		<div class="form-group select category_parent_id">
+	  <label class="select control-label" for="category.parent_id">
+	  {{'ADMIN_CATEGORY_ADD_SELECT_PARENT' | translate }}</label>
+	  <select class="select form-control" ng-model="category.parent_id" id="category_parent_id">
+	    <option ng-repeat="category in categories" ng-if="!category.parent_id" value="{{category.id}}">{{ category.name }}</option>
+	 </select>
+	</div>
+
   </div>
-  <md-button ng-click="editCategory()" class="md-raised md-primary">Редактировать категорию</md-button>
+  <md-button ng-click="editCategory()" class="md-raised md-primary">{{'ADMIN_CATEGORY_EDIT_BUTTON' | translate }}</md-button>
 </form>

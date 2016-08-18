@@ -2,14 +2,22 @@
 	<div class="page-header">
 	  <div class="row">
 	  	<div class="col-md-6">
-	  		<h2>Список товаров</h2>		
+	  		<h2>{{'ADMIN_PRODUCT_LIST' | translate }}</h2>
+	  		<p class="adminproductlist_sort">Сортировка по: <span ng-click="predicate = 'name'; reverse=!reverse">Имени</span> | <span ng-click="predicate = 'created_at'; reverse=!reverse">Дате</span> | <span ng-click="predicate = 'price'; reverse=!reverse">Цене</span></p>
+	  		<p>Показать продукты из категории:</p>
+	  		<div ng-controller="categoryCtrl">
+	  		<select ng-repeat="cat in categories">
+	  			<option value="Name">{{cat.name}}</option>
+	  		</select>
+	  		</div>
 	  	</div>
 	  	<div class="col-md-6">
-	  		<input type="text" placeholder="Поиск" ng-model="query">
+	  		<input type="text" placeholder="{{'ADMIN_SEARCH' | translate }}" ng-model="query">
 	  	</div>
 	  </div>
 	</div>
-	<div ng-repeat="product in products | filter:query">
+	
+	<div ng-repeat="product in products | filter:query | orderBy:predicate:reverse">
 		<div class="adminproductlist_one">
 			<div class="row">
 				<div class="col-md-4">
@@ -18,9 +26,9 @@
 				<div class="col-md-8">
 					<h4><a href="#/product/{{product.id}}">{{product.name}}</a></h4>
 					<h5>{{product.price}} &#8381;</h5>
-					<a href="#/admin/product/edit/{{product.id}}"><md-button class="md-raised">Редактировать</md-button></a>
-					<a href="#/admin/product/photos/{{product.id}}"><md-button class="md-raised">Фотоальбом</md-button></a>
-					<md-button class="md-raised" ng-click="productDel(product.id)">Удалить</md-button>
+					<a href="#/admin/product/edit/{{product.id}}"><md-button class="md-raised">{{'ADMIN_PRODUCT_BUTTON_EDIT' | translate }}</md-button></a>
+					<a href="#/admin/product/photos/{{product.id}}"><md-button class="md-raised">{{'ADMIN_PRODUCT_BUTTON_PHOTOALBUM' | translate }}</md-button></a>
+					<md-button class="md-raised" ng-click="productDel(product.id)">{{'ADMIN_PRODUCT_BUTTON_DELETE' | translate }}</md-button>
 				</div>
 			</div>
 		</div>	

@@ -1,50 +1,50 @@
 <div class="admin-main">
-  <h2>Основной раздел</h2><br>    
+  <h2>{{'ADMIN_MAIN_SECTION_TITLE' | translate }}</h2><br>    
   <form action="">
     <md-input-container class="md-icon-float md-block">
-      <label>Название сайта</label>
+      <label>{{'ADMIN_MAIN_SECTION_NAME_SITE' | translate}}</label>
       <input ng-model="newProduct.name" type="text">
     </md-input-container>
 
     <md-input-container class="md-block">
-      <label>Текст для главной страницы</label>
+      <label>{{'ADMIN_MAIN_SECTION_TEXT_MAIN_PAGE' | translate}}</label>
       <textarea ng-model="newProduct.description" rows="5" cols="5" md-select-on-focus></textarea>
     </md-input-container>
 
-    <h3>Контакты</h3></br> 
+    <h3>{{'ADMIN_MAIN_SECTION_CONTACTS' | translate}}</h3></br> 
 
     <md-input-container class="md-icon-float md-block">
-      <label>Номер телефона</label>
+      <label>{{'ADMIN_MAIN_SECTION_CONTACTS_PHONE' | translate}}</label>
       <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
       <input ng-model="newProduct.name" type="text">
     </md-input-container>
 
     <md-input-container class="md-icon-float md-block">
-      <label>Контактный email</label>
+      <label>{{'ADMIN_MAIN_SECTION_CONTACTS_EMAIL' | translate}}</label>
       <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
       <input ng-model="newProduct.name" type="text">
     </md-input-container>
 
-    <h3>Социальные сети</h3></br> 
+    <h3>{{'ADMIN_MAIN_SECTION_SOCIAL' | translate}}</h3></br> 
 
     <md-input-container class="md-icon-float md-block">
-      <label>Ссылка VK</label>
+      <label>{{'ADMIN_MAIN_SECTION_SOCIAL_VK' | translate}}</label>
       <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
       <input ng-model="newProduct.name" type="text">
     </md-input-container>
 
     <md-input-container class="md-icon-float md-block">
-      <label>Ссылка Facebook</label>
+      <label>{{'ADMIN_MAIN_SECTION_SOCIAL_FACEBOOK' | translate}}</label>
       <md-icon md-svg-src="/assets/images/icon/facebook.png" class="name"></md-icon>
       <input ng-model="newProduct.name" type="text">
     </md-input-container>
 
     <md-input-container class="md-icon-float md-block">
-      <label>Ссылка Instagram</label>
+      <label>{{'ADMIN_MAIN_SECTION_SOCIAL_INTAGRAM' | translate}}</label>
       <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
       <input ng-model="newProduct.name" type="text">
     </md-input-container>
 
-    <md-button class="md-raised md-primary">Обновить информацию</md-button>
+    <md-button class="md-raised md-primary">{{'ADMIN_MAIN_SECTION_BUTTON' | translate}}</md-button>
   </form>
 </div>  

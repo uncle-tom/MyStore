@@ -8,8 +8,8 @@
 		<div class="col-md-3 col-xs-12 admin-sidebar_right_position">
 			<div class="admin-sidebar_right">
 				<div class="adminorderbutton">
-					<md-button class="md-raised" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80); margin-bottom: 20px;">Принять</md-button>
-					<md-button class="md-raised md-accent" ng-click="orderDel(order.id)">Удалить</md-button>
+					<md-button class="md-raised" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80); margin-bottom: 20px;">{{'ADMIN_ORDER_BUTTON_STATUS_SUCCESS' | translate }}</md-button>
+					<md-button class="md-raised md-accent" ng-click="orderDel(order.id)">{{'ADMIN_ORDER_BUTTON_STATUS_DELETE' | translate }}</md-button>
 				</div>
 			</div>
 		</div>
@@ -17,16 +17,16 @@
 			<div class="page-header">
 			  <div class="row">
 			  	<div class="col-md-12">
-			  		<h2>Номер заказа: {{order.id}}</h2>
+			  		<h2>{{'ADMIN_ORDER_NUMBER' | translate }}: {{order.id}}</h2>
 			  	</div>
 			  </div>
 			</div>
       <table class="table table-striped">
       	<thead>
       		<tr>
-      			<th>Название продукта</th>
-      			<th>Кол-во</th>
-      			<th>Цена</th>
+      			<th>{{'ADMIN_PRODUCT_ADD_NAME' | translate }}</th>
+      			<th>{{'ADMIN_ORDER_QTY' | translate }}</th>
+      			<th>{{'ADMIN_PRODUCT_ADD_PRICE' | translate }}</th>
       		</tr>
       	</thead>
       	<tbody>
@@ -40,18 +40,18 @@
       <div class="page-header">
 			  <div class="row">
 			  	<div class="col-md-12">
-			  		<h3>Информация о заказе</h3>
+			  		<h3>{{'ADMIN_ORDER_INFO' | translate }}</h3>
 			  	</div>
 			  </div>
 			</div>
 			<table class="table table-striped">
       	<thead>
       		<tr>
-      			<th>Имя</th>
-      			<th>Телефон</th>
-      			<th>Email</th>
-      			<th>Город</th>
-      			<th>Адрес</th>
+      			<th>{{'ADMIN_ORDER_NAME' | translate }}</th>
+      			<th>{{'ADMIN_ORDER_PHONE' | translate }}</th>
+      			<th>{{'ADMIN_ORDER_EMAIL' | translate }}</th>
+      			<th>{{'ADMIN_ORDER_CITY' | translate }}</th>
+      			<th>{{'ADMIN_ORDER_ADDRESS' | translate }}</th>
       		</tr>
       	</thead>
       	<tbody>
@@ -64,11 +64,11 @@
       		</tr>
       	</tbody>
       </table>
-      <p>Способ оплаты: {{order.payment_type}}</p>
+      <p>{{'ADMIN_ORDER_PAYMENT_TYPE' | translate }}: {{order.payment_type}}</p>
       <div class="page-header">
 			  <div class="row">
 			  	<div class="col-md-12">
-			  		<h3>Заметки:</h3>
+			  		<h3>{{'ADMIN_ORDER_NOTES' | translate }}:</h3>
 			  	</div>
 			  </div>
 			</div>

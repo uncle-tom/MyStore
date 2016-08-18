@@ -6,11 +6,11 @@
         <div class="admin-sidebar_right">
           <div class="addproduct">
             <md-checkbox ng-model="product.has_popular">
-              Популярный товар?
+              {{'ADMIN_PRODUCT_ADD_POPULAT' | translate }}
             </md-checkbox>
 
             <md-checkbox ng-model="product.in_stock">
-              Есть в наличии?
+              {{'ADMIN_PRODUCT_ADD_STOCK' | translate }}
             </md-checkbox>
           </div>
         </div>
@@ -19,32 +19,32 @@
       </div>
 
       <div class="col-md-8">
-        <h2>Редактирование товара</h2></br>
+        <h2>{{'ADMIN_PRODUCT_EDIT_TITLE' | translate }}</h2></br>
         <md-input-container class="md-icon-float md-block">
-          <label>URL товара | Например: redskip</label>
+          <label>{{'ADMIN_PRODUCT_ADD_URL' | translate }}</label>
           <input ng-model="product.permalink" type="text">
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
-          <label>Название товара</label>
+          <label>{{'ADMIN_PRODUCT_ADD_NAME' | translate }}</label>
           <input ng-model="product.name" type="text">
         </md-input-container>
 
         <md-input-container class="md-block">
-          <label>Цена</label>
+          <label>{{'ADMIN_PRODUCT_ADD_PRICE' | translate }}</label>
           <input step="any" ng-model="product.price"/>
         </md-input-container>
         <md-checkbox ng-model="has_sale">
-         Есть скидка?
+         {{'ADMIN_PRODUCT_ADD_HAS_SALE' | translate }}
         </md-checkbox>
         <div class="sale_price" ng-if="has_sale">
         <md-input-container class="md-block">
-          <label>Цена со скидкой</label>
+          <label>{{'ADMIN_PRODUCT_ADD_SALE' | translate }}</label>
           <input type="number" step="any" ng-model="product.sale_price"/>
         </md-input-container>
         </div>
         <div>
         <md-input-container>
-          <label>Размер</label>
+          <label>{{'ADMIN_PRODUCT_ADD_SIZES' | translate }}</label>
           <md-select ng-model="product.sizes" multiple>
             <md-optgroup label="Размеры">
                <md-option ng-repeat="size in sizes" value="{{size.size}}">
@@ -55,7 +55,7 @@
         </md-input-container>
         <br>
         <md-input-container>
-          <label>Цвет</label>
+          <label>{{'ADMIN_PRODUCT_ADD_COLOR' | translate }}</label>
           <md-select ng-model="product_color" multiple>
             <md-optgroup label="Цвета">
                <md-option ng-repeat="color in colors" value="{{color.color}}">
@@ -67,13 +67,13 @@
         </div>
 
         <md-input-container class="md-block">
-          <label>Описание товара</label>
+          <label>{{'ADMIN_PRODUCT_ADD_DESCRIPTION' | translate }}</label>
           <textarea ng-model="product.description" rows="5" cols="5" ></textarea>
         </md-input-container>
         
         <div ng-controller="categoryCtrl">
         <fieldset class="demo-fieldset" >
-          <legend class="demo-legend">Выберите подходящие категории</legend>
+          <legend class="demo-legend">{{'ADMIN_PRODUCT_ADD_CHOOSE_CATEGORY' | translate }}</legend>
           <div layout="row" layout-wrap flex>
             <div style="column-count: 3;">
               <div ng-repeat="category in categories">
@@ -86,7 +86,7 @@
         </fieldset>
         </div>
 
-        <md-button ng-click="productEdit()" class="md-raised md-primary">Обновить товар</md-button>
+        <md-button ng-click="productEdit()" class="md-raised md-primary">{{'ADMIN_PRODUCT_EDIT_BUTTON' | translate }}</md-button>
       </div>
     </form>
   </div>

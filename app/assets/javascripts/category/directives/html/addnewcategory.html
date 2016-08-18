@@ -1,20 +1,21 @@
-<h2>Добавление новой категории</h2></br>
+<h2>{{'ADMIN_CATEGORY_ADD_TITLE' | translate }}</h2></br>
 <form action="">
 	<md-input-container class="md-icon-float md-block">
-    <label>Название категории</label>
+    <label>{{'ADMIN_CATEGORY_ADD_NAME' | translate }}</label>
     <input ng-model="category.name" type="text">
   </md-input-container>
 	
 	<md-checkbox>
-  	Родительская категория
+  	{{'ADMIN_CATEGORY_ADD_PARENT' | translate }}
   </md-checkbox>
 	
 	<div class="form-group select category_parent_id">
-	  <label class="select control-label" for="category.parent_id">Выберите родительскую категорию</label>
+	  <label class="select control-label" for="category.parent_id">
+	  {{'ADMIN_CATEGORY_ADD_SELECT_PARENT' | translate }}</label>
 	  <select class="select form-control" ng-model="category.parent_id" id="category_parent_id">
 	    <option ng-repeat="category in categories" ng-if="!category.parent_id" value="{{category.id}}">{{ category.name }}</option> 
 	 </select>
 	</div>
 
-  <md-button ng-click="addCategory()" class="md-raised md-primary">Добавить категорию</md-button>
+  <md-button ng-click="addCategory()" class="md-raised md-primary">{{'ADMIN_CATEGORY_BUTTON_ADD' | translate }}</md-button>
 </form>

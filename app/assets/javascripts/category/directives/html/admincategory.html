@@ -2,7 +2,7 @@
 	<div class="page-header">
 		  <div class="row">
 		  	<div class="col-md-6">
-		  		<h2>Список категорий</h2>		
+		  		<h2>{{'ADMIN_CATEGORY_LIST' | translate }}</h2>		
 		  	</div>
 		  	<div class="col-md-6">
 		  		<input type="text" placeholder="Поиск" ng-model="query">
@@ -26,10 +26,10 @@
 					</div>
 
 					<div class="col-md-3">
-						<p><a href="#/admin/category/edit/{{cat.id}}">Редактировать</a></p>
+						<p><a href="#/admin/category/edit/{{cat.id}}">{{'ADMIN_CATEGORY_EDIT' | translate }}</a></p>
 					</div>
 					<div class="col-md-2">
-						<p ng-click="categoryDel(cat.id)">Удалить</p>
+						<p ng-click="categoryDel(cat.id)">{{'ADMIN_CATEGORY_DELETE' | translate }}</p>
 					</div>	
 				</div>
 			</div>
