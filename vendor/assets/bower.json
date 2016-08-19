@@ -21,6 +21,7 @@
     "ngstorage": "latest",
     "ngcart": "latest",
     "md-steppers": "latest",
-    "angular-translate": "latest"
+    "angular-translate": "latest",
+    "wowjs": "latest"
   }
 }

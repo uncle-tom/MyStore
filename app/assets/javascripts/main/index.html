@@ -9,24 +9,24 @@
 </div>
 <div class="container-fluid">
 	<div class="row ourplus">
-		<div class="col-md-4">
+		<div class="col-md-4 wow fadeIn" data-wow-delay="1.5s">
 			<img src="http://candyladyshop.ru/assets/img/ik2.png" alt="">
 			<h3>Большой ассортимент</h3>
 			<p>В нашем магазине Вы всегда найдёте что-то своё. У нас большой выбор цветов, форм и размеров. Убедитесь в этом сами!</p>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 wow fadeIn" data-wow-delay="1.8s">
 			<img src="http://candyladyshop.ru/assets/img/ik3.png" alt="">
 			<h3>Доступная примерка</h3>
 			<p>В наличии всегда множество различных комплектов, которые вы можете примерить в нашем шоуруме.</p>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 wow fadeIn" data-wow-delay="2.1s">
 			<img src="http://candyladyshop.ru/assets/img/ik1.png" alt="">
 			<h3>Быстрая доставка</h3>
 			<p>Доставка по Санкт-Петербургу осуществляется на следующий день после заказа. В другие города России в течение 5 - 7 дней.</p>
 		</div>
 	</div>
 </div>
-<section id="coolone">
+<section id="coolone" class="wow fadeIn" data-wow-delay="0.6s">
 	<div class="background-color">
 		<div class="container">
 			<h1>CandyLadyShop - нижнее белье в Санкт-Петербурге</h1>
@@ -38,7 +38,7 @@
 
 <div class="margin50"></div>
 
-<div class="container">
+<div class="container wow fadeIn" data-wow-delay="0.6s">
 	<md-content>
     <md-tabs md-dynamic-height md-border-bottom>
       <md-tab label="Новинки">
@@ -107,7 +107,7 @@
 <button type="button" class="button-more center-block"><a href="#/catalog">Перейти в каталог</a></button>
 
 
-<section id="cooltwo">
+<section id="cooltwo" class="wow fadeIn" data-wow-delay="0.6s">
 	<div class="background-color">
 		<div class="container">
 			<h1>Купить нижнее женское белье в интернет магазине CandyLadyShop</h1>
@@ -118,9 +118,9 @@
 </section>
 
 <div class="margin50"></div>
-<div class="container-fluid">
+<div class="container-fluid" >
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6 wow bounceInLeft" data-wow-duration="2s">
 			<div class="reviews">
 				<h2>Присоединяйтесь!</h2>
 				<h4>Покупайте, наслаждайтесь, делитесь эмоциями</h4>
@@ -136,7 +136,7 @@
 
 			<button type="button" class="button-more center-block"><a href="https://new.vk.com/topic-8129415_29157965?offset=260" target="_blank">Больше отзывов</a></button>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6 wow bounceInRight" data-wow-duration="2s">
 			<div class="buynow" ng-repeat="random in products | limitTo: 1">
 				<img src="http://candyladyshop.ru/assets/img/portfolio/21.jpg" alt="">
 				<h2>{{random.price_min}} рублей<br>Купить сейчас!</h2>
@@ -145,7 +145,7 @@
 	</div>
 </div>
 
-<section id="vk">
+<section id="vk" class="wow fadeIn" data-wow-delay="0.6s">
 	<div class="container">
 		<img src="assets/icon/vk-white-128.png" alt="" style="width: 82px;">
 		<h1>35,850</h1>
@@ -154,7 +154,7 @@
 	</div>
 </section>
 
-<div class="foundus">
+<div class="foundus wow fadeIn" data-wow-delay="0.6s">
 	<div class="foundus-text">
 		<h2>Ищите нас в Санкт-Петербурге</h2>
 		<hr></hr>
@@ -167,3 +167,7 @@
 </div>
 <div ng-include="'footer/footer.html'"></div>
 <a href="#/admin">Admin</a>
+
+<script type="text/javascript">
+	new WOW().init();
+</script>

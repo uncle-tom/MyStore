@@ -206,6 +206,12 @@ angular
         'ADMIN_HEADER_ON_SITE': 'Site',
         'ADMIN_HEADER_ON_ADMIN': 'Admin Panel',
 
+        'ADMIN_SORTED_BY': 'Sort by',
+        'ADMIN_SORTED_BY_NAME': 'Name',
+        'ADMIN_SORTED_BY_DATE': 'Date',
+        'ADMIN_SORTED_BY_PRICE': 'Price',
+        'ADMIN_SORTED_BY_CATEGORIES': 'Show products from the category',
+
         'CHANGE_LANGUAGE_ENGLISH_BUTTON': 'English',
         'CHANGE_LANGUAGE_RUSSIAN_BUTTON': 'Russian',
         'CHANGE_LANGUAGE_UKRAINE_BUTTON': 'Ukraine'
@@ -290,6 +296,12 @@ angular
 
         'ADMIN_HEADER_ON_SITE': 'На сайт',
         'ADMIN_HEADER_ON_ADMIN': 'Админка',
+
+        'ADMIN_SORTED_BY': 'Сортировка по',
+        'ADMIN_SORTED_BY_NAME': 'Имени',
+        'ADMIN_SORTED_BY_DATE': 'Дате',
+        'ADMIN_SORTED_BY_PRICE': 'Цене',
+        'ADMIN_SORTED_BY_CATEGORIES': 'Показать продукты из категории',
         
         'CHANGE_LANGUAGE_ENGLISH_BUTTON': 'Английский',
         'CHANGE_LANGUAGE_RUSSIAN_BUTTON': 'Русский',

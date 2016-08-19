@@ -3,21 +3,33 @@
 	  <div class="row">
 	  	<div class="col-md-6">
 	  		<h2>{{'ADMIN_PRODUCT_LIST' | translate }}</h2>
-	  		<p class="adminproductlist_sort">Сортировка по: <span ng-click="predicate = 'name'; reverse=!reverse">Имени</span> | <span ng-click="predicate = 'created_at'; reverse=!reverse">Дате</span> | <span ng-click="predicate = 'price'; reverse=!reverse">Цене</span></p>
-	  		<p>Показать продукты из категории:</p>
-	  		<div ng-controller="categoryCtrl">
-	  		<select ng-repeat="cat in categories">
-	  			<option value="Name">{{cat.name}}</option>
-	  		</select>
-	  		</div>
+	  		<p class="adminproductlist_sort">{{'ADMIN_SORTED_BY' | translate }}: <span ng-click="predicate = 'name'; reverse=!reverse">{{'ADMIN_SORTED_BY_NAME' | translate }}</span> | <span ng-click="predicate = 'created_at'; reverse=!reverse">{{'ADMIN_SORTED_BY_DATE' | translate }}</span> | <span ng-click="predicate = 'price'; reverse=!reverse">{{'ADMIN_SORTED_BY_PRICE' | translate }}</span></p>
+	  		<p>{{'ADMIN_SORTED_BY_CATEGORIES' | translate }}:</p>
+	  		<fieldset ng-controller="categoryCtrl">
+				<select 
+          ng-options="p.name for p in categories"
+          ng-model="selected"></select>
+       	<p>{{ selected.name }}</p> 
+				</fieldset>
+	  		<!-- <div ng-controller="categoryCtrl">
+	  		<md-input-container>
+          <label>{{'ADMIN_SIDEBAR_CATEGORIES' | translate }}</label>
+          <md-select ng-model="selected" multiple>
+            <md-optgroup label="Категории">
+               <md-option ng-options="cat.name for cat in categories">
+                {{selected}}
+              </md-option>
+            </md-optgroup>
+          </md-select>
+        </md-input-container>
+	  		</div> -->
 	  	</div>
 	  	<div class="col-md-6">
 	  		<input type="text" placeholder="{{'ADMIN_SEARCH' | translate }}" ng-model="query">
 	  	</div>
 	  </div>
 	</div>
-	
-	<div ng-repeat="product in products | filter:query | orderBy:predicate:reverse">
+	<div ng-repeat="product in products | filter:query | filter:selected.name | orderBy:predicate:reverse ">
 		<div class="adminproductlist_one">
 			<div class="row">
 				<div class="col-md-4">
@@ -26,6 +38,7 @@
 				<div class="col-md-8">
 					<h4><a href="#/product/{{product.id}}">{{product.name}}</a></h4>
 					<h5>{{product.price}} &#8381;</h5>
+					<h5>{{product.categories[0].name}}</h5>
 					<a href="#/admin/product/edit/{{product.id}}"><md-button class="md-raised">{{'ADMIN_PRODUCT_BUTTON_EDIT' | translate }}</md-button></a>
 					<a href="#/admin/product/photos/{{product.id}}"><md-button class="md-raised">{{'ADMIN_PRODUCT_BUTTON_PHOTOALBUM' | translate }}</md-button></a>
 					<md-button class="md-raised" ng-click="productDel(product.id)">{{'ADMIN_PRODUCT_BUTTON_DELETE' | translate }}</md-button>

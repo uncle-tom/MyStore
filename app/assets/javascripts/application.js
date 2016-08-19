@@ -50,4 +50,5 @@
 //= require angular-material
 //= require angular-timeago
 //= require sweetalert/dist/sweetalert.min.js
+//= require wowjs
 //#= require turbolinks

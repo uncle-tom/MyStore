@@ -1,6 +1,6 @@
 <div ng-include="'header/header.html'"></div>
 
-<div class="container">
+<div class="container a">
 <md-card ng-init="step3.disabled = true; step2.disabled = true; step4.disabled = true; selected = 0">
 <md-toolbar>
   <div class="md-toolbar-tools">
@@ -17,8 +17,8 @@
       </md-content>
       <md-step-actions layout="row">
         <div flex layout="row" layout-align="end top">
-          <a href="#/catalog"><md-button class="md-warn">Продолжить покупки</md-button></a>
-          <md-button class="md-primary md-raised" ng-click="selected = 1; step1.completed = true; step2.disabled = false;" ng-disabled="ngCart.getTotalItems() === 0">Оформить заказ</md-button>
+          <a href="#/catalog"><md-button class="md-warn">Назад</md-button></a>
+          <md-button class="md-primary md-raised" ng-click="selected = 1; step1.completed = true; step2.disabled = false;" ng-disabled="ngCart.getTotalItems() === 0">Далее</md-button>
           <h2>{{$scope.ngCart.getTotalItems()}}</h2>
         </div>
       </md-step-actions>
@@ -76,7 +76,29 @@
           <h2>Проверка данных:</h2>
           <p>Убедитесь, что все поля заполненны верно.</p>
           <ngcart-cart></ngcart-cart>
-          <table class="table table-striped">
+          <div class="mobile-show">
+            <div class="row">
+              <div class="col-xs-6 color-grey"><p>Имя</p></div>
+              <div class="col-xs-6"><p>{{user.name}}</p></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 color-grey"><p>Телефон</p></div>
+              <div class="col-xs-6"><p>{{user.phone}}</p></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 color-grey"><p>Email</p></div>
+              <div class="col-xs-6"><p>{{user.email}}</p></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 color-grey"><p>Город</p></div>
+              <div class="col-xs-6"><p>{{user.city}}</p></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 color-grey"><p>Адрес</p></div>
+              <div class="col-xs-6"><p>{{user.address}}</p></div>
+            </div>
+          </div>
+          <table class="pc-show table table-striped ng-show">
             <thead>
               <tr>
                 <th>Имя</th>
@@ -104,7 +126,7 @@
         <md-step-actions layout="row">
           <div flex layout="row" layout-align="end top">
             <md-button class="md-warn" ng-click="selected = 1">Назад</md-button>
-            <md-button type="submit" class="md-raised md-primary" ng-click="selected = 3; step3.completed = true; step4.disabled = false; updateOrder(ngCart.getCart())">Оформить заказ</md-button>
+            <md-button type="submit" class="md-raised md-primary" ng-click="selected = 3; step3.completed = true; step4.disabled = false; updateOrder(ngCart.getCart())">Оформить <span class="pc-show">заказ</span></md-button>
           </div>
         </md-step-actions>
     </md-step>
