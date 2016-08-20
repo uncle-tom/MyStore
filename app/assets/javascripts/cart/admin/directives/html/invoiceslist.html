@@ -1,0 +1,21 @@
+<div class="admin-sidebar_right">
+	<p>Список заказов:</p>
+	<div ng-controller="invoicesCtrl">
+		<div ng-repeat="i in orders">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="#/admin/invoices/{{i.id}}">№ {{i.id}}</a>
+				</div>
+				<div class="col-md-4">
+					{{i.created_at | date : 'shortDate'}}
+				</div>
+				<div class="col-md-4">
+					<p class="pull-right" ng-class="{'order_status-waiting' : i.order_status === 'В ожидании', 'color-grey' : i.order_status === 'Принят'}"></p>
+				</div>
+			</div>
+				
+				
+			
+		</div>
+	</div>
+</div>

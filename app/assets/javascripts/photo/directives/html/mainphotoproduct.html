@@ -3,8 +3,11 @@
 	ng-mouseenter="bg = product.photos[1].image.url"
 	ng-mouseleave="bg = product.photos[0].image.url"
 	ng-style="{ 'background-image': 'url(' + bg + ')' }">
+	<div ng-if="product.has_popular != null" class="haspopularphoto">
+		<span class="haspopular">Топ продаж</span>
+	</div>
 	<div ng-if="product.sale_price != null" class="salephoto">
-		<span class="sale">Скидка 10%</span>
+		<span class="sale">Акция</span>
 	</div>
 </div>
 

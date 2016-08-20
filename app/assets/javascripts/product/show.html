@@ -18,7 +18,7 @@
 		
 
 		<!-- Фотки для компа -->
-		<div class="col-md-6 pc-show">
+		<div class="col-md-6 pc-show wow bounceInLeft" data-wow-duration="2s">
 			<ul class="product-thumbs">
 			  <li ng-repeat="img in product.photos">
 			    <img src="{{img.image.url}}" ng-click="setImage(img.image.url)" />
@@ -34,7 +34,7 @@
 		</div>
 		<!-- Фотки для компа -->
 		<!-- Информация о продукте -->
-		<div class="col-md-4 col-md-offset-1">
+		<div class="col-md-4 col-md-offset-1 wow bounceInRight" data-wow-duration="2s">
 			<div class="product-page_info">
 				<div class="row">
 					<div class="col-md-6 col-xs-6">
@@ -199,4 +199,8 @@
 <div ng-include="'footer/footer.html'"></div>
 <script>
 	$('img').elevateZoom({zoomType:"inner"});
+</script>
+
+<script type="text/javascript">
+	new WOW().init();
 </script>

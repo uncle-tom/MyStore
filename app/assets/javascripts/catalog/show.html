@@ -55,10 +55,11 @@
 		<div class="col-md-9">
 			<div class="col-md-12">
 				<h1>Каталог женского нижнего белья</h1>	
+				<filterproductincategoryandcatalog></filterproductincategoryandcatalog>
 			</div>
 			
-			<div ng-repeat="product in products | filter: minpriceFilter">
-				<div class="col-md-4">
+			<div class="row2" ng-repeat="product in products | filter: minpriceFilter | orderBy:predicate:reverse">
+				<div class="col-md-4 margin-bottom50">
 					<div class="product myfade">
 						<a href="#/product/{{product.id}}">
 						<div class="product-photo">

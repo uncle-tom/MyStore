@@ -114,6 +114,11 @@ angular
         controller: 'invoicesCtrl',
         templateUrl: 'cart/admin/invoiceshow.html'
       })
+      .state('sendemail', {
+        url: '/admin/sendemail',
+        controller: 'sendemailCtrl',
+        templateUrl: 'sendemail/admin/sendemail.html'
+      })
       .state('adminpage', {
         url: '/admin/pages',
         controller: 'pageCtrl',
@@ -202,6 +207,9 @@ angular
         'ADMIN_SIDEBAR_CATEGORIES': 'Categories',
         'ADMIN_SIDEBAR_PAGES': 'Pages',
         'ADMIN_SIDEBAR_ORDERS': 'Orders',
+        'ADMIN_SIDEBAR_SEND_EMAIL': 'Send Email',
+
+        'ADMIN_SEND_EMAIL_BUTTON_ADD': 'Send Emails',
 
         'ADMIN_HEADER_ON_SITE': 'Site',
         'ADMIN_HEADER_ON_ADMIN': 'Admin Panel',
@@ -293,6 +301,9 @@ angular
         'ADMIN_SIDEBAR_CATEGORIES': 'Категории',
         'ADMIN_SIDEBAR_PAGES': 'Страницы',
         'ADMIN_SIDEBAR_ORDERS': 'Заказы',
+        'ADMIN_SIDEBAR_SEND_EMAIL': 'Рассылка',
+
+        'ADMIN_SEND_EMAIL_BUTTON_ADD': 'Новая рассылка',
 
         'ADMIN_HEADER_ON_SITE': 'На сайт',
         'ADMIN_HEADER_ON_ADMIN': 'Админка',

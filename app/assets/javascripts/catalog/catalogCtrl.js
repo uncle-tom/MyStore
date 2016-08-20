@@ -22,5 +22,4 @@ function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $state
   $scope.isActive = function (viewLocation) { 
     return viewLocation === $location.path();
   };
-  
 }
