@@ -210,6 +210,7 @@ angular
         'ADMIN_SIDEBAR_SEND_EMAIL': 'Send Email',
 
         'ADMIN_SEND_EMAIL_BUTTON_ADD': 'Send Emails',
+        'ADMIN_SEND_EMAIL_LIST': 'List of sent messages:',
 
         'ADMIN_HEADER_ON_SITE': 'Site',
         'ADMIN_HEADER_ON_ADMIN': 'Admin Panel',
@@ -304,6 +305,7 @@ angular
         'ADMIN_SIDEBAR_SEND_EMAIL': 'Рассылка',
 
         'ADMIN_SEND_EMAIL_BUTTON_ADD': 'Новая рассылка',
+        'ADMIN_SEND_EMAIL_LIST': 'Список отправленных рассылок:',
 
         'ADMIN_HEADER_ON_SITE': 'На сайт',
         'ADMIN_HEADER_ON_ADMIN': 'Админка',

@@ -1,5 +1,5 @@
 <div class="admin-sidebar_right">
-	<p>Список заказов:</p>
+	<p>{{'ADMIN_ORDER_LIST' | translate }}:</p>
 	<div ng-controller="invoicesCtrl">
 		<div ng-repeat="i in orders">
 			<div class="row">
@@ -10,7 +10,7 @@
 					{{i.created_at | date : 'shortDate'}}
 				</div>
 				<div class="col-md-4">
-					<p class="pull-right" ng-class="{'order_status-waiting' : i.order_status === 'В ожидании', 'color-grey' : i.order_status === 'Принят'}"></p>
+					<p class="pull-right" ng-class="{'order_status-waiting' : i.order_status === 'В ожидании', 'order_status-success' : i.order_status === 'Принят'}"></p>
 				</div>
 			</div>
 				

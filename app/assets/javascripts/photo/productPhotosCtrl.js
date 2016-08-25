@@ -1,7 +1,8 @@
 angular.module('MyStore').controller('productPhotosCtrl', 
   [ 
     '$scope', 
-    '$http', 
+    '$http',
+    '$state', 
     '$localStorage', 
     '$sessionStorage', 
     'Auth',
@@ -12,7 +13,7 @@ angular.module('MyStore').controller('productPhotosCtrl',
     productPhotos
   ]);
 
-function productPhotos($scope, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Photo, FileUploader) {
+function productPhotos($scope, $http, $state, $localStorage, $sessionStorage, Auth, $stateParams, Product, Photo, FileUploader) {
   $scope.product = Product.get({id: $stateParams.id});
 
   var uploader = $scope.uploader = new FileUploader({
@@ -21,6 +22,7 @@ function productPhotos($scope, $http, $localStorage, $sessionStorage, Auth, $sta
 
   uploader.onCompleteAll = function() {
     console.info('onCompleteAll');
+    $state.go('editproduct', {id: $stateParams.id})
     window.location.reload(); // reload the page
   };
 

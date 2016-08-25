@@ -22,4 +22,22 @@ function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $state
   $scope.isActive = function (viewLocation) { 
     return viewLocation === $location.path();
   };
+
+  $scope.filterIncludes = [];
+  // filters
+  $scope.includesFilter = function(colors){
+    var i = $.inArray(colors, $scope.filterIncludes);
+    if (i > -1) {
+      $scope.filterIncludes.splice(i, 1);
+    } else {
+      $scope.filterIncludes.push(colors);
+    }
+  }
+  $scope.catalogFilter = function(products) {
+    if ($scope.filterIncludes.length > 0) {
+      if ($.inArray(products.colors, $scope.filterIncludes) < 0)
+        return;
+    }
+    return products;
+  }
 }

@@ -29,6 +29,8 @@
           <input ng-model="product.name" type="text">
         </md-input-container>
 
+        <!-- <div contentEditable="true" ng-model="product.name" title="Click to edit">{{product.name}}</div> -->
+
         <md-input-container class="md-block">
           <label>{{'ADMIN_PRODUCT_ADD_PRICE' | translate }}</label>
           <input step="any" ng-model="product.price"/>
@@ -86,7 +88,7 @@
         </fieldset>
         </div>
 
-        <md-button ng-click="productEdit()" class="md-raised md-primary">{{'ADMIN_PRODUCT_EDIT_BUTTON' | translate }}</md-button>
+        <md-button ng-click="productEdit(); uploader.uploadAll()" class="md-raised md-primary">{{'ADMIN_PRODUCT_EDIT_BUTTON' | translate }}</md-button>
       </div>
     </form>
   </div>

@@ -639,6 +639,12 @@ li.active { color:orange;  }
 	width: 20px;
 	border-radius: 50%;
 }
+.order_status-success {
+	background: green;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;	
+}
 
 .header-cart_qty {
 	background: #45586c;
@@ -738,7 +744,7 @@ li.active { color:orange;  }
 	margin-bottom: -20px;
 }
 
-.adminproductlist, .admincategorylist, .admin-welcome, .admin-main, .admin-invoices, .product-page_info {
+.admincenterbox, .adminproductlist, .admincategorylist, .admin-welcome, .admin-main, .admin-invoices, .product-page_info {
 	background: #fff;
 	margin: 20px 0px;
 	padding: 20px;

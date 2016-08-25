@@ -58,7 +58,7 @@
 					<md-input-container>
 		        <label>Размер</label>
 		        <md-select ng-model="product_size">
-		          <md-option ng-repeat="size in product.size" value="{{size}}">
+		          <md-option ng-repeat="size in product.sizes" value="{{size}}">
 		            {{size}}
 		          </md-option>
 		        </md-select>
@@ -66,7 +66,7 @@
 		      <md-input-container>
 		        <label>Цвет</label>
 		        <md-select ng-model="product_color">
-		          <md-option ng-repeat="color in product.color" value="{{color}}">
+		          <md-option ng-repeat="color in product.colors" value="{{color}}">
 		            {{color}}
 		          </md-option>
 		        </md-select>
