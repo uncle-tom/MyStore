@@ -58,4 +58,5 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
   $scope.predicate = 'id';
   $scope.reverse = true;
 
+
 }
