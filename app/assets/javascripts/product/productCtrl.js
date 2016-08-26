@@ -1,9 +1,9 @@
 angular.module('MyStore').controller('productCtrl', 
   ['$scope', '$stateParams', '$http', '$localStorage', 
-  '$sessionStorage', 'Auth', '$stateParams', 'Product',
+  '$sessionStorage', 'Auth', '$stateParams', 'Product', 'Category',
   productCtrl]);
 
-function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product) {	
+function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category) {	
 	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
     $scope.product = data;
     
@@ -15,6 +15,10 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
 
   Product.query({}, function(data){
     $scope.products = data;
+  });
+
+  Category.query({}, function(data){
+    $scope.categories = data;
   });
 
 	$scope.setImage = function setImage(imageUrl) {
@@ -58,5 +62,5 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
   $scope.predicate = 'id';
   $scope.reverse = true;
 
-
+  
 }
