@@ -38,6 +38,10 @@
 				<div class="col-md-8">
 					<h4><a href="#/product/{{product.id}}">{{product.name}}</a></h4>
 					<h5>{{product.price}} &#8381;</h5>
+					<div ng-repeat="c in product.categories">
+						{{c.name}}
+					</div>
+					
 					<a href="#/admin/product/edit/{{product.id}}"><md-button class="md-raised">{{'ADMIN_PRODUCT_BUTTON_EDIT' | translate }}</md-button></a>
 					<a href="#/admin/product/photos/{{product.id}}"><md-button class="md-raised">{{'ADMIN_PRODUCT_BUTTON_PHOTOALBUM' | translate }}</md-button></a>
 					<md-button class="md-raised" ng-click="productDel(product.id)">{{'ADMIN_PRODUCT_BUTTON_DELETE' | translate }}</md-button>

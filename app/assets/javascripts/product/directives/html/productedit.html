@@ -60,8 +60,8 @@
           <label>{{'ADMIN_PRODUCT_ADD_COLOR' | translate }}</label>
           <md-select ng-model="product_color" multiple>
             <md-optgroup label="Цвета">
-               <md-option ng-repeat="color in colors" value="{{color.color}}">
-                {{color.color}}
+               <md-option ng-repeat="color in colors" value="{{color.color}}" ng-selected="exists_color(color.color)" ng-click="toggle_color(color.color)">
+                <span >{{color.color}}</span>
               </md-option>
             </md-optgroup>
           </md-select>
@@ -73,19 +73,18 @@
           <textarea ng-model="product.description" rows="5" cols="5" ></textarea>
         </md-input-container>
         
+
         <div ng-controller="categoryCtrl">
-        <fieldset class="demo-fieldset" >
           <legend class="demo-legend">{{'ADMIN_PRODUCT_ADD_CHOOSE_CATEGORY' | translate }}</legend>
-          <div layout="row" layout-wrap flex>
-            <div style="column-count: 3;">
-              <div ng-repeat="category in categories">
+          <div class="row">
+            <div ng-repeat="category in categories">
+              <div class="col-md-4">
                 <md-checkbox ng-checked="exists_cat(category.id)" ng-click="toggle_cat(category.id)">
-                 {{ category.name }}
+                  {{ category.name }}
                 </md-checkbox>
               </div>
             </div>
           </div>
-        </fieldset>
         </div>
 
         <md-button ng-click="productEdit(); uploader.uploadAll()" class="md-raised md-primary">{{'ADMIN_PRODUCT_EDIT_BUTTON' | translate }}</md-button>
