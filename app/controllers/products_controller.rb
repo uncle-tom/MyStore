@@ -38,6 +38,6 @@ protected
 	def product_params
 		params.require(:product).permit(:id, :name, :description,
 			:sale_price, :has_popular, :has_sale, :in_stock, :quantity, 
-			:price, :colors, :sizes, :permalink, :cover_photo_id, :category_ids, category_ids:[])
+			:price, :permalink, :cover_photo_id, :category_ids, category_ids:[], sizes:[], colors:[])
 	end
 end
