@@ -4,14 +4,16 @@ angular.module('MyStore').controller('productCtrl',
   productCtrl]);
 
 function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category) {	
-	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
-    $scope.product = data;
-    
-    $scope.product.category_ids = [];
-    $($scope.product.categories).map(function(el){
-      $scope.product.category_ids.push(this.id);
+  if($stateParams.id) {
+  	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
+      $scope.product = data;
+      
+      $scope.product.category_ids = [];
+      $($scope.product.categories).map(function(el){
+        $scope.product.category_ids.push(this.id);
+      });
     });
-  });
+  }
 
   Product.query({}, function(data){
     $scope.products = data;
@@ -52,7 +54,7 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
       window.location.reload();
     });
   }
-
+  
   $scope.images = [
     {
       url:"https://scontent-waw1-1.xx.fbcdn.net/t31.0-8/13227725_572348286259991_2582891693683454351_o.jpg"
@@ -76,7 +78,8 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
     {size: "70B"},
     {size: "75B"},
     {size: "80B"},
-  ]
+  ];
+
   $scope.$on('ngCart:itemAdded', function(event, item) {
     console.log('added', item);
   });
