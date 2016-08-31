@@ -19,6 +19,7 @@
       			<th>{{'ADMIN_ORDER_NUMBER' | translate }}</th>
       			<th>{{'ADMIN_ORDER_PRODUCT_NAME' | translate }}</th>
       			<th>{{'ADMIN_ORDER_TIME' | translate }}</th>
+      			<th>{{'ADMIN_ORDER_STATUS' | translate }}</th>
       		</tr>
       	</thead>
       	<tbody>
@@ -26,6 +27,7 @@
       			<td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
       			<td>{{order.invoice_items.length}}</td>
       			<td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+      			<td>{{order.order_status}}</td>
       		</tr>
       	</tbody>
       </table>
