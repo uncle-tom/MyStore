@@ -86,7 +86,9 @@ function mainCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, n
             product_id: el._id, 
             price: el._price, 
             count: el._quantity,
-            order_id: order.id
+            order_id: order.id,
+            color: el.getData().color,
+            size: el.getData().size
           });
 
           invoice_item.$save();
