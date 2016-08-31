@@ -60,7 +60,7 @@
 
         <md-input-container>
           <label>{{'ADMIN_PRODUCT_ADD_COLOR' | translate }}</label>
-          <md-select ng-model="product_color" multiple>
+          <md-select ng-model="product.colors" multiple>
             <md-optgroup label="Цвета">
                <md-option ng-repeat="color in colors" value="{{color.color}}">
                 {{color.color}}

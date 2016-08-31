@@ -77,4 +77,7 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
     {size: "75B"},
     {size: "80B"},
   ]
+  $scope.$on('ngCart:itemAdded', function(event, item) {
+    console.log('added', item);
+  });
 }
