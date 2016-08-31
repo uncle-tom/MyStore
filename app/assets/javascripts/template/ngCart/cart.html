@@ -90,7 +90,11 @@
     <tr ng-repeat="item in ngCart.getCart().items track by $index">
         <td><span ng-click="ngCart.removeItemById(item.getId())" class="glyphicon glyphicon-remove"></span></td>
         
+<<<<<<< HEAD
         <td ng-controller="productCtrl"><a href="#/product/{{item.getId(id)}}">{{ item.getName() }} ( {{ item.getData().color }} , {{ item.getData().size }})</a></td>
+=======
+        <td ng-controller="productCtrl"><a href="#/product/{{item.getId(id)}}">{{ item.getName() }} / {{ item.getData().color }} / {{ item.getData().size }}</a></td>
+>>>>>>> a2aba1df10b67cf1a6c3921b28b83016f2302dc7
         <td><span class="glyphicon glyphicon-minus" ng-class="{'disabled':item.getQuantity()==1}"
                   ng-click="item.setQuantity(-1, true)"></span>&nbsp;&nbsp;
             {{ item.getQuantity() | number }}&nbsp;&nbsp;
