@@ -19,6 +19,7 @@
 @import "md-steppers/dist/md-steppers.min.css";
 @import "wowjs/css/libs/animate.css";
 
+
 @import url(https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic);
 
@@ -732,6 +733,7 @@ li.active { color:orange;  }
 	margin: 20px;
 	padding: 20px;
 	font-size: 1.1em;
+	position: relative;
 }
 
 .admin-sidebar_left a {
@@ -820,6 +822,13 @@ li.active { color:orange;  }
 .adminproductlist_one img {
 	width: 150px;
 	height: 150px;
+}
+
+.addproduct_cirlce_button {
+	position: fixed;
+	display: none;
+	right: 50px;
+	bottom: 30px;
 }
 
 .adminpcategorylist_one {

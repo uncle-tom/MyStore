@@ -22,6 +22,9 @@
     "ngcart": "latest",
     "md-steppers": "latest",
     "angular-translate": "latest",
-    "wowjs": "latest"
+    "wowjs": "latest",
+    "material-design-icons": "latest"
+  },
+  "resolutions": {
   }
 }
