@@ -163,7 +163,9 @@ angular
         'ADMIN_PRODUCT_ADD_PRICE': 'Price',
         'ADMIN_PRODUCT_ADD_NAME': 'Product Name',
         'ADMIN_PRODUCT_ADD_URL': 'Product URL | For example: redskip',
-        
+        'ADMIN_PRODUCT_ADD_PHOTOLIST': 'Product photos',
+        'ADMIN_PRODUCT_ADD_PHOTO': 'Add photos',
+
         'ADMIN_PRODUCT_EDIT_TITLE': 'Edit product',
         'ADMIN_PRODUCT_EDIT_BUTTON': 'Update product',
         
@@ -259,6 +261,8 @@ angular
         'ADMIN_PRODUCT_ADD_PRICE': 'Цена',
         'ADMIN_PRODUCT_ADD_NAME': 'Название товара',
         'ADMIN_PRODUCT_ADD_URL': 'URL товара | Например: redskip',
+        'ADMIN_PRODUCT_ADD_PHOTO': 'Добавить фотографии',
+        'ADMIN_PRODUCT_EDIT_TITLE': 'Edit product',
         
         'ADMIN_PRODUCT_EDIT_TITLE': 'Редактирование товара',
         'ADMIN_PRODUCT_EDIT_BUTTON': 'Обновить товар',
