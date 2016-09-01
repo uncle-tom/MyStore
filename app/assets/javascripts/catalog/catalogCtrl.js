@@ -23,21 +23,27 @@ function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $state
     return viewLocation === $location.path();
   };
 
-  $scope.filterIncludes = [];
-  // filters
-  $scope.includesFilter = function(colors){
-    var i = $.inArray(colors, $scope.filterIncludes);
-    if (i > -1) {
-      $scope.filterIncludes.splice(i, 1);
-    } else {
-      $scope.filterIncludes.push(colors);
-    }
-  }
-  $scope.catalogFilter = function(products) {
-    if ($scope.filterIncludes.length > 0) {
-      if ($.inArray(products.colors, $scope.filterIncludes) < 0)
-        return;
-    }
-    return products;
-  }
+  $scope.colors = '';
+  $scope.filterProductsByColor = function(color){
+    $scope.colors = color;
+  };
+
+  // $scope.sizeIncludes = [];
+  // $scope.setSelectedSize = function(size) {
+  //   var i = $.inArray(size, $scope.sizeIncludes);
+  //   if (i > -1) {
+  //     $scope.sizeIncludes.splice(i, 1);
+  //   } else {
+  //     $scope.sizeIncludes.push(size);
+  //   }
+  //   console.log($scope.sizeIncludes);
+  // }
+
+  // $scope.sizeFilter = function(products) {
+  //   if ($scope.sizeIncludes.length > 0) {
+  //     if ($.inArray(products.sizes, $scope.sizeIncludes) < 0)
+  //       return;
+  //   }
+  //   return products;
+  // }
 }
