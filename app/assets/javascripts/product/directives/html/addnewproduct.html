@@ -1,6 +1,6 @@
 <div class="row addproduct" ng-controller="adminCtrl">
   <div class="row">
-    <form name="newproduct" class="simple_form form-horizontal" novalidate="novalidate" id="new-product" accept-charset="UTF-8">
+    <form name="newproduct" uploader="uploader" class="simple_form form-horizontal" novalidate="novalidate" id="new-product" accept-charset="UTF-8">
       
       <div class="col-md-4 col-xs-12 admin-sidebar_right_position">
         <div class="admin-sidebar_right">
@@ -31,7 +31,7 @@
 
         <md-input-container class="md-block">
           <label>{{'ADMIN_PRODUCT_ADD_PRICE' | translate }}</label>
-          <input type="number" step="any" ng-model="product.price"/>
+          <input type="text" step="any" ng-model="product.price"/>
         </md-input-container>
 
         <md-checkbox ng-model="has_sale">
@@ -88,7 +88,7 @@
           </div>
         </div>
 
-        <md-button ng-click="addProduct(); uploader.uploadAll()" class="md-raised md-primary">{{'ADMIN_PRODUCT_BUTTON_ADD' | translate }}</md-button>
+        <md-button ng-click="addProduct()" class="md-raised md-primary">{{'ADMIN_PRODUCT_BUTTON_ADD' | translate }}</md-button>
       </div>
     </form>
   </div>

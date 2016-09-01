@@ -1,23 +1,36 @@
 angular.module('MyStore').controller('addNewProduct', 
   [	
   	'$scope', 
+    '$state',
 	  '$http', 
 	  '$localStorage', 
 	  '$sessionStorage', 
 	  'Auth', 
-	  'Product', 
+	  'Product',
+    'FileUploader',
   	addNewProduct
   ]);
 
-function addNewProduct($scope, $http, $localStorage, $sessionStorage, Auth, Product) {
+function addNewProduct($scope, $state, $http, $localStorage, $sessionStorage, Auth, Product, FileUploader) {
 	console.log('newProductCtrl');
 
 	$scope.product = new Product;
 
+  var uploader = $scope.uploader = new FileUploader({});
+
   $scope.addProduct = function(){
     $scope.product.$save(function(){
-      console.log($scope.product);
-      window.location.reload();
+      uploader.url = '/products/'+$scope.product.id+'/photos';
+
+      $.map(uploader.queue, function(file_obj) {
+        file_obj.url = '/products/'+$scope.product.id+'/photos';
+      })
+      
+      uploader.onCompleteAll = function() {
+        $state.go('editproduct', {id: $scope.product.id});
+      };
+
+      uploader.uploadAll();
     })
   }
 

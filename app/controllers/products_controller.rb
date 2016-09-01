@@ -26,7 +26,6 @@ class ProductsController < ApplicationController
   def create
     create! do |success, failure|
       success.json do
-        Photo.create image: params[:file], product_id: resource.id
         render json: resource 
       end
       failure.json { render json: @article.errors, status: 422 }

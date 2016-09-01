@@ -1,9 +1,9 @@
 angular.module('MyStore').controller('productCtrl', 
-  ['$scope', '$stateParams', '$http', '$localStorage', 
-  '$sessionStorage', 'Auth', '$stateParams', 'Product', 'Category',
+  ['$scope', '$state', '$http', '$localStorage', 
+  '$sessionStorage', 'Auth', '$stateParams', 'Product', 'Category','FileUploader',
   productCtrl]);
 
-function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category) {	
+function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category, FileUploader) {	
   if($stateParams.id) {
   	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
       $scope.product = data;
@@ -48,11 +48,22 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
     }
   }
 
+  var uploader = $scope.uploader = new FileUploader({});
+
   $scope.productEdit = function(product_id){
     console.log('productEdit');
     Product.update({ product: $scope.product, id: $scope.product.id }, function(resp){
-      console.log(resp);
-      window.location.reload();
+      uploader.url = '/products/'+$scope.product.id+'/photos';
+
+      $.map(uploader.queue, function(file_obj) {
+        file_obj.url = '/products/'+$scope.product.id+'/photos';
+      })
+      
+      uploader.onCompleteAll = function() {
+        $state.go('editproduct', {id: $scope.product.id});
+      };
+
+      uploader.uploadAll();
     });
   }
   

@@ -7,9 +7,9 @@ class PhotosController < ApplicationController
 
   def create
     if p = Photo.create(photo_params)
-      respond_with(p)
+      render json: p
     else
-      respond_with(p.errors)
+      render json: p.errors, status: :unprocessable_entity
     end
   end
 
