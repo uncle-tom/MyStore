@@ -25,6 +25,7 @@ function productCtrl($scope, $stateParams, $http, $localStorage, $sessionStorage
 
 	$scope.setImage = function setImage(imageUrl) {
     $scope.mainImageUrl = imageUrl;
+    console.log($scope.mainImageUrl);
   };  
 
   $scope.product = new Product();

@@ -31,6 +31,9 @@
 			  ng-class="{selected: img.image.url === mainImageUrl}"
 			  ng-repeat="img in product.photos" />
 			</div>
+			<div ng-if="product.has_popular" class="haspopularphoto" style="top:-8px;">
+				<span class="haspopular">Топ продаж</span>	
+			</div>
 		</div>
 		<!-- Фотки для компа -->
 		<!-- Информация о продукте -->
@@ -51,8 +54,6 @@
 					<span ng-class="product.sale_price ? 'sale-true' : 'sale-false'">{{product.price}} &#8381;</span>
 					<br><span ng-if="product.sale_price">{{product.sale_price}} &#8381;</span>
 				</p>
-
-				<h4 ng-if="product.has_popular">Это популярный товар!</h4>
 				
 				<div class="text-center">
 					<md-input-container>
