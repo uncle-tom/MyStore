@@ -26,7 +26,7 @@
 			<div class="sidebar" ng-controller="productCtrl">
 				<h4>Выберете нужный размер</h4>
 				<span ng-repeat="size in sizes">
-					<md-button data-ng-click="setSelectedSize(size.size)">{{size.size}}</md-button>
+					<md-button ng-click="filterProductsBySize(size.size)">{{size.size}}</md-button>
 				</span>
 			</div>
 			<div class="sidebar" ng-controller="productCtrl">
@@ -37,7 +37,7 @@
 			</div>
 			<div class="sidebar">
 				<h4>Выберете стоимость</h4>
-				<input type="range" min="0" max="1000" data-ng-model="qty" />
+				<input type="range" min="0" max="5000" data-ng-model="qty" />
 		    <div class="row">
 		      <div class="col-md-6">
 		        <p class="pull-left">0</p>
@@ -46,6 +46,12 @@
 		        <p class="pull-right">{{qty}}</p>
 		      </div>
 		    </div>
+			</div>
+
+			<div class="sidebar">
+				<h4 class="text-center" ng-click="colors = ''; sizes = ''; qty = 5000;">
+					Сбросить фильтры
+				</h4>
 			</div>
 			
 		</div>
@@ -56,9 +62,23 @@
 			<div class="col-md-12">
 				<h1>Каталог женского нижнего белья</h1>	
 				<filterproductincategoryandcatalog></filterproductincategoryandcatalog>
+				<div>
+					<span ng-if="colors.length > 0" >
+						Цвет: {{colors}}
+					</span>
+					<span ng-click="colors = ''">
+						<span ng-if="colors.length > 0" style="padding-right: 20px;">&#10006;</span>
+					</span>
+					<span ng-if="sizes.length > 0">
+						Размер: {{sizes}}
+					</span>
+					<span ng-click="sizes = ''">
+						<span ng-if="sizes.length > 0">&#10006;</span>
+					</span>
+				</div>
 			</div>
 			
-			<div class="row2" ng-repeat="product in products | filter:colors | filter: minpriceFilter | filter: catalogFilter | orderBy:predicate:!reverse">
+			<div class="row2" ng-repeat="product in products | filter:colors | filter:sizes | filter: minpriceFilter | orderBy:predicate:!reverse">
 				<div class="col-md-4 margin-bottom50">
 					<div class="product myfade">
 						<a href="#/product/{{product.id}}">

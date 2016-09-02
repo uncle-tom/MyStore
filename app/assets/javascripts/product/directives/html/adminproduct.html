@@ -3,8 +3,9 @@
 	  <div class="row">
 	  	<div class="col-md-6">
 	  		<h2>{{'ADMIN_PRODUCT_LIST' | translate }}</h2>
-	  		<p class="adminproductlist_sort">{{'ADMIN_SORTED_BY' | translate }}: <span ng-click="predicate = 'name'; reverse=!reverse">{{'ADMIN_SORTED_BY_NAME' | translate }}</span> | <span ng-click="predicate = 'created_at'; reverse=!reverse">{{'ADMIN_SORTED_BY_DATE' | translate }}</span> | <span ng-click="predicate = 'price'; reverse=!reverse">{{'ADMIN_SORTED_BY_PRICE' | translate }}</span></p>
-	  		<p>{{'ADMIN_SORTED_BY_CATEGORIES' | translate }}:</p>
+	  		<filterproductincategoryandcatalog></filterproductincategoryandcatalog>
+	  		<!-- <p class="adminproductlist_sort">{{'ADMIN_SORTED_BY' | translate }}: <span ng-click="predicate = 'name'; reverse=!reverse">{{'ADMIN_SORTED_BY_NAME' | translate }}</span> | <span ng-click="predicate = 'created_at'; reverse=!reverse">{{'ADMIN_SORTED_BY_DATE' | translate }}</span> | <span ng-click="predicate = 'price'; reverse=!reverse">{{'ADMIN_SORTED_BY_PRICE' | translate }}</span></p>
+	  		<p>{{'ADMIN_SORTED_BY_CATEGORIES' | translate }}:</p> -->
 	  		<fieldset>
 				<select 
           ng-options="p.name for p in categories"

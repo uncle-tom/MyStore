@@ -26,6 +26,13 @@ function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $state
   $scope.colors = '';
   $scope.filterProductsByColor = function(color){
     $scope.colors = color;
+    console.log($scope.colors)
+  };
+
+  $scope.sizes = '';
+  $scope.filterProductsBySize = function(size){
+    $scope.sizes = size;
+    console.log($scope.sizes)
   };
 
   // $scope.sizeIncludes = [];

@@ -630,8 +630,16 @@ footer {
   padding: 10px 15px;
 }
 
+.catalog .sidebar h4 {
+	outline: none;
+}
+
 .catalog .sidebar .md-button {
 	margin: auto;
+}
+
+.catalog .sidebar .md-button:focus {
+	background: #ddd;
 }
 
 /****************

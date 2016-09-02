@@ -26,13 +26,13 @@
 			<div class="sidebar" ng-controller="productCtrl">
 				<h4>Выберете нужный размер</h4>
 				<span ng-repeat="size in sizes">
-					<md-button>{{size.size}}</md-button>
+					<md-button ng-click="filterProductsBySize(size.size)">{{size.size}}</md-button>
 				</span>
 			</div>
 			<div class="sidebar" ng-controller="productCtrl">
 				<h4>Выберете нужный цвет</h4>
 				<span ng-repeat="color in colors">
-					<md-button>{{color.color}}</md-button>
+					<md-button ng-click="filterProductsByColor(color.color)">{{color.color}}</md-button>
 				</span>
 			</div>
 			<div class="sidebar">
@@ -48,6 +48,12 @@
 		    </div>
 			</div>
 			
+			<div class="sidebar">
+				<h4 class="text-center" ng-click="colors = ''; sizes = ''; qty = 5000;">
+					Сбросить фильтры
+				</h4>
+			</div>
+
 		</div>
 		<!-- Сайдбар - Категории - Фильтры -->
 
@@ -56,10 +62,24 @@
 			<div class="col-md-12">
 				<h1>{{resp.category.name}}</h1>	
 				<filterproductincategoryandcatalog></filterproductincategoryandcatalog>
+				<div>
+					<span ng-if="colors.length > 0" >
+						Цвет: {{colors}}
+					</span>
+					<span ng-click="colors = ''">
+						<span ng-if="colors.length > 0" style="padding-right: 20px;">&#10006;</span>
+					</span>
+					<span ng-if="sizes.length > 0">
+						Размер: {{sizes}}
+					</span>
+					<span ng-click="sizes = ''">
+						<span ng-if="sizes.length > 0">&#10006;</span>
+					</span>
+				</div>
 			</div>
 			
-			<div ng-repeat="product in resp.products | filter: minpriceFilter">
-				<div class="col-md-4">
+			<div ng-repeat="product in resp.products | filter:colors | filter:sizes | filter: minpriceFilter | orderBy:predicate:!reverse ">
+				<div class="col-md-4 margin-bottom50">
 					<div class="product myfade">
 						<a href="#/product/{{product.id}}">
 						<div class="product-photo">

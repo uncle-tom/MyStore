@@ -23,7 +23,6 @@ function productPhotos($scope, $http, $state, $localStorage, $sessionStorage, Au
   uploader.onCompleteAll = function() {
     console.info('onCompleteAll');
     $state.go('editproduct', {id: $stateParams.id})
-    window.location.reload(); // reload the page
   };
 
   $scope.set_main = function(hotel_id, photo_id) {
@@ -39,7 +38,7 @@ function productPhotos($scope, $http, $state, $localStorage, $sessionStorage, Au
     console.log('yes')
     if(confirm('Вы уверены, что хотите удалить эту фотографию?')){
       Photo.delete({ product_id: $stateParams.id, id: photo_id }, function(response) {
-        window.location.reload();
+        
         $state.go('products', {id: $stateParams.id})
         // Optional function. Clear html form, redirect or whatever.
       });

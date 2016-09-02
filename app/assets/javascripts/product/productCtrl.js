@@ -32,7 +32,7 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
 
   $scope.productDel = function(product_id){
     Product.delete({id: product_id});
-    console.log('del')
+    $state.go('adminproduct');
   }
 
   $scope.exists_cat = function(cat_id){
@@ -60,11 +60,14 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
       })
       
       uploader.onCompleteAll = function() {
+        
         $state.go('editproduct', {id: $scope.product.id});
       };
 
       uploader.uploadAll();
+      $state.go('adminproduct');
     });
+    
   }
   
   $scope.images = [
