@@ -25,6 +25,17 @@ class ProductsController < ApplicationController
 
   def create
     create! do |success, failure|
+      resource.categories = Category.where("id IN (?)", params[:categories_ids])
+      success.json do
+        render json: resource 
+      end
+      failure.json { render json: @article.errors, status: 422 }
+    end
+  end
+
+  def update
+    update! do |success, failure|
+      resource.categories = Category.where("id IN (?)", params[:categories_ids])
       success.json do
         render json: resource 
       end
@@ -36,7 +47,8 @@ protected
 
 	def product_params
 		params.require(:product).permit(:id, :name, :description,
-			:sale_price, :has_popular, :has_sale, :in_stock, :quantity, 
-			:price, :permalink, :cover_photo_id, :category_ids, category_ids:[], sizes:[], colors:[])
+			:sale_price, :has_popular, :has_sale, :in_stock, :quantity,
+			:price, :permalink, :cover_photo_id, :categories_ids, categories:[], 
+      categories_ids:[], sizes:[], colors:[])
 	end
 end
