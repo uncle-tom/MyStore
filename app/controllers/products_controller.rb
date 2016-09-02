@@ -34,8 +34,9 @@ class ProductsController < ApplicationController
   end
 
   def update
+    resource.categories = Category.where("id IN (?)", params[:product][:categories_ids])
+    params[:product].delete(:categories_ids)
     update! do |success, failure|
-      resource.categories = Category.where("id IN (?)", params[:categories_ids])
       success.json do
         render json: resource 
       end
