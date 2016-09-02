@@ -80,7 +80,7 @@
           <div class="row">
             <div ng-repeat="category in categories">
               <div class="col-md-4">
-                <md-checkbox name="categories" value="{{category.id}}">
+                <md-checkbox ng-checked="exists_cat(category.id)" ng-click="toggle_cat(category.id)">
                   {{ category.name }}
                 </md-checkbox>
               </div>

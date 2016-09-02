@@ -262,7 +262,7 @@ angular
         'ADMIN_PRODUCT_ADD_NAME': 'Название товара',
         'ADMIN_PRODUCT_ADD_URL': 'URL товара | Например: redskip',
         'ADMIN_PRODUCT_ADD_PHOTO': 'Добавить фотографии',
-        'ADMIN_PRODUCT_EDIT_TITLE': 'Edit product',
+        'ADMIN_PRODUCT_ADD_PHOTOLIST': 'Фотографии товара',
         
         'ADMIN_PRODUCT_EDIT_TITLE': 'Редактирование товара',
         'ADMIN_PRODUCT_EDIT_BUTTON': 'Обновить товар',

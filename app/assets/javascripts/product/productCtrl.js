@@ -32,7 +32,6 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
 
   $scope.productDel = function(product_id){
     Product.delete({id: product_id});
-    $state.go('adminproduct');
   }
 
   $scope.exists_cat = function(cat_id){
