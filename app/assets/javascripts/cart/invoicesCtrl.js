@@ -37,6 +37,6 @@ function invoicesCtrl($scope, $http, $stateParams, $state, $location, Order) {
 
   //filter done order
   $scope.doneOrderFilter = function(orders) {
-    return orders.order_status === 'Завершенно';
+    return orders.order_status === 'Завершено';
   }
 }
