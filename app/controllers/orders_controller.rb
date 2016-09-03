@@ -26,6 +26,7 @@ class OrdersController < ApplicationController
 protected
 
   def order_params
-    params.permit(:id, :subtotal, :total, :discount, :address_id, :shipping_id, :user_id, :payment_type)
+    params.permit(:id, :subtotal, :total, :discount, :address_id, 
+      :shipping_id, :user_id, :payment_type, :order_status)
   end
 end
