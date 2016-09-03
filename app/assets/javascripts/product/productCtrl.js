@@ -15,6 +15,16 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
     });
   }
 
+  $scope.customCompare = function(v1, v2) {
+    console.log('customCompare', v1, v2);
+    if(v1.value.indexOf('T') > 0) {
+      // Compare strings alphabetically, taking locale into account
+      return v1.value.localeCompare(v2.value);
+    } else {
+      return parseFloat(v1.value) < parseFloat(v2.value) ? -1 : 1;
+    }
+  };
+
   Product.query({}, function(data){
     $scope.products = data;
   });
@@ -77,7 +87,7 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
     }
   ]  
 
-  $scope.predicate = 'id';
+  $scope.predicate = 'price';
   $scope.reverse = true;
 
   $scope.colors = [
