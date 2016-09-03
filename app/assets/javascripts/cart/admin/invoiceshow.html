@@ -8,7 +8,8 @@
 		<div class="col-md-3 col-xs-12 admin-sidebar_right_position">
 			<div class="admin-sidebar_right">
 				<div class="adminorderbutton">
-					<md-button ng-click="changeStatus(order.id, order.order_status = 'Успешно')" class="md-raised" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80); margin-bottom: 20px;">{{'ADMIN_ORDER_BUTTON_STATUS_SUCCESS' | translate }}</md-button>
+					<md-button ng-click="changeStatus(order.id, order.order_status = 'Выполняется')" class="md-raised" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80); margin-bottom: 20px;">{{'ADMIN_ORDER_BUTTON_STATUS_SUCCESS' | translate }}</md-button>
+          <md-button ng-click="changeStatus(order.id, order.order_status = 'Завершено')" class="md-raised" style="margin-bottom: 20px;">{{'ADMIN_ORDER_BUTTON_STATUS_COMPLETED' | translate }}</md-button>
 					<md-button ng-click="orderDel(order.id)" class="md-raised md-accent" >{{'ADMIN_ORDER_BUTTON_STATUS_DELETE' | translate }}</md-button>
 				</div>
 			</div>

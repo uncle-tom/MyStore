@@ -204,7 +204,11 @@ angular
         'ADMIN_ORDER_NOTES': 'Notes',
         'ADMIN_ORDER_BUTTON_STATUS_DELETE': 'Delete',
         'ADMIN_ORDER_BUTTON_STATUS_SUCCESS': 'To accept',
-        
+        'ADMIN_ORDER_BUTTON_STATUS_COMPLETED': 'Completed',
+        'ADMIN_ORDER_STATUS_WAIT': 'Wait',
+        'ADMIN_ORDER_STATUS_WORK': 'In progress',
+        'ADMIN_ORDER_STATUS_DONE': 'Done',
+
         'ADMIN_SIDEBAR_MAIN': 'Main',
         'ADMIN_SIDEBAR_PRODUCTS': 'Products',
         'ADMIN_SIDEBAR_CATEGORIES': 'Categories',
@@ -302,6 +306,10 @@ angular
         'ADMIN_ORDER_NOTES': 'Заметки',
         'ADMIN_ORDER_BUTTON_STATUS_DELETE': 'Удалить',
         'ADMIN_ORDER_BUTTON_STATUS_SUCCESS': 'Принять',
+        'ADMIN_ORDER_BUTTON_STATUS_COMPLETED': 'Завершено',
+        'ADMIN_ORDER_STATUS_WAIT': 'В ожидании',
+        'ADMIN_ORDER_STATUS_WORK': 'Выполняется',
+        'ADMIN_ORDER_STATUS_DONE': 'Завершено',
 
         'ADMIN_SIDEBAR_MAIN': 'Основное',
         'ADMIN_SIDEBAR_PRODUCTS': 'Товары',

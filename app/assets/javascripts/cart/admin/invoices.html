@@ -13,7 +13,77 @@
 			  	</div>
 			  </div>
 			</div>
-			<table class="table table-striped">
+      <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab label="{{'ADMIN_ORDER_STATUS_WAIT' | translate }}">
+            <md-content class="md-padding">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>{{'ADMIN_ORDER_NUMBER' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_PRODUCT_NAME' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_TIME' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_STATUS' | translate }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="order in orders | orderBy:order.id:!reverse | filter: waitOrderFilter">
+                    <td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+                    <td>{{order.invoice_items.length}}</td>
+                    <td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+                    <td>{{order.order_status}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </md-content>
+          </md-tab>
+          <md-tab label="{{'ADMIN_ORDER_STATUS_WORK' | translate }}">
+            <md-content class="md-padding">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>{{'ADMIN_ORDER_NUMBER' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_PRODUCT_NAME' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_TIME' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_STATUS' | translate }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="order in orders | orderBy:order.id:!reverse | filter: workOrderFilter">
+                    <td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+                    <td>{{order.invoice_items.length}}</td>
+                    <td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+                    <td>{{order.order_status}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </md-content>
+          </md-tab>
+          <md-tab label="{{'ADMIN_ORDER_STATUS_DONE' | translate }}">
+            <md-content class="md-padding">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>{{'ADMIN_ORDER_NUMBER' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_PRODUCT_NAME' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_TIME' | translate }}</th>
+                    <th>{{'ADMIN_ORDER_STATUS' | translate }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="order in orders | orderBy:order.id:!reverse | filter: doneOrderFilter">
+                    <td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+                    <td>{{order.invoice_items.length}}</td>
+                    <td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
+                    <td>{{order.order_status}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+			<!-- <table class="table table-striped">
       	<thead>
       		<tr>
       			<th>{{'ADMIN_ORDER_NUMBER' | translate }}</th>
@@ -30,7 +100,7 @@
       			<td>{{order.order_status}}</td>
       		</tr>
       	</tbody>
-      </table>
+      </table> -->
 			
 		</div>
 	</div>

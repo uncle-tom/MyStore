@@ -24,4 +24,19 @@ function invoicesCtrl($scope, $http, $stateParams, $state, $location, Order) {
       console.log(resp);
     });
   }
+
+  //filter wait order
+  $scope.waitOrderFilter = function(orders) {
+    return orders.order_status === 'В ожидании';
+  }
+
+  //filter work order
+  $scope.workOrderFilter = function(orders) {
+    return orders.order_status === 'Выполняется';
+  }
+
+  //filter done order
+  $scope.doneOrderFilter = function(orders) {
+    return orders.order_status === 'Завершенно';
+  }
 }
