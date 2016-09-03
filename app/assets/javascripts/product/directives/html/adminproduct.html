@@ -18,7 +18,7 @@
 	  	</div>
 	  </div>
 	</div>
-	<div ng-repeat="product in products | filter:query | filter: selected.name | orderBy:predicate:reverse " >
+	<div ng-repeat="product in products | filter:query | filter: selected.name | orderBy:predicate:reverse:customCompare " >
 		<div class="adminproductlist_one">
 			<div class="row">
 				<div class="col-md-4">
@@ -27,6 +27,7 @@
 				<div class="col-md-8">
 					<h4><a href="#/product/{{product.id}}">{{product.name}}</a></h4>
 					<h5>{{product.price}} &#8381;</h5>
+					<small>{{product.created_at | date:'short'}}</small>
 					<div ng-repeat="c in product.categories">
 						{{c.name}}
 					</div>
