@@ -4,7 +4,7 @@
 		<div ng-repeat="i in orders | orderBy:i.id:!reverse">
 			<div class="row">
 				<div class="col-md-4">
-					<a href="#/admin/invoices/{{i.id}}">№ {{i.id}}</a>
+					<a href="/admin/invoices/{{i.id}}">№ {{i.id}}</a>
 				</div>
 				<div class="col-md-4">
 					{{i.created_at | date : 'shortDate'}}
@@ -13,9 +13,6 @@
 					<p class="pull-right" ng-class="{'order_status-waiting' : i.order_status === 'В ожидании', 'order_status-success' : i.order_status === 'Выполняется', 'order_status-done' : i.order_status === 'Завершено'}"></p>
 				</div>
 			</div>
-				
-				
-			
 		</div>
 	</div>
 </div>

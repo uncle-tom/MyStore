@@ -17,7 +17,7 @@
       </md-content>
       <md-step-actions layout="row">
         <div flex layout="row" layout-align="end top">
-          <a href="#/catalog"><md-button class="md-warn">Назад</md-button></a>
+          <a href="/catalog"><md-button class="md-warn">Назад</md-button></a>
           <md-button class="md-primary md-raised" ng-click="selected = 1; step1.completed = true; step2.disabled = false;" ng-disabled="ngCart.getTotalItems() === 0">Далее</md-button>
           <h2>{{$scope.ngCart.getTotalItems()}}</h2>
         </div>
@@ -140,7 +140,7 @@
       </md-content>
       <md-step-actions layout="row">
         <div flex layout="row" layout-align="end top">
-          <a href="#/catalog"><md-button class="md-warn">Продолжить покупки</md-button></a>
+          <a href="/catalog"><md-button class="md-warn">Продолжить покупки</md-button></a>
         </div>
       </md-step-actions>
     </md-step>

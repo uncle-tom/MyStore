@@ -4,7 +4,7 @@
 		<h1>Нижнее белье в наличии 
 		<br>в Санкт-Петербурге</h1>	
 		<br><h4>Лучшее женское нижнее белье по доступной цене</h4>
-		<br><a href="#/catalog"><md-button class="welcome-text_button" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Посмотреть каталог</md-button></a>
+		<br><a href="/catalog"><md-button class="welcome-text_button" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Посмотреть каталог</md-button></a>
 	</div>
 </div>
 <div class="container-fluid">
@@ -47,7 +47,7 @@
 						<div ng-repeat="product in products | limitTo:4">
 							<div class="col-md-3">
 								<div class="product">
-									<a href="#/product/{{product.id}}">
+									<a href="/product/{{product.id}}">
 									<div class="product-photo">
 										<mainphotoproduct></mainphotoproduct>
 									</div>
@@ -67,7 +67,7 @@
 						<div ng-repeat="product in products | limitTo:4 | filter: haspopularFilter">
 							<div class="col-md-3">
 								<div class="product">
-									<a href="#/product/{{product.id}}">
+									<a href="/product/{{product.id}}">
 									<div class="product-photo">
 										<mainphotoproduct></mainphotoproduct>
 									</div>
@@ -87,7 +87,7 @@
 						<div ng-repeat="product in products | limitTo:4">
 							<div class="col-md-3">
 								<div class="product">
-									<a href="#/product/{{product.id}}">
+									<a href="/product/{{product.id}}">
 									<div class="product-photo">
 										<mainphotoproduct></mainphotoproduct>
 									</div>
@@ -104,7 +104,7 @@
     </md-tabs>
   </md-content>
 </div>
-<button type="button" class="button-more center-block"><a href="#/catalog">Перейти в каталог</a></button>
+<button type="button" class="button-more center-block"><a href="/catalog">Перейти в каталог</a></button>
 
 
 <section id="cooltwo" class="wow fadeIn" >
@@ -166,7 +166,6 @@
 	</div>
 </div>
 <div ng-include="'footer/footer.html'"></div>
-<a href="#/admin">Admin</a>
 
 <script type="text/javascript">
 	new WOW().init();

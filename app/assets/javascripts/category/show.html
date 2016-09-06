@@ -6,7 +6,7 @@
 			<div xmlns:v="http://rdf.data-vocabulary.org/#">
 				<span typeof="v:Breadcrumb">
 				<a href="/" rel="v:url" property="v:title"> CandyLadyShop</a> › </span>
-				<span typeof="v:Breadcrumb"> <a href="http://candyladyshop.ru/#categories/{{resp.category.name}}" rel="v:url" property="v:title">{{resp.category.name}}</a> </span>
+				<span typeof="v:Breadcrumb"> <a href="/categories/{{resp.category.name}}" rel="v:url" property="v:title">{{resp.category.name}}</a> </span>
 			</div>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 			<div class="sidebar" ng-controller="categoryCtrl">
 				<h4>Категории</h4>
 				<div ng-repeat="cat in categories">
-					<p ng-class="{ active: isActive('/categories/{{cat.name}}')}"><a href="#/categories/{{cat.name}}">{{cat.name}}</a></p>	
+					<p ng-class="{ active: isActive('/categories/{{cat.name}}')}"><a href="/categories/{{cat.name}}">{{cat.name}}</a></p>	
 				</div>
 			</div>
 
@@ -81,7 +81,7 @@
 			<div ng-repeat="product in resp.products | filter:colors | filter:sizes | filter: minpriceFilter | orderBy:predicate:!reverse ">
 				<div class="col-md-4 margin-bottom50">
 					<div class="product myfade">
-						<a href="#/product/{{product.id}}">
+						<a href="/product/{{product.id}}">
 						<div class="product-photo">
 							<mainphotoproduct></mainphotoproduct>
 						</div>

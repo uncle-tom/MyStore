@@ -34,7 +34,7 @@
       	</thead>
       	<tbody>
       		<tr ng-repeat="item in order.invoice_items">
-      			<td><a href="#/product/{{item.product_id}}">{{item.product_name}} ({{item.color}} , {{item.size}})</a></td>
+      			<td><a href="/product/{{item.product_id}}">{{item.product_name}} ({{item.color}} , {{item.size}})</a></td>
       			<td>{{item.count}}</td>
       			<td>{{item.price}}</td>
       		</tr>

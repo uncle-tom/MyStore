@@ -12,7 +12,7 @@
       ng-transclude
       >Купить</md-button>
       <md-button ng-hide="inCart()" class="md-fab md-mini" aria-label="Favorite">
-          <img src="assets/icon/favorite2.png" alt="">
+          <img src="/assets/icon/favorite2.png" alt="">
       </md-button> <span ng-hide="inCart()" class="addtofav">Добавить в избранное</span>
 
       <!-- <a class="btn btn-sm btn-primary"
@@ -21,7 +21,7 @@
   </div>
   <div style="    line-height: 52px">
       <mark  ng-show="inCart()">
-          В <a href="/#cart">корзине</a> | <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">&times; </a>
+          В <a href="/cart">корзине</a> | <a ng-click="ngCart.removeItemById(id)" style="cursor: pointer;">&times; </a>
       </mark>
   </div>
 </div>

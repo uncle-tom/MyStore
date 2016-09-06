@@ -6,7 +6,7 @@
 			<div xmlns:v="http://rdf.data-vocabulary.org/#">
 				<span typeof="v:Breadcrumb">
 				<a href="/" rel="v:url" property="v:title"> CandyLadyShop</a> › </span>
-				<span typeof="v:Breadcrumb"> <a href="#/product/{{product.id}}" rel="v:url" property="v:title">{{product.name}}</a> </span>
+				<span typeof="v:Breadcrumb"> <a href="/product/{{product.id}}" rel="v:url" property="v:title">{{product.name}}</a> </span>
 			</div>
 		</div>
 	</div>
@@ -124,7 +124,7 @@
 						<div ng-repeat="product in products | limitTo:4">
 							<div class="col-md-3">
 								<div class="product">
-									<a href="#/product/{{product.id}}">
+									<a href="/product/{{product.id}}">
 									<div class="product-photo">
 										<img src="http://candyladyshop.ru/assets/img/portfolio/1.jpg" alt="">
 										<h5>Больше информации
@@ -150,7 +150,7 @@
 						<div ng-repeat="product in products | limitTo:4">
 							<div class="col-md-3">
 								<div class="product">
-									<a href="#/product/{{product.id}}">
+									<a href="/product/{{product.id}}">
 									<div class="product-photo">
 										<img src="http://candyladyshop.ru/assets/img/portfolio/10.jpg" alt="">
 										<h5>Больше информации
@@ -176,7 +176,7 @@
 						<div ng-repeat="product in products | limitTo:4">
 							<div class="col-md-3">
 								<div class="product">
-									<a href="#/product/{{product.id}}">
+									<a href="/product/{{product.id}}">
 									<div class="product-photo">
 										<img src="http://candyladyshop.ru/assets/img/portfolio/11.jpg" alt="">
 										<h5>Больше информации

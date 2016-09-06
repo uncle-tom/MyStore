@@ -28,7 +28,7 @@
                 </thead>
                 <tbody>
                   <tr ng-repeat="order in orders | orderBy:order.id:!reverse | filter: waitOrderFilter">
-                    <td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+                    <td><a href="/admin/invoices/{{order.id}}">{{order.id}}</a></td>
                     <td>{{order.invoice_items.length}}</td>
                     <td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
                     <td>{{order.order_status}}</td>
@@ -50,7 +50,7 @@
                 </thead>
                 <tbody>
                   <tr ng-repeat="order in orders | orderBy:order.id:!reverse | filter: workOrderFilter">
-                    <td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+                    <td><a href="/admin/invoices/{{order.id}}">{{order.id}}</a></td>
                     <td>{{order.invoice_items.length}}</td>
                     <td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
                     <td>{{order.order_status}}</td>
@@ -72,7 +72,7 @@
                 </thead>
                 <tbody>
                   <tr ng-repeat="order in orders | orderBy:order.id:!reverse | filter: doneOrderFilter">
-                    <td><a href="#/admin/invoices/{{order.id}}">{{order.id}}</a></td>
+                    <td><a href="/admin/invoices/{{order.id}}">{{order.id}}</a></td>
                     <td>{{order.invoice_items.length}}</td>
                     <td>{{order.created_at | date:"MM/dd/yyyy 'at' h:mma"}}</td>
                     <td>{{order.order_status}}</td>
