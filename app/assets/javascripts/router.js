@@ -130,11 +130,11 @@ angular
         templateUrl: 'page/admin/addnewpage.html'
       });
       $urlRouterProvider.otherwise('/');
-    
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
-    });
+
+      $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+      });
 
       $translateProvider.translations('en', {
         'ADMIN_WELCOME': 'Welcome!',

@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :categories, :shippings, :addresses
 
   root 'test#index'
+
+  get '*path' => redirect('/#/%{path}')
 end
