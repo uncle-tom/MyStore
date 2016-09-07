@@ -349,7 +349,7 @@ angular
         'CHANGE_LANGUAGE_UKRAINE_BUTTON': 'Український'
       });
    
-      $translateProvider.preferredLanguage('en');
+      $translateProvider.preferredLanguage('ru');
     }
     
   ]);
