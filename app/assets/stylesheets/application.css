@@ -32,6 +32,9 @@
 		display: block;
 		margin: auto;
 	}
+	#vk {
+		font-size: 1.4em !important;
+	}
 	.md-fab img {
 		height: auto;
 	}
@@ -296,7 +299,7 @@ md-content.md-default-theme, md-content {
 
 #vk {
 	text-align: center;
-	padding: 100px;
+	padding: 100px 0px;
 	background-color: #507299;
 	color: #fff;
 	font-size: 40px;
