@@ -167,7 +167,7 @@ angular
         'ADMIN_PRODUCT_ADD_HAS_SALE': 'There is a discount?',
         'ADMIN_PRODUCT_ADD_PRICE': 'Price',
         'ADMIN_PRODUCT_ADD_NAME': 'Product Name',
-        'ADMIN_PRODUCT_ADD_URL': 'Product URL | For example: redskip',
+        'ADMIN_PRODUCT_ADD_URL': 'Articul',
         'ADMIN_PRODUCT_ADD_PHOTOLIST': 'Product photos',
         'ADMIN_PRODUCT_ADD_PHOTO': 'Add photos',
 
@@ -269,7 +269,7 @@ angular
         'ADMIN_PRODUCT_ADD_HAS_SALE': 'Есть скидка?',
         'ADMIN_PRODUCT_ADD_PRICE': 'Цена',
         'ADMIN_PRODUCT_ADD_NAME': 'Название товара',
-        'ADMIN_PRODUCT_ADD_URL': 'URL товара | Например: redskip',
+        'ADMIN_PRODUCT_ADD_URL': 'Артикул товара',
         'ADMIN_PRODUCT_ADD_PHOTO': 'Добавить фотографии',
         'ADMIN_PRODUCT_ADD_PHOTOLIST': 'Фотографии товара',
         

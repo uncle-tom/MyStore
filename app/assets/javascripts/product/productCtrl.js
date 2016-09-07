@@ -92,8 +92,13 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
 
   $scope.colors = [
     {color: "Черный"},
-    {color: "Не черный"},
-    {color: "Белый"}
+    {color: "Белый"},
+    {color: "Голубой"},
+    {color: "Розовый"},
+    {color: "Бежевый"},
+    {color: "Коричневый"},
+    {color: "Красный"},
+    {color: "Фиолетовый"},
   ]
 
   $scope.sizes = [
@@ -104,6 +109,7 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
     {size: "70B"},
     {size: "75B"},
     {size: "80B"},
+    {size: "85B"},
   ];
 
   $scope.$on('ngCart:itemAdded', function(event, item) {
