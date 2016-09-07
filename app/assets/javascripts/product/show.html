@@ -126,18 +126,12 @@
 								<div class="product">
 									<a href="/product/{{product.id}}">
 									<div class="product-photo">
-										<img src="{{img.image.url}}" alt="">
-										<h5>Больше информации
-										<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
-										</h5>
+										<mainphotoproduct></mainphotoproduct>
 									</div>
 									<h4>{{product.name}}</h4>
 									</a>
-									<h4>{{product.price}} рублей</h4>
-									<md-button  style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Купить</md-button>
-									<md-button class="md-fab md-mini" aria-label="Favorite">
-				          	<img src="/assets/icon/favorite2.png" alt="">
-				        	</md-button>
+									<h4>{{product.price}} &#8381;</h4>
+									<ngcart-addtocart  id="{{product.id}}" name="{{product.name}}" data="{color: product_color, size: product_size}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
 								</div>
 							</div>
 						</div>
@@ -147,23 +141,17 @@
       <md-tab label="Популярное">
         <md-content class="md-padding">
           <div class="row">
-						<div ng-repeat="product in products | limitTo:4">
+						<div ng-repeat="product in products | limitTo:4 | filter: haspopularFilter">
 							<div class="col-md-3">
 								<div class="product">
 									<a href="/product/{{product.id}}">
 									<div class="product-photo">
-										<img src="{{img.image.url}}" alt="">
-										<h5>Больше информации
-										<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
-										</h5>
+										<mainphotoproduct></mainphotoproduct>
 									</div>
 									<h4>{{product.name}}</h4>
 									</a>
-									<h4>{{product.price}} рублей</h4>
-									<md-button  style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Купить</md-button>
-									<md-button class="md-fab md-mini" aria-label="Favorite">
-				          	<img src="/assets/icon/favorite2.png" alt="">
-				        	</md-button>
+									<h4>{{product.price}} &#8381;</h4>
+									<ngcart-addtocart  id="{{product.id}}" name="{{product.name}}" data="{color: product_color, size: product_size}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
 								</div>
 							</div>
 						</div>
@@ -178,18 +166,12 @@
 								<div class="product">
 									<a href="/product/{{product.id}}">
 									<div class="product-photo">
-										<img src="{{img.image.url}}" alt="">
-										<h5>Больше информации
-										<br><md-button class="product-text_button" style="color: rgba(255, 255, 255, 0.870588); background: rgb(63, 81, 181);">Подробнее</md-button>
-										</h5>
+										<mainphotoproduct></mainphotoproduct>
 									</div>
 									<h4>{{product.name}}</h4>
 									</a>
-									<h4>{{product.price}} рублей</h4>
-									<md-button  style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);">Купить</md-button>
-									<md-button class="md-fab md-mini" aria-label="Favorite">
-				          	<img src="/assets/icon/favorite2.png" alt="">
-				        	</md-button>
+									<h4>{{product.price}} &#8381;</h4>
+									<ngcart-addtocart  id="{{product.id}}" name="{{product.name}}" data="{color: product_color, size: product_size}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
 								</div>
 							</div>
 						</div>
