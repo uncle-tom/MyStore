@@ -217,13 +217,13 @@ md-content.md-default-theme, md-content {
 }
 
 .welcome {
-	background: url('http://candyladyshop.ru/assets/img/header_bg.png');
+	background: url('bg/header_bg.png');
 	background-size: cover;
 	background-position: 50% 70%;
 }
 
 .foundus {
-	background: url('http://candyladyshop.ru/assets/img/bg/contact.png');
+	background: url('bg/contact.png');
 	background-size: cover;
 	background-position: 50% 70%;
 }
@@ -270,14 +270,14 @@ md-content.md-default-theme, md-content {
 #coolone {
 	text-align: center;
 	color: #fff;
-	background-image: url('http://candyladyshop.ru/assets/img/bg/divider1.jpg');
+	background-image: url('bg/divider1.jpg');
 	background-size: cover;
 }
 
 #cooltwo {
 	text-align: center;
 	color: #fff;
-	background-image: url('http://candyladyshop.ru/assets/img/bg/divider2.jpg');
+	background-image: url('bg/divider2.jpg');
 	background-size: cover;
 }
 

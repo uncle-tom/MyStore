@@ -37,22 +37,22 @@ function mainCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, n
   $scope.team = [
 	  {
 	  	name:"Саша",
-	  	photo: "http://candyladyshop.ru/assets/img/team/team01.jpg",
+	  	photo: "assets/team/team01.jpg",
 	  	description: "Директор"
 	  }, 
 	  {
 	  	name:"ТотЧьеИмяНельзяНазывать",
-	  	photo: "http://candyladyshop.ru/assets/img/team/team02.jpg",
+	  	photo: "assets/team/team02.jpg",
 	  	description: "Курьер"
 	  },
 	  {
 	  	name:"Семенчик",
-	  	photo: "http://candyladyshop.ru/assets/img/team/team03.jpg",
+	  	photo: "assets/team/team03.jpg",
 	  	description: "Быстроногий Гермес"
 	  },
 	  {
 	  	name:"Вова",
-	  	photo: "http://candyladyshop.ru/assets/img/team/team04.jpg",
+	  	photo: "assets/team/team04.jpg",
 	  	description: "Разработчик"
 	  }
   ]
