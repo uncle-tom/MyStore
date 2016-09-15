@@ -24,6 +24,13 @@
 			</div>
 
 			<div class="sidebar" ng-controller="productCtrl">
+				<h4>Размеры для аксессуаров</h4>
+				<span ng-repeat="size in sizes_setka">
+					<md-button ng-click="filterProductsBySize(size.setka)">{{size.setka}}</md-button>
+				</span>
+			</div>
+
+			<div class="sidebar" ng-controller="productCtrl">
 				<h4>Выберете нужный размер</h4>
 				<span ng-repeat="size in sizes">
 					<md-button ng-click="filterProductsBySize(size.size)">{{size.size}}</md-button>
@@ -32,7 +39,7 @@
 			<div class="sidebar" ng-controller="productCtrl">
 				<h4>Выберете нужный цвет</h4>
 				<span ng-repeat="color in colors">
-					<md-button ng-click="filterProductsByColor(color.color)">{{color.color}}</md-button>
+					<md-button ng-click="filterProductsByColor(color.color)" style="background: {{color.html}}; border: {{color.border}}"></md-button>
 				</span>
 			</div>
 			<div class="sidebar">

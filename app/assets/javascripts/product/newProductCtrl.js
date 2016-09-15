@@ -60,18 +60,92 @@ function addNewProduct($scope, $state, $http, $localStorage, $sessionStorage, Au
   }
 
   $scope.colors = [
-    {color: "Черный"},
-    {color: "Не черный"},
-    {color: "Белый"}
-  ]
+    {
+      color: "Черный",
+      html: 'black',
+      border: 'none',
+    },
+    {
+      color: "Белый",
+      html: 'white',
+      border: '1px solid',
+    },
+    {
+      color: "Голубой",
+      html: 'lightskyblue',
+      border: 'none',
+    },
+    {
+      color: "Бежевый",
+      html: 'beige',
+      border: 'none',
+    },
+    {
+      color: "Коричневый",
+      html: '#964B00',
+      border: 'none',
+    },
+    {
+      color: "Красный",
+      html: 'red',
+      border: 'none',
+    },
+    {
+      color: "Темно-красный",
+      html: 'Darkred',
+      border: 'none',
+    },
+    {
+      color: "Бордовый",
+      html: 'Maroon',
+      border: 'none',
+    },
+    {
+      color: "Синий",
+      html: 'blue',
+      border: 'none',
+    },
+    {
+      color: "Серый",
+      html: 'grey',
+      border: 'none',
+    },
+    {
+      color: "Персиковый",
+      html: '#FFE5B4',
+      border: 'none',
+    },
+    {
+      color: "Зеленый",
+      html: 'green',
+      border: 'none',
+    },
+    {
+      color: "Фиолетовый",
+      html: 'purple',
+      border: 'none',
+    },
+  ];
 
   $scope.sizes = [
-    {size: "70C"},
+    {size: "75A"},
+    {size: "75B"},
+    {size: "80B"},
+    {size: "85B"},
     {size: "75C"},
     {size: "80C"},
     {size: "85C"},
-    {size: "70B"},
-    {size: "75B"},
-    {size: "80B"},
+    {size: "70D"},
+    {size: "75D"},
+    {size: "80D"},
+    {size: "85D"},
+  ];
+
+  $scope.sizes_setka = [
+    {setka: "XS"},
+    {setka: "S"},
+    {setka: "M"},
+    {setka: "L"},
+    {setka: "XL"},
   ];
 }
