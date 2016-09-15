@@ -8,7 +8,12 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find_by name: params[:id]
     @products = @category.products if @category
-    render json: {category: @category, products: @products.as_json({include: {photos: {}}})}
+    show! do |format|
+      format.html { render }
+      format.json do
+        render json: {category: @category, products: @products.as_json({include: {photos: {}}})}
+      end
+    end
   end
 
 protected
