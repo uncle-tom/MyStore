@@ -96,7 +96,7 @@
 	margin:0px !important;
 }
 
-.fullwidth {
+.fullwidth, .admin-sizes-setka-color md-input-container {
 	width: 100%;
 }
 

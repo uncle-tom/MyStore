@@ -44,8 +44,10 @@
 			<div class="product-page_info">
 				<div class="row">
 					<div class="col-md-6 col-xs-6">
-						<h4>{{product.name}}
+						<h4>{{product.name}} | <span ng-if="product.sizes_setka">{{product.sizes_setka}}</span>
 							<br><h6>Артикул: {{product.permalink}}</h6>
+						}
+						}
 						</h4>
 					</div>
 					<div class="col-md-6 col-xs-6">

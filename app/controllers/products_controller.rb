@@ -50,6 +50,6 @@ protected
 		params.require(:product).permit(:id, :name, :description,
 			:sale_price, :has_popular, :has_sale, :in_stock, :quantity,
 			:price, :permalink, :cover_photo_id, :categories_ids, categories:[], 
-      categories_ids:[], sizes:[], colors:[])
+      categories_ids:[], sizes:[], colors:[], sizes_setka:[])
 	end
 end

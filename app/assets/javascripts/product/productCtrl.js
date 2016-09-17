@@ -7,7 +7,7 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
   if($stateParams.id) {
   	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
       $scope.product = data;
-
+      console.log($scope.product.sizes_setka.length)
       $scope.product.categories_ids = [];
       $($scope.product.categories).map(function(el){
         $scope.product.categories_ids.push(this.id);
@@ -183,4 +183,6 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
   $scope.$on('ngCart:itemAdded', function(event, item) {
     console.log('added', item);
   });
+
+
 }
