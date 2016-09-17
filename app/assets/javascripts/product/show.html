@@ -44,10 +44,8 @@
 			<div class="product-page_info">
 				<div class="row">
 					<div class="col-md-6 col-xs-6">
-						<h4>{{product.name}} | <span ng-if="product.sizes_setka">{{product.sizes_setka}}</span>
+						<h4>{{product.name}} 
 							<br><h6>Артикул: {{product.permalink}}</h6>
-						}
-						}
 						</h4>
 					</div>
 					<div class="col-md-6 col-xs-6">
@@ -66,6 +64,14 @@
 		        <md-select ng-model="product_size">
 		          <md-option ng-repeat="size in product.sizes" value="{{size}}">
 		            {{size}}
+		          </md-option>
+		        </md-select>
+		      </md-input-container>
+		      <md-input-container ng-if="product.sizes_setka.length>0">
+		        <label>Размерная сетка</label>
+		        <md-select ng-model="product.sizes_setka">
+		          <md-option ng-repeat="setka in product.sizes_setka" value="{{setka}}">
+		            {{setka}}
 		          </md-option>
 		        </md-select>
 		      </md-input-container>
