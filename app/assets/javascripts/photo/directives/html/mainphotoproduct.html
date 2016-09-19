@@ -1,7 +1,5 @@
 <div ng-if="product.photos.length > 0" class="background-photo animate-show"
 	ng-init="bg = product.photos[0].image.url" 
-	ng-mouseenter="bg = product.photos[1].image.url"
-	ng-mouseleave="bg = product.photos[0].image.url"
 	ng-style="{ 'background-image': 'url(' + bg + ')' }">
 	<div ng-if="product.has_popular != null" class="haspopularphoto">
 		<span class="haspopular">Топ продаж</span>
