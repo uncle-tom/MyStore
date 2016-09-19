@@ -47,19 +47,7 @@
         <div>
         <br>
           <div class="row admin-sizes-setka-color">
-            <div class="col-md-4">
-              <md-input-container>
-                <label>{{'ADMIN_PRODUCT_ADD_SETKA' | translate }}</label>
-                <md-select ng-model="product.sizes_setka" multiple>
-                  <md-optgroup label="Размерная сетка">
-                     <md-option ng-repeat="size in sizes_setka" value="{{size.setka}}">
-                      {{size.setka}}
-                    </md-option>
-                  </md-optgroup>
-                </md-select>
-              </md-input-container>
-            </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <md-input-container>
                 <label>{{'ADMIN_PRODUCT_ADD_SIZES' | translate }}</label>
                 <md-select ng-model="product.sizes" multiple>
@@ -71,7 +59,7 @@
                 </md-select>
               </md-input-container>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <md-input-container>
                 <label>{{'ADMIN_PRODUCT_ADD_COLOR' | translate }}</label>
                 <md-select ng-model="product.colors" multiple>

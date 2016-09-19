@@ -26,13 +26,6 @@
 			</div>
 
 			<div class="sidebar" ng-controller="productCtrl">
-				<h4>Размеры для аксессуаров</h4>
-				<span ng-repeat="size in sizes_setka">
-					<md-button ng-click="filterProductsBySize(size.setka)">{{size.setka}}</md-button>
-				</span>
-			</div>
-
-			<div class="sidebar" ng-controller="productCtrl">
 				<h4>Выберете нужный размер</h4>
 				<span ng-repeat="size in sizes">
 					<md-button ng-click="filterProductsBySize(size.size)">{{size.size}}</md-button>

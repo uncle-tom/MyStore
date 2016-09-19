@@ -13,10 +13,10 @@ function catalogCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $state
     $scope.products = data;
   });
 
-  $scope.qty = 5000;
+  $scope.price = 5000;
   //filter price_min
-  $scope.minpriceFilter = function(products, qty, price) {
-    return products.price <= $scope.qty
+  $scope.minpriceFilter = function(products) {
+    return parseFloat(products.price) <= parseFloat($scope.price);
   }
   
   $scope.isActive = function (viewLocation) { 

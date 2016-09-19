@@ -67,14 +67,6 @@
 		          </md-option>
 		        </md-select>
 		      </md-input-container>
-		      <md-input-container ng-if="product.sizes_setka.length>0">
-		        <label>Размерная сетка</label>
-		        <md-select ng-model="product.sizes_setka">
-		          <md-option ng-repeat="setka in product.sizes_setka" value="{{setka}}">
-		            {{setka}}
-		          </md-option>
-		        </md-select>
-		      </md-input-container>
 		      <md-input-container>
 		        <label>Цвет</label>
 		        <md-select ng-model="product_color">

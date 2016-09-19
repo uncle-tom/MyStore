@@ -139,6 +139,11 @@ function addNewProduct($scope, $state, $http, $localStorage, $sessionStorage, Au
     {size: "75D"},
     {size: "80D"},
     {size: "85D"},
+    {size: "XS"},
+    {size: "S"},
+    {size: "M"},
+    {size: "L"},
+    {size: "XL"},
   ];
 
   $scope.sizes_setka = [
