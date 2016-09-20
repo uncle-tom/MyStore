@@ -26,19 +26,19 @@
 			</div>
 			
 			<div class="sidebar" ng-controller="productCtrl">
-				<h4>Выберете нужный размер</h4>
+				<h4>Выберите нужный размер</h4>
 				<span ng-repeat="size in sizes">
 					<md-button ng-click="filterProductsBySize(size.size)">{{size.size}}</md-button>
 				</span>
 			</div>
 			<div class="sidebar" ng-controller="productCtrl">
-				<h4>Выберете нужный цвет</h4>
+				<h4>Выберите нужный цвет</h4>
 				<span ng-repeat="color in colors">
 					<md-button ng-click="filterProductsByColor(color.color)" style="background: {{color.html}}; border: {{color.border}}"></md-button>
 				</span>
 			</div>
 			<div class="sidebar">
-				<h4>Выберете стоимость</h4>
+				<h4>Выберите стоимость</h4>
 				<input type="range" min="0" max="5000" data-ng-model="price" />
 		    <div class="row">
 		      <div class="col-md-6">
