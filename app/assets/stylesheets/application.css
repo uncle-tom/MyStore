@@ -543,6 +543,13 @@ footer {
 	margin: 20px 0px 0px 0px;	
 }
 
+.productpageline {
+  background: -webkit-gradient(linear,left top,right top,from(#e1e1e1),color-stop(11%,#e1e1e1),color-stop(11.1%,#fff),to(#fff));
+  border: 0;
+  height: 3px;
+  -webkit-background-size: 9px;
+}
+
 .product-page {
 	margin: 20px 0px;
 }
