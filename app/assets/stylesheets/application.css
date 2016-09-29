@@ -376,7 +376,7 @@ footer {
   height: 188px;
   position: absolute;
   top: 2px;
-  left: -8px;
+  left: -43px;
   overflow: hidden;
 }
 .salephoto:before, .salephoto:after, .haspopularphoto:before, .haspopularphoto:after{
@@ -554,7 +554,7 @@ footer {
 .product-images_main {
   display: none;
   float: left;
-  height: 700px;
+  width: 100%;
   padding: 0em 2em;
 }
 
@@ -577,7 +577,7 @@ footer {
 }
 
 .product-thumbs img {
-  height: 215px;
+  height: 100%;
   width: 140px;
   outline: none;
 }
