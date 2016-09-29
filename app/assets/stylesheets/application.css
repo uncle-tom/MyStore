@@ -406,7 +406,7 @@ footer {
   height: 188px;
   position: absolute;
   top: 2px;
-  left: -43px;
+  left: 8px;
   overflow: hidden;
 }
 .salephoto:before, .salephoto:after, .haspopularphoto:before, .haspopularphoto:after, .salephoto-product:before, .salephoto-product:after, .haspopularphoto-product:before, .haspopularphoto-product:after{
@@ -536,7 +536,7 @@ footer {
 ****************/
 
 .breadcrumb {
-	margin: 20px 0px 0px 50px;
+	margin: 20px 0px 0px 115px;
 }
 
 .breadcrumb-catalog {
@@ -597,13 +597,14 @@ footer {
   height: 700px;
   overflow: hidden;
   position: relative;
+  margin: 20px 0px;
 }
 
 .product-thumbs {
 	float: left;
 	position: relative;
   list-style: none;
-  margin: 0;
+  margin: 20px 0px;
   z-index: 2;
 }
 
