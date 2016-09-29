@@ -15,10 +15,11 @@
  */
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "angular-material/angular-material.css";
+@import "ngGallery/src/css/ngGallery.css";
 @import "swiper/dist/css/swiper.min.css";
 @import "md-steppers/dist/md-steppers.min.css";
 @import "wowjs/css/libs/animate.css";
-@import "ngGallery/src/css/ngGallery.css";
+
 
 
 @import url(https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic);
@@ -601,7 +602,6 @@ footer {
 }
 
 .product-images {
-  height: 700px;
   overflow: hidden;
   position: relative;
   margin: 20px 0px;

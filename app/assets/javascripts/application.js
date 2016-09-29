@@ -14,13 +14,13 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require angular
+//= require ngGallery
 //= require angular-animate
 //= require angular-ui-router
 //= require angular-rails-templates
 //= require angular-resource
 //= require angular-xeditable
 //= require ngcart
-//= require ngGallery
 //= require angular-devise
 //= require angular-file-upload
 //= require angular-cookie
