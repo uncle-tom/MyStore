@@ -23,6 +23,19 @@
 		<!-- Фотки для компа -->
 		<div class="col-md-6 pc-show wow bounceInLeft" data-wow-duration="2s">
 			<ul class="product-thumbs">
+			  <div class="gallery" ng-controller="productCtrl as ctrl">
+          <ng-gallery images="ctrl.images" thumbs-num="11"></ng-gallery>
+        </div>
+			</ul>
+			<div class="product-images">
+			  <img 
+			  ng-src="{{product.photos[0].image.url}}"  
+			  class="product-images_main"
+			  />
+			</div>
+
+
+			<!-- <ul class="product-thumbs">
 			  <li ng-repeat="img in product.photos">
 			    <img src="{{img.image.url}}" ng-click="setImage(img.image.url)" />
 			  </li>
@@ -33,7 +46,7 @@
 			  class="product-images_main"
 			  ng-class="{selected: img.image.url === mainImageUrl}"
 			  ng-repeat="img in product.photos" />
-			</div>
+			</div> -->
 			<div ng-if="product.has_popular" class="haspopularphoto-product" style="top:-8px;">
 				<span class="haspopular">Топ продаж</span>	
 			</div>

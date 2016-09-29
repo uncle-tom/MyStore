@@ -18,6 +18,7 @@
 @import "swiper/dist/css/swiper.min.css";
 @import "md-steppers/dist/md-steppers.min.css";
 @import "wowjs/css/libs/animate.css";
+@import "ngGallery/src/css/ngGallery.css";
 
 
 @import url(https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic);
@@ -184,6 +185,27 @@ md-content.md-default-theme, md-content {
   padding: 8px;
   width: 40px;
   border-radius: 50%;
+}
+
+.ng-gallery-content > .ng-thumbnails-wrapper {
+	overflow: hidden !important;
+}
+
+.ng-gallery-content > .ng-thumbnails-wrapper > .ng-thumbnails {
+	margin:auto;
+}
+
+.ng-gallery-content > img.effect {
+	width: auto;
+	height: auto;
+}
+
+.ng-gallery-content > .ng-thumbnails-wrapper > .ng-thumbnails {
+	padding: 1em 0em;
+}
+
+.md-button.md-fab {
+	z-index: 1;
 }
 
 .main {
@@ -424,6 +446,7 @@ footer {
 }
 
 .haspopular {
+	z-index: 1;
 	background: #ff7a00;
 	box-shadow:0 0 0 3px #ff7a00,  0px 21px 5px -18px rgba(0,0,0,0.6);
 }

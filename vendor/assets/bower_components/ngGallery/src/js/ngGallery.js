@@ -39,7 +39,7 @@
             '<div class="ng-gallery-content" unselectable="on" ng-show="opened" ng-swipe-left="nextImage()" ng-swipe-right="prevImage()">' +
             '  <div class="uil-ring-css" ng-show="loading"><div></div></div>' +
             '<a href="{{getImageDownloadSrc()}}" target="_blank" ng-show="showImageDownloadButton()" class="download-image"><i class="fa fa-download"></i></a>' +
-            '  <a class="close-popup" ng-click="closeGallery()"><i class="fa fa-close"></i></a>' +
+            '  <a class="close-popup close" ng-click="closeGallery()">&#10006</a>' +
             '  <a class="nav-left" ng-click="prevImage()"><i class="fa fa-angle-left"></i></a>' +
             '  <img ondragstart="return false;" draggable="false" ng-src="{{ img }}" ng-click="nextImage()" ng-show="!loading" class="effect" />' +
             '  <a class="nav-right" ng-click="nextImage()"><i class="fa fa-angle-right"></i></a>' +

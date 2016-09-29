@@ -4,6 +4,9 @@ angular.module('MyStore').controller('productCtrl',
   productCtrl]);
 
 function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category, FileUploader) {	
+  var self = this;
+  self.images = [];
+  
   if($stateParams.id) {
   	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
       $scope.product = data;
@@ -12,6 +15,14 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
       $($scope.product.categories).map(function(el){
         $scope.product.categories_ids.push(this.id);
       });
+
+      if($scope.product.photos.length > 0) {
+        console.log($scope.product.photos)
+        $.each($scope.product.photos, function(index, photo) {
+          console.log(photo.image.url);
+          self.images.push({thumb: photo.image.middle.url, img: photo.image.url, desciption: photo})
+        });
+      }
     });
   }
 
