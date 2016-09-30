@@ -2,7 +2,7 @@ angular.module('MyStore').controller('editCategoryCtrl',
   ['$scope', '$http', '$stateParams', '$localStorage', '$sessionStorage', 
   'Auth', 'Category', editCategoryCtrl]);
 
-function editCategoryCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, Auth, Category) {
+function editCategoryCtrl($scope, $http, $state, $stateParams, $localStorage, $sessionStorage, Auth, Category) {
 
   if($stateParams.id) {
     $http.get('/categories/'+$stateParams.id+'.json').success(function(data, status, headers, config){
