@@ -2,14 +2,14 @@
 <form>
 	<md-input-container class="md-icon-float md-block">
     <label>{{'ADMIN_CATEGORY_ADD_NAME' | translate }}</label>
-    <input ng-model="category.name" type="text">
+    <input ng-model="category.name" type="text"/>
   </md-input-container>
 	
 	<md-checkbox>
   	{{'ADMIN_CATEGORY_ADD_PARENT' | translate }}
   </md-checkbox>
 	
-	<div ng-controller="categoryCtrl">
+	<div>
 		<div class="form-group select category_parent_id">
 	  <label class="select control-label" for="category.parent_id">
 	  {{'ADMIN_CATEGORY_ADD_SELECT_PARENT' | translate }}</label>

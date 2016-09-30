@@ -4,15 +4,17 @@ angular.module('MyStore').controller('categoryCtrl',
 
 function categoryCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, Auth, ngCart, $location, Category) {
 
-  $http.get('/categories/'+$stateParams.id+'.json').success(function(data, status, headers, config){
-    $scope.resp = data;
-  })
+  if($stateParams.id) {
+    $http.get('/categories/'+$stateParams.id+'.json').success(function(data, status, headers, config){
+      $scope.category = data;
+    })
+  }
 	
 	Category.query({}, function(data){
     $scope.categories = data;
   });
 
-  $scope.category = new Category();
+  // $scope.category = new Category();
 
   $scope.categoryDel = function(category_id){
     Category.delete({id: category_id});
