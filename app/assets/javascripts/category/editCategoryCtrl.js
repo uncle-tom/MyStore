@@ -1,5 +1,5 @@
 angular.module('MyStore').controller('editCategoryCtrl', 
-  ['$scope', '$http', '$stateParams', '$localStorage', '$sessionStorage', 
+  ['$scope', '$http', '$state', '$stateParams', '$localStorage', '$sessionStorage', 
   'Auth', 'Category', editCategoryCtrl]);
 
 function editCategoryCtrl($scope, $http, $state, $stateParams, $localStorage, $sessionStorage, Auth, Category) {
