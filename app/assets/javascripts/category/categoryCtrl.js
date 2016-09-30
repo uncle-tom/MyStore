@@ -21,11 +21,6 @@ function categoryCtrl($scope, $http, $stateParams, $localStorage, $sessionStorag
     console.log('del')
   }
 
-  $scope.editCategory = function(){
-  	Category.update({ category: $scope.category, id: $scope.category.id }, function(){
-      window.location.reload();
-    });
-  }
 
   $scope.isActive = function (viewLocation) { 
     return viewLocation === $location.path();
