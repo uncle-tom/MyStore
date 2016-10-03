@@ -616,8 +616,8 @@ footer {
 }
 
 .product-thumbs img {
-  height: 100%;
-  width: 140px;
+  height: auto;
+  /*width: 140px;*/
   outline: none;
 }
 
