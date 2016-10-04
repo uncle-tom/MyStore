@@ -165,6 +165,11 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
       html: 'purple',
       border: 'none',
     },
+    {
+      color: "Розовый",
+      html: 'pink',
+      border: 'none',
+    },
   ];
 
   $scope.sizes = [

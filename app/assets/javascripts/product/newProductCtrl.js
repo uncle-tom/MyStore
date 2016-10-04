@@ -125,6 +125,11 @@ function addNewProduct($scope, $state, $http, $localStorage, $sessionStorage, Au
       html: 'purple',
       border: 'none',
     },
+    {
+      color: "Розовый",
+      html: 'pink',
+      border: 'none',
+    },
   ];
 
   $scope.sizes = [

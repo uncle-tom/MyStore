@@ -69,8 +69,8 @@
 				<hr class="productpageline">
 
 				<p class="product-price text-center">
-					<span ng-class="product.sale_price ? 'sale-true' : 'sale-false'">{{product.price}} &#8381;</span>
-					<br><span ng-if="product.sale_price">{{product.sale_price}} &#8381;</span>
+					<span ng-class="product.sale_price ? 'sale-true' : 'sale-false'">{{product.price}} <i class="fa fa-rub" aria-hidden="true"></i></span>
+					<br><span ng-if="product.sale_price">{{product.sale_price}} <i class="fa fa-rub" aria-hidden="true"></i></span>
 				</p>
 
 				<hr class="productpageline">
@@ -150,7 +150,7 @@
 									</div>
 									<h4>{{product.name}}</h4>
 									</a>
-									<h4>{{product.price}} &#8381;</h4>
+									<h4>{{product.price}} <i class="fa fa-rub" aria-hidden="true"></i></h4>
 									<ngcart-addtocart  id="{{product.id}}" name="{{product.name}}" data="{color: product_color, size: product_size}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
 								</div>
 							</div>
@@ -170,7 +170,7 @@
 									</div>
 									<h4>{{product.name}}</h4>
 									</a>
-									<h4>{{product.price}} &#8381;</h4>
+									<h4>{{product.price}} <i class="fa fa-rub" aria-hidden="true"></i></h4>
 									<ngcart-addtocart  id="{{product.id}}" name="{{product.name}}" data="{color: product_color, size: product_size}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
 								</div>
 							</div>
@@ -190,7 +190,7 @@
 									</div>
 									<h4>{{product.name}}</h4>
 									</a>
-									<h4>{{product.price}} &#8381;</h4>
+									<h4>{{product.price}} <i class="fa fa-rub" aria-hidden="true"></i></h4>
 									<ngcart-addtocart  id="{{product.id}}" name="{{product.name}}" data="{color: product_color, size: product_size}" price="{{product.price}}" quantity="1">Купить</ngcart-addtocart>
 								</div>
 							</div>
