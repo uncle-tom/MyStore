@@ -46,7 +46,7 @@
       <md-tab label="Новинки">
         <md-content class="md-padding">
           <div class="row">
-						<div ng-repeat="product in products | limitTo:4">
+						<div ng-repeat="product in products | orderBy:product.id:reverse | limitTo:4">
 							<div class="col-md-3">
 								<div class="product">
 									<a href="/product/{{product.id}}">
