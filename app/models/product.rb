@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
   
   def cover_url
     if self.cover_photo_id
-      Photo.find_by(id:self.cover_photo_id).try(:photo).try(:url)
+      Photo.find_by(id:self.cover_photo_id).try(:image).try(:url)
     end
   end
 end
