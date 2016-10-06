@@ -29,7 +29,7 @@
 			</ul>
 			<div class="product-images">
 			  <img 
-			  ng-src="{{product.cover_url}}"  
+			  ng-src="{{product.cover_url != null ? bg = product.cover_url : bg = product.photos[0].image.url}}"  
 			  class="product-images_main"
 			  />
 			</div>
