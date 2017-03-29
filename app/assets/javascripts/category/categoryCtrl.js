@@ -3,10 +3,11 @@ angular.module('MyStore').controller('categoryCtrl',
   'Auth', 'ngCart', '$location', 'Category',  categoryCtrl]);
 
 function categoryCtrl($scope, $http, $stateParams, $localStorage, $sessionStorage, Auth, ngCart, $location, Category) {
-
-  $http.get('/categories/'+$stateParams.id+'.json').success(function(data, status, headers, config){
-    $scope.resp = data;
-  })
+  if($stateParams.id) {
+    $http.get('/categories/'+$stateParams.id+'.json').success(function(data, status, headers, config){
+      $scope.resp = data;
+    })
+  }
 	
 	Category.query({}, function(data){
     $scope.categories = data;
@@ -24,7 +25,11 @@ function categoryCtrl($scope, $http, $stateParams, $localStorage, $sessionStorag
     return viewLocation === $location.path();
   };
 
-  $scope.qty = 5000;
+  $scope.price = 5000;
+  //filter price_min
+  $scope.minpriceFilter = function(products) {
+    return parseFloat(products.price) <= parseFloat($scope.price);
+  }
 
   $scope.colors = '';
   $scope.filterProductsByColor = function(color){
