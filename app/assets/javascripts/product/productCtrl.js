@@ -8,6 +8,7 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
   self.images = [];
   
   if($stateParams.id) {
+    console.log('$stateParams.id', $stateParams.id);
   	$http.get('/products/'+$stateParams.id+'.json').success(function(data, status, headers, config){
       $scope.product = data;
 
@@ -34,7 +35,9 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
     }
   };
 
+  console.log('querying products');
   Product.query({}, function(data){
+    console.log('data', data);
     $scope.products = data;
   });
 

@@ -62,70 +62,80 @@ angular
       .state('admin', {
         url: '/admin',
         controller: 'adminCtrl',
-        templateUrl: 'admin/index.html'
+        templateUrl: 'admin/index.html',
+        resolve: {
+          isAdmin: () => {
+            return localStorage.getItem('candyladyshop.isAdmin')
+          }
+        },
+        controller: function ($state, isAdmin) {
+          if(!isAdmin) {
+            $state.go('home');
+          }
+        }
       })
-      .state('adminmain', {
+      .state('admin.main', {
         url: '/admin/main',
         controller: 'adminCtrl',
         templateUrl: 'admin/main.html'
       })
-      .state('adminproduct', {
-        url: '/admin/product',
+      .state('admin.product', {
+        url: '/product',
         controller: 'productCtrl',
         templateUrl: 'product/admin/product.html'
       })
-      .state('addnewproduct', {
-        url: '/admin/addnewproduct',
+      .state('admin.addnewproduct', {
+        url: '/addnewproduct',
         controller: 'addNewProduct',
         templateUrl: 'product/admin/addnewproduct.html'
       })
-      .state('editproduct', {
-        url: '/admin/product/edit/{id}',
+      .state('admin.editproduct', {
+        url: '/product/edit/{id}',
         controller: 'productCtrl',
         templateUrl: 'product/admin/productedit.html'
       })
-      .state('photos', {
-        url: '/admin/product/photos/{id}',
+      .state('admin.photos', {
+        url: '/product/photos/{id}',
         controller: 'productPhotosCtrl',
         templateUrl: 'photo/admin/product_photos.html'
       })
-      .state('editcategory', {
-        url: '/admin/category/edit/{id}',
+      .state('admin.editcategory', {
+        url: '/category/edit/{id}',
         controller: 'editCategoryCtrl',
         templateUrl: 'category/admin/categoryedit.html'
       })
-      .state('admincategory', {
-        url: '/admin/category',
+      .state('admin.category', {
+        url: '/category',
         controller: 'categoryCtrl',
         templateUrl: 'category/admin/category.html'
       })
-      .state('addnewcategory', {
-        url: '/admin/addnewcategory',
+      .state('admin.addnewcategory', {
+        url: '/addnewcategory',
         controller: 'addNewCategory', 
         templateUrl: 'category/admin/addnewcategory.html'
       })
-      .state('admininvoices', {
-        url: '/admin/invoices',
+      .state('admin.invoices', {
+        url: '/invoices',
         controller: 'invoicesCtrl',
         templateUrl: 'cart/admin/invoices.html'
       })
-      .state('admininvoiceshow', {
-        url: '/admin/invoices/{id}',
+      .state('admin.invoiceshow', {
+        url: '/invoices/{id}',
         controller: 'invoicesCtrl',
         templateUrl: 'cart/admin/invoiceshow.html'
       })
-      .state('sendemail', {
-        url: '/admin/sendemail',
+      .state('admin.sendemail', {
+        url: '/sendemail',
         controller: 'sendemailCtrl',
         templateUrl: 'sendemail/admin/sendemail.html'
       })
-      .state('adminpage', {
-        url: '/admin/pages',
+      .state('admin.page', {
+        url: '/pages',
         controller: 'pageCtrl',
         templateUrl: 'page/admin/pages.html'
       })
-      .state('addnewpage', {
-        url: '/admin/addnewpage',
+      .state('admin.addnewpage', {
+        url: '/addnewpage',
         controller: 'addNewPage',
         templateUrl: 'page/admin/addnewpage.html'
       });
