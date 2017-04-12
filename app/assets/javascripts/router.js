@@ -54,7 +54,6 @@ angular
         resolve: {
           products: function($http) {
             return $http.get('/products.json').then(function (response) {
-              console.log('response.data', response.data);
               return response.data;
             });
           }
@@ -77,17 +76,17 @@ angular
       })
       .state('about', {
         url: '/about', 
-        controller: 'mainCtrl',
+        controller: function() {},
         templateUrl: 'main/about.html'
       })
       .state('contact', {
         url: '/contact', 
-        controller: 'mainCtrl',
+        controller: function() {},
         templateUrl: 'main/contact.html'
       })
       .state('cart', {
         url: '/cart', 
-        controller: 'mainCtrl',
+        controller: 'invoicesCtrl',
         templateUrl: 'cart/cart.html'
       })
       .state('admin', {
