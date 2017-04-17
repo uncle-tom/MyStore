@@ -26,6 +26,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic);
 
+@font-face {
+	font-family: 'Gothic'; /* Имя шрифта */
+	src: url(GOTHIC.TTF); /* Путь к файлу со шрифтом */
+}
+
 @media screen and (max-width: 640px) {
 	.mobile-show {
 		display: block !important;
@@ -122,7 +127,7 @@
 
 body {
 	font-size: 18px;
-	font-family: inherit;
+	font-family: 'Gothic';
 }
 
 li, span {
