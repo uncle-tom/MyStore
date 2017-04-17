@@ -28,7 +28,7 @@
 
 @font-face {
 	font-family: 'Gothic'; /* Имя шрифта */
-	src: url(GOTHIC.TTF); /* Путь к файлу со шрифтом */
+	src: url(fonts/GOTHIC.TTF); /* Путь к файлу со шрифтом */
 }
 
 @media screen and (max-width: 640px) {
