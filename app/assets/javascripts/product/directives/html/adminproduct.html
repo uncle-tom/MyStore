@@ -18,7 +18,9 @@
 	  	</div>
 	  </div>
 	</div>
-	<div ng-repeat="product in products | filter:query | filter: selected.name | orderBy:predicate:reverse:customCompare " >
+	<div ng-repeat="product in products | filter:query | filter: selected.name | orderBy:predicate:reverse:customCompare " dnd-draggable="list"
+        dnd-moved="list.splice($index, 1)"
+        dnd-effect-allowed="move">
 		<div class="adminproductlist_one">
 			<div class="row">
 				<div class="col-md-4">

@@ -15,7 +15,8 @@ angular
     'yaru22.angular-timeago',
     'ngCart',
     'md-steppers',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'dndLists'
   ])
   .config([
     '$stateProvider',

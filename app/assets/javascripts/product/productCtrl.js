@@ -26,7 +26,7 @@ function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth
   }
 
   $scope.customCompare = function(v1, v2) {
-    console.log('customCompare', v1, v2);
+    // console.log('customCompare', v1, v2);
     if(v1.value.indexOf('T') > 0) {
       // Compare strings alphabetically, taking locale into account
       return v1.value.localeCompare(v2.value);
