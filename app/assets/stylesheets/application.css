@@ -771,7 +771,15 @@ li.active { color:orange;  }
 	padding-bottom: 10px;
 }
 
-
+.admin-absolute {
+	background: rgba(0, 0, 0, 0.78);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+  top: 0;
+  transition: 0.5s;
+}
 
 .admin-header {
 	-webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.3);
@@ -847,6 +855,8 @@ li.active { color:orange;  }
 	border-radius: 4px;
 	-webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.3);
   box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+  z-index: 2;
+  position: relative;
 }
 
 .admin-invoices md-content {
