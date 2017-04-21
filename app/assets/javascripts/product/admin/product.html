@@ -4,10 +4,9 @@
 			<a href="/admin/addnewproduct"><md-button class="md-raised md-primary" >{{'ADMIN_PRODUCT_BUTTON_ADD' | translate }}</md-button></a>
 		</div>
 	</div>
-
 	<div class="admin-sidebar_right" style="z-index:2; position: relative;">
 		<div class="addproduct" ng-show="!drag_on">
-			<a href="#" ng-click="drag()"><md-button class="md-raised md-primary"  >Редактировать порядок</md-button></a>
+			<a href="#" ng-click="drag_on = !drag_on"><md-button class="md-raised md-primary"  >Редактировать порядок</md-button></a>
 		</div>
 		<div class="addproduct" ng-show="drag_on">
 			<a href="#" ng-click="drag_on = !drag_on"><md-button class="md-raised md-primary-green" style="color: rgb(255, 255, 255); background: rgb(76, 175, 80);" >Сохранить</md-button></a>

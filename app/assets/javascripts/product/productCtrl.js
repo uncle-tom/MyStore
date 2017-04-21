@@ -5,8 +5,6 @@ angular.module('MyStore').controller('productCtrl',
 
 function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category, FileUploader) {	
   
-  $scope.drag_on = false;
-
   var self = this;
   self.images = [];
   
