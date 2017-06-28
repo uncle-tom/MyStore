@@ -19,7 +19,8 @@
 	  </div>
 	</div>
 	<div dnd-list="products">
-		<div ng-repeat="product in products | filter:query | filter: selected.name | orderBy:predicate:reverse:customCompare ">
+	{{showShadowScreen}}
+		<div ng-repeat="product in products | filter:query | filter: selected.name | orderBy:(showShadowScreen ? 'predicate': 'predicate2' )">
 			<div class="adminproductlist_one" 
 				dnd-draggable="product"
         dnd-moved="products.splice($index, 1)"

@@ -1,10 +1,15 @@
 angular.module('MyStore').controller('productCtrl', 
-  ['$scope', '$state', '$http', '$localStorage', 
+  ['$rootScope', '$scope', '$state', '$http', '$localStorage', 
   '$sessionStorage', 'Auth', '$stateParams', 'Product', 'Category','FileUploader',
   productCtrl]);
 
-function productCtrl($scope, $state, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category, FileUploader) {	
+function productCtrl($rootScope, $scope, $state, $http, $localStorage, $sessionStorage, Auth, $stateParams, Product, Category, FileUploader) {	
   
+  $scope.clickedOnChangeOrder = function() {
+    $rootScope.$broadcast('clickedOnChangeOrder');
+    console.log('yes')
+  };
+
   var self = this;
   self.images = [];
   

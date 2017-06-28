@@ -1,8 +1,13 @@
 angular.module('MyStore').controller('headerCtrl', 
-  ['$scope', '$http', '$localStorage', '$sessionStorage', 'Auth', '$stateParams', '$location', '$translate', 'Product', headerCtrl]);
+  ['$rootScope', '$scope', '$http', '$localStorage', '$sessionStorage', 'Auth', '$stateParams', '$location', '$translate', 'Product', headerCtrl]);
 
-function headerCtrl($scope, $http, $localStorage, $sessionStorage, Auth, $stateParams, $location, $translate, Product) {
+function headerCtrl($rootScope, $scope, $http, $localStorage, $sessionStorage, Auth, $stateParams, $location, $translate, Product) {
 	console.log('headerCtrl');
+
+	$rootScope.$on('clickedOnChangeOrder', function() {
+    console.log('clickedOnChangeOrder');
+    $rootScope.showShadowScreen = !$rootScope.showShadowScreen;
+  });
 
 	$scope.isActive = function (viewLocation) { 
     return viewLocation === $location.path();
